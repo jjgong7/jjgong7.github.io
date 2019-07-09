@@ -1,1 +1,523 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-06-26T17:16:11-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Site Title</title><subtitle>An amazing website.</subtitle><author><name>Your Name</name></author></feed>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-07-09T16:01:40-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Justin Gong</title><subtitle>Data Science Portfolio</subtitle><author><name>Justin Gong</name></author><entry><title type="html">Supervised Learning</title><link href="http://localhost:4000/sl/" rel="alternate" type="text/html" title="Supervised Learning" /><published>2018-06-03T00:00:00-04:00</published><updated>2018-06-03T00:00:00-04:00</updated><id>http://localhost:4000/sl</id><content type="html" xml:base="http://localhost:4000/sl/">&lt;!-- # Supervised Learning --&gt;
+&lt;p&gt;Analyze two datasets using five different supervised learning algorithms. Weka, a suite of machine learning software written in Java, is used for analysis.&lt;/p&gt;
+
+&lt;h2 id=&quot;datasets-used&quot;&gt;Datasets used:&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Faulty Steel Plates&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;1,941 instances; 27 attributes; 7 labels&lt;/li&gt;
+  &lt;li&gt;Steel Plates are classified into 7 different faulty categories - Pastry, Z_Scratch, K_Scratch, Stains, Dirtiness, Bumps, and Other_Faults&lt;/li&gt;
+  &lt;li&gt;Other_Faults ~ 35%, Bumps ~ 20%, K_Scratch ~ 20%&lt;/li&gt;
+  &lt;li&gt;All features are numerical&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Phishing Websites&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;11,055 instances, 30 attributes, binary label&lt;/li&gt;
+  &lt;li&gt;Websites are classified as a phishing website (1) or not a phishing website (-1)&lt;/li&gt;
+  &lt;li&gt;Not Phishing ~ 44%, Phishing ~ 56%&lt;/li&gt;
+  &lt;li&gt;All data is nominal (-1, 0, or 1)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;why-are-the-datasets-interesting&quot;&gt;Why are the datasets interesting?&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Faulty Steel Plates&lt;/strong&gt;&lt;br /&gt;
+Identifying faulty steel plates can:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Improve safety and reduce costs (return fees)&lt;/li&gt;
+  &lt;li&gt;Reduce amount of defective plates used and in circulation&lt;/li&gt;
+  &lt;li&gt;Applicable to evaluating other types of defective metals&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Phishing Websites&lt;/strong&gt;&lt;br /&gt;
+Identifying phishing websites can:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Improve online security&lt;/li&gt;
+  &lt;li&gt;Prevents identity theft, credit card theft, etc.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;analysis-steps&quot;&gt;Analysis Steps:&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;80% training data, 20% test data&lt;/li&gt;
+  &lt;li&gt;10-fold cross validation used on training set to help generalize and avoid overfitting&lt;/li&gt;
+  &lt;li&gt;Accuracy rate for training and cross-validation is averaged accross folds&lt;/li&gt;
+  &lt;li&gt;Training set (build the model), validation set (tune the hyperparameters and pick a model), and held-out test set (final performance of the chosen model)&lt;/li&gt;
+  &lt;li&gt;Two learning curves graphed
+    &lt;ul&gt;
+      &lt;li&gt;Training and Validation Accuracy vs. Training Size (Learning Curve)
+        &lt;ul&gt;
+          &lt;li&gt;Used to evaluate bias and variance. Training size in increments of 10%&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Training and Validation Accuracy vs. Range of Single Hyperparameter Value (Model Evaluation)
+        &lt;ul&gt;
+          &lt;li&gt;Performance of training and cv accuracy vary for different inputs of a single hyperparameter&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Supervised Learning Algorithms:&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Decision Tree&lt;/li&gt;
+  &lt;li&gt;Boosting&lt;/li&gt;
+  &lt;li&gt;Neural Network&lt;/li&gt;
+  &lt;li&gt;Support Vector Machines&lt;/li&gt;
+  &lt;li&gt;k-Nearest Neighbors (kNN)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;1-decision-tree&quot;&gt;1. Decision Tree:&lt;/h3&gt;
+&lt;p&gt;This is a top down learning algorithm that splits the best attributes (decision nodes) based on information gain. The branches are the outcomes of the binary splits (≥,≤ or T, F) and the leaf nodes represent a classifying label.&lt;/p&gt;
+
+&lt;p&gt;Hyperparameters:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Pruning (True, False)
+    &lt;ul&gt;
+      &lt;li&gt;Pruning serves to simplify the tree, making it easier to understand the results and avoid risk of overfitting the training data.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Confidence Factor (Default = 0.25)
+    &lt;ul&gt;
+      &lt;li&gt;Lower values incur more pruning&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Faulty Steel Plates&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&quot;learning-curve&quot;&gt;Learning Curve&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;../images/ml-sup/DT_LC_FP.png&quot; alt=&quot;DT_LC_FP&quot; width=&quot;300px&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;High Variance/Low Bias (Overfitting)&lt;/li&gt;
+  &lt;li&gt;Training accuracy ~93% while validation accuracy ~70%&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;model-complexity&quot;&gt;Model Complexity&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;../images/ml-sup/DT_MC_FP.png&quot; alt=&quot;DT_MC_FP&quot; width=&quot;300px&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Adjusted confidence factor from 0.1 to 0.5&lt;/li&gt;
+  &lt;li&gt;With confidence factor = 0.5, tree size is 432, and has second highest cv-accuracy after the unpruned tree.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Phishing Websites&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&quot;learning-curve-1&quot;&gt;Learning Curve&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;../images/ml-sup/DT_LC_PW.png&quot; alt=&quot;DT_LC_PW&quot; width=&quot;300px&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Low Variance/Low Bias (Good Model)&lt;/li&gt;
+  &lt;li&gt;Accuracy is high for both training and validation set&lt;/li&gt;
+  &lt;li&gt;Classifies well even with low training data (~10%)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;model-complexity-1&quot;&gt;Model Complexity&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;../images/ml-sup/DT_MC_PW.png&quot; alt=&quot;DT_MC_PW&quot; width=&quot;300px&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;With confidence factor = 0.2, tree size is 257 with 129 leaves, CV-accuracy is 73.32%.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Phishing websites has a much better classification accuracy than faulty plates. This can be because faulty plates dataset has seven different class labels, while phishing websites only has a binary label.&lt;/p&gt;
+
+&lt;h3 id=&quot;2-boosting&quot;&gt;2. Boosting:&lt;/h3&gt;
+&lt;p&gt;Boosting is an ensemble learning method that incrementally builds the model by placing more weight on the misclassified data. It basically turns a set of weak learners, which always do better than chance, into a single strong learner. In Weka, the boosting algorithm is called AdaBoostM1.&lt;/p&gt;
+
+&lt;p&gt;Hyperparameters:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Defaults:
+    &lt;ul&gt;
+      &lt;li&gt;Base Classifier (J48 Decision Tree)&lt;/li&gt;
+      &lt;li&gt;Pruned Tree&lt;/li&gt;
+      &lt;li&gt;0.25 Confidence Factor&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Number of Iterations:
+    &lt;ul&gt;
+      &lt;li&gt;Higher iterations use more weak learners&lt;/li&gt;
+      &lt;li&gt;10 to 50&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Faulty Steel Plates&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&quot;learning-curve-2&quot;&gt;Learning Curve&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;../images/ml-sup/BS_LC_FP.png&quot; alt=&quot;BS_LC_FP&quot; width=&quot;300px&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;High Variance/Low Bias (Overfitting)&lt;/li&gt;
+  &lt;li&gt;100% accuracy on training set while validation set only has around 71% accuracy, so it doesn’t generalize well&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;model-complexity-2&quot;&gt;Model Complexity&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;../images/ml-sup/BS_MC_FP.png&quot; alt=&quot;BS_MC_FP&quot; width=&quot;300px&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Test iterations from 10 to 50 to improve weak learners&lt;/li&gt;
+  &lt;li&gt;Best cv-accuracy at 79.70% when iterations = 40. Tree size is 293 with 147 leaves.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Phishing Websites&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&quot;learning-curve-3&quot;&gt;Learning Curve&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;../images/ml-sup/BS_LC_PW.png&quot; alt=&quot;BS_LC_PW&quot; width=&quot;300px&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Low Variance/Low Bias (Good model)&lt;/li&gt;
+  &lt;li&gt;Training and validation data both above ~92%&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;model-complexity-3&quot;&gt;Model Complexity&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;../images/ml-sup/BS_MC_PW.png&quot; alt=&quot;BS_MC_PW&quot; width=&quot;300px&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Test iterations from 10 to 50 to improve weak learners&lt;/li&gt;
+  &lt;li&gt;Best cv-accuracy at 96.96% when iterations = 30. Tree size is lowest at 19.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;For the learning curves, both datasets improve a lot with more training data:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Faulty Plates from 64% to 79%&lt;/li&gt;
+  &lt;li&gt;Phishing Websites from 92.5% to 97.04%&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This shows with more training data, the model is able to generalize better and achieve a lower variance/bias. Boosting does better than the original decision tree because it improves upon our decision tree base classifier by turning weak learners into a set of strong learners.&lt;/p&gt;
+
+&lt;h3 id=&quot;3-neural-network&quot;&gt;3. Neural Network:&lt;/h3&gt;
+&lt;p&gt;A neural network tries to mimic the brain in mapping inputs to outputs. Weka uses MultiLayerPerceptron - a network of perceptions.&lt;/p&gt;
+
+&lt;p&gt;Hyperparameters:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Hidden Layers
+    &lt;ul&gt;
+      &lt;li&gt;Default of one hidden layer&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Number of Neurons
+    &lt;ul&gt;
+      &lt;li&gt;Default (attributes + classes)/2 neurons in each layer.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Weights (Learning Rate, Momentum)
+    &lt;ul&gt;
+      &lt;li&gt;Weights for the perceptrons are learned from the training set and updated via “backpropagation”.&lt;/li&gt;
+      &lt;li&gt;The change in weight is the learning rate times the gradient plus the previous change in weight times the momentum.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Faulty Steel Plates&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&quot;learning-curve-4&quot;&gt;Learning Curve&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;../images/ml-sup/NN_LC_FP.png&quot; alt=&quot;NN_LC_FP&quot; width=&quot;300px&quot; /&gt;&lt;br /&gt;
+What this means is&lt;/p&gt;
+
+&lt;h4 id=&quot;model-complexity-4&quot;&gt;Model Complexity&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;../images/ml-sup/NN_MC_FP.png&quot; alt=&quot;NN_MC_FP&quot; width=&quot;300px&quot; /&gt;&lt;br /&gt;
+What this mean&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Phishing Websites&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&quot;learning-curve-5&quot;&gt;Learning Curve&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;../images/ml-sup/NN_LC_PW.png&quot; alt=&quot;NN_LC_PW&quot; width=&quot;300px&quot; /&gt;&lt;br /&gt;
+What this mean&lt;/p&gt;
+
+&lt;h4 id=&quot;model-complexity-5&quot;&gt;Model Complexity&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;../images/ml-sup/NN_MC_PW.png&quot; alt=&quot;NN_MC_PW&quot; width=&quot;300px&quot; /&gt;&lt;br /&gt;
+What this mean&lt;/p&gt;
+
+&lt;h3 id=&quot;4-support-vector-machines-svm&quot;&gt;4. Support Vector Machines (SVM):&lt;/h3&gt;
+&lt;p&gt;Support Vector Machines uses hyperplanes to maximize the margins between the different classes. The larger the distance between the hyperplanes, the better the generalization and separation of classes. In Weka, LibSVM is the most popular and robust SVM algorithm. LibSVM uses one vs one classification, where each different pair of labels has a separately trained classifier.&lt;/p&gt;
+
+&lt;p&gt;Hyperparameters:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Kernels
+    &lt;ul&gt;
+      &lt;li&gt;Linear, Polynomial, Radial Basis Function, Sigmoid&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Faulty Steel Plates&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&quot;learning-curve-6&quot;&gt;Learning Curve&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;../images/ml-sup/SVM_LC_FP.png&quot; alt=&quot;SVM_LC_FP&quot; width=&quot;300px&quot; /&gt;&lt;br /&gt;
+What this means is&lt;/p&gt;
+
+&lt;h4 id=&quot;model-complexity-6&quot;&gt;Model Complexity&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;../images/ml-sup/SVM_MC_FP.png&quot; alt=&quot;SVM_MC_FP&quot; width=&quot;300px&quot; /&gt;&lt;br /&gt;
+What this mean&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Phishing Websites&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&quot;learning-curve-7&quot;&gt;Learning Curve&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;../images/ml-sup/SVM_LC_PW.png&quot; alt=&quot;SVM_LC_PW&quot; width=&quot;300px&quot; /&gt;&lt;br /&gt;
+What this mean&lt;/p&gt;
+
+&lt;h4 id=&quot;model-complexity-7&quot;&gt;Model Complexity&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;../images/ml-sup/SVM_MC_PW.png&quot; alt=&quot;SVM_MC_PW&quot; width=&quot;300px&quot; /&gt;&lt;br /&gt;
+What this mean&lt;/p&gt;
+
+&lt;h3 id=&quot;5-k-nearest-neighbors-knn&quot;&gt;5. k-Nearest Neighbors (kNN):&lt;/h3&gt;
+&lt;p&gt;The k-Nearest Neighbor algorithm outputs a classification based on the majority of the number of neighbors. This is an instance based, lazy learner, which means it does nothing until you have to make a prediction. In Weka, IBK is used.&lt;/p&gt;
+
+&lt;p&gt;Hyperparameters:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Number of Nearest Neighbors
+    &lt;ul&gt;
+      &lt;li&gt;Default: 1 Nearest Neighbor&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Distance Function
+    &lt;ul&gt;
+      &lt;li&gt;Default: Euclidean Distance&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Faulty Steel Plates&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&quot;learning-curve-8&quot;&gt;Learning Curve&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;../images/ml-sup/KNN_LC_FP.png&quot; alt=&quot;KNN_LC_FP&quot; width=&quot;300px&quot; /&gt;&lt;br /&gt;
+What this means is&lt;/p&gt;
+
+&lt;h4 id=&quot;model-complexity-8&quot;&gt;Model Complexity&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;../images/ml-sup/KNN_MC_FP.png&quot; alt=&quot;KNN_MC_FP&quot; width=&quot;300px&quot; /&gt;&lt;br /&gt;
+What this mean&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Phishing Websites&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&quot;learning-curve-9&quot;&gt;Learning Curve&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;../images/ml-sup/KNN_LC_PW.png&quot; alt=&quot;KNN_LC_PW&quot; width=&quot;300px&quot; /&gt;&lt;br /&gt;
+What this mean&lt;/p&gt;
+
+&lt;h4 id=&quot;model-complexity-9&quot;&gt;Model Complexity&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;../images/ml-sup/KNN_MC_PW.png&quot; alt=&quot;KNN_MC_PW&quot; width=&quot;300px&quot; /&gt;&lt;br /&gt;
+What this mean&lt;/p&gt;
+
+&lt;!-- ![e](../images/ml-sup/Conclusion.png)   --&gt;
+
+&lt;!-- #### Learning Curve
+**Faulty Steel Plates**
+**Phishing Websites**
+
+#### Model Complexity
+**Faulty Steel Plates**
+**Phishing Websites** --&gt;</content><author><name>Justin Gong</name></author><category term="supervised learning" /><category term="python" /><summary type="html">Supervised Learning, Decision Trees, Boosting, Neural Networks, Support Vector Machines, k-Nearest Neighbors</summary></entry><entry><title type="html">Space Shuttle Challenger</title><link href="http://localhost:4000/bay/" rel="alternate" type="text/html" title="Space Shuttle Challenger" /><published>2018-06-02T00:00:00-04:00</published><updated>2018-06-02T00:00:00-04:00</updated><id>http://localhost:4000/bay</id><content type="html" xml:base="http://localhost:4000/bay/"></content><author><name>Justin Gong</name></author><category term="bayesian statistics" /><category term="WinBUGS" /><summary type="html">Bayesian Statistics, WinBugs</summary></entry><entry><title type="html">Database Systems - Emergency Resource Management System</title><link href="http://localhost:4000/dbm/" rel="alternate" type="text/html" title="Database Systems - Emergency Resource Management System" /><published>2018-06-01T00:00:00-04:00</published><updated>2018-06-01T00:00:00-04:00</updated><id>http://localhost:4000/dbm</id><content type="html" xml:base="http://localhost:4000/dbm/">&lt;!-- # Emergency Resource Management System (ERMS) --&gt;
+&lt;h2 id=&quot;database-systems---team-project&quot;&gt;Database Systems - Team Project&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Team Members:&lt;/strong&gt;&lt;br /&gt;
+Evan Althouse, Chang-Zhou Gong, Tich Mangono, David Ribeiro&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Languages:&lt;/strong&gt;&lt;br /&gt;
+Python, SQL, Javascript, HTML, CSS&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Libraries:&lt;/strong&gt;&lt;br /&gt;
+jQuery&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Frameworks:&lt;/strong&gt;&lt;br /&gt;
+Flask, Bootstrap&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Relational Database Management System:&lt;/strong&gt;&lt;br /&gt;
+MariaDB (MySQL)&lt;/p&gt;
+
+&lt;h2 id=&quot;overview&quot;&gt;Overview:&lt;/h2&gt;
+
+&lt;h3 id=&quot;emergency-resource-management-system-erms&quot;&gt;Emergency Resource Management System (ERMS)&lt;/h3&gt;
+&lt;p&gt;Build an information management tool that supports government agencies and municipalities in locating and activating resources after an emergency such as a natural disaster, hazardous material spill, etc. The system is used because such events require resources above and beyond the set of resources that would normally meet a municipality’s typical operational needs. Users of the system can:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;Add a Resource&lt;/strong&gt; Allows the user to add resources that will be available for use in case of a nearby emergency incident. Other users in the system will be able to search for and request these resources.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Add an Incident&lt;/strong&gt; The user selects this option in order to add some basic information about an emergency incident that has just occurred.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Search for Resources&lt;/strong&gt; This option allows the user to search for and request available resources in the case of an emergency.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Resource Status&lt;/strong&gt; This option allows the user to view currently deployed resources and manage resource requests that she has sent or received.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Resource Report&lt;/strong&gt; This option shows a summary report of all the user’s resources grouped by their primary Emergency Support Function.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;project-separated-into-three-phases&quot;&gt;Project Separated into Three Phases:&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;Phase 1&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://github.com/jjgong7/Database-Systems-Concepts-and-Design/blob/master/Phase%201/team05_p1_eer.pdf&quot;&gt;team05_p1_eer.pdf&lt;/a&gt;
+        &lt;ul&gt;
+          &lt;li&gt;Enhanced Entity-Relationship (EER) Diagram&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://github.com/jjgong7/Database-Systems-Concepts-and-Design/blob/master/Phase%201/team05_p1_ifd.pdf&quot;&gt;team05_p1_ifd.pdf&lt;/a&gt;
+        &lt;ul&gt;
+          &lt;li&gt;Information Flow Diagram (IFD)&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://github.com/jjgong7/Database-Systems-Concepts-and-Design/blob/master/Phase%201/team05_p1_report.pdf&quot;&gt;team05_p1_report.pdf&lt;/a&gt;
+        &lt;ul&gt;
+          &lt;li&gt;Report with Data Types, Business Logic Constraints, Task Decomposition (TD) &amp;amp; Abstract Code (AC)&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Phase 2&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://github.com/jjgong7/Database-Systems-Concepts-and-Design/blob/master/Phase%202/team05_p2_ac+SQL.pdf&quot;&gt;team05_p2_ac+SQL.pdf&lt;/a&gt;
+        &lt;ul&gt;
+          &lt;li&gt;Abstract Code with in-line SQL queries added&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://github.com/jjgong7/Database-Systems-Concepts-and-Design/blob/master/Phase%202/team05_p2_eer2rel.pdf&quot;&gt;team05_p2_eer2rel.pdf&lt;/a&gt;
+        &lt;ul&gt;
+          &lt;li&gt;Enhanced Entity-Relationship (EER) to Relational Mapping&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://github.com/jjgong7/Database-Systems-Concepts-and-Design/blob/master/Phase%202/team05_p2_updatedEER.pdf&quot;&gt;team05_p2_updatedEER.pdf&lt;/a&gt;
+        &lt;ul&gt;
+          &lt;li&gt;Updated Enhanced Entity-Relationship (EER)&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://github.com/jjgong7/Database-Systems-Concepts-and-Design/blob/master/Phase%202/team05_p2_schema.sql&quot;&gt;team05_p2_schema.sql&lt;/a&gt;
+        &lt;ul&gt;
+          &lt;li&gt;SQL Create Table statements to create schema (tables with constraints and keys)&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Phase 3&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Implementation/Code&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+&lt;h1 id=&quot;phase-3&quot;&gt;Phase 3&lt;/h1&gt;
+
+&lt;h2 id=&quot;instructions-to-run&quot;&gt;Instructions to Run:&lt;/h2&gt;
+
+&lt;h3 id=&quot;setup-database-locally&quot;&gt;Setup Database Locally:&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Using Ubuntu or Mac:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Change to root (sudo) user&lt;/li&gt;
+  &lt;li&gt;cd into the directory of this file (setup folder)&lt;/li&gt;
+  &lt;li&gt;Set file permissions:&lt;br /&gt;
+     &lt;code class=&quot;highlighter-rouge&quot;&gt;bash
+     chmod a+rwx &amp;lt;setupUbuntu.sh or setupMac.sh&amp;gt;
+    &lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Run setup shell:
+    &lt;ul&gt;
+      &lt;li&gt;For Ubuntu:
+        &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;nb&quot;&gt;yes&lt;/span&gt; | ./setupUbuntu.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+      &lt;li&gt;For Mac:
+        &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;nb&quot;&gt;yes&lt;/span&gt; | ./setupMac.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;If permissions denied, input the root password in lines 25 to 28 –password= pw and uncomment. Comment out lines 21 to 24.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;running-app&quot;&gt;Running App:&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;cd into directory with app.py&lt;/li&gt;
+  &lt;li&gt;In terminal run:
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; python app.py
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Connect to local host (e.g. http://127.0.0.1:5000/) with browser&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;pages&quot;&gt;Pages&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Overview:&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;Add a Resource&lt;/strong&gt; Allows the user to add resources that will be available for use in case of a nearby emergency incident. Other users in the system will be able to search for and request these resources.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Add an Incident&lt;/strong&gt; The user selects this option in order to add some basic information about an emergency incident that has just occurred.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Search for Resources&lt;/strong&gt; This option allows the user to search for and request available resources in the case of an emergency.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Resource Status&lt;/strong&gt; This option allows the user to view currently deployed resources and manage resource requests that she has sent or received.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Resource Report&lt;/strong&gt; This option shows a summary report of all the user’s resources grouped by their primary Emergency Support Function.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+&lt;h2 id=&quot;login&quot;&gt;Login&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/jjgong7/Database-Systems-Concepts-and-Design/raw/master/Phase%203/images/1.Login.jpg&quot; alt=&quot;Login&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;main-menu&quot;&gt;Main Menu&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/jjgong7/Database-Systems-Concepts-and-Design/raw/master/Phase%203/images/2.MainMenu.jpg&quot; alt=&quot;Main Menu&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;add-resource&quot;&gt;Add Resource&lt;/h2&gt;
+&lt;h3 id=&quot;1-empty-form&quot;&gt;1. Empty Form&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/jjgong7/Database-Systems-Concepts-and-Design/raw/master/Phase%203/images/3a.AddResource.png&quot; alt=&quot;AddResource1&quot; /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;2-empty-form-submit-with-required-fields&quot;&gt;2. Empty Form Submit with Required Fields&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/jjgong7/Database-Systems-Concepts-and-Design/raw/master/Phase%203/images/3b.AddResourceReqField.png&quot; alt=&quot;AddResource2&quot; /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;3-filled-form&quot;&gt;3. Filled Form&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/jjgong7/Database-Systems-Concepts-and-Design/raw/master/Phase%203/images/3c.AddResourceFilled.png&quot; alt=&quot;AddResource3&quot; /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;4-submitted-form&quot;&gt;4. Submitted Form&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/jjgong7/Database-Systems-Concepts-and-Design/raw/master/Phase%203/images/3d.AddResourceSubmitted.png&quot; alt=&quot;AddResource4&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;add-incident&quot;&gt;Add Incident&lt;/h2&gt;
+&lt;h3 id=&quot;1-empty-form-1&quot;&gt;1. Empty Form&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/jjgong7/Database-Systems-Concepts-and-Design/raw/master/Phase%203/images/4a.AddIncident.png&quot; alt=&quot;AddIncident1&quot; /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;2-empty-form-submit-with-required-fields-1&quot;&gt;2. Empty Form Submit with Required Fields&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/jjgong7/Database-Systems-Concepts-and-Design/raw/master/Phase%203/images/4b.AddIncidentReqField.png&quot; alt=&quot;AddIncident2&quot; /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;3-filled-form-1&quot;&gt;3. Filled Form&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/jjgong7/Database-Systems-Concepts-and-Design/raw/master/Phase%203/images/4c.AddIncidentFilled.png&quot; alt=&quot;AddIncident3&quot; /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;4-submitted-form-1&quot;&gt;4. Submitted Form&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/jjgong7/Database-Systems-Concepts-and-Design/raw/master/Phase%203/images/4d.AddIncidentSubmitted.png&quot; alt=&quot;AddIncident4&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;search-resources&quot;&gt;Search Resources&lt;/h2&gt;
+&lt;h3 id=&quot;1-empty-form-2&quot;&gt;1. Empty Form&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/jjgong7/Database-Systems-Concepts-and-Design/raw/master/Phase%203/images/5a.SearchResources.png&quot; alt=&quot;SearchResources1&quot; /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;2-empty-form-search---returns-all-incidents&quot;&gt;2. Empty Form Search - Returns All Incidents&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/jjgong7/Database-Systems-Concepts-and-Design/raw/master/Phase%203/images/5b.SearchResourcesAllIncidents.png&quot; alt=&quot;SearchResources2&quot; /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;3a-search-ford&quot;&gt;3a. Search Ford&lt;/h3&gt;
+&lt;h4 id=&quot;search-criteria---keyword-ford-esf-transportation-location-500-incident-md-3-earthquake&quot;&gt;Search Criteria - Keyword: Ford; ESF: Transportation; Location: 500; Incident: MD-3: Earthquake&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/jjgong7/Database-Systems-Concepts-and-Design/raw/master/Phase%203/images/5c.SearchResourcesFilled.png&quot; alt=&quot;SearchResources3&quot; /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;3b-search-ford---results&quot;&gt;3b. Search Ford - Results&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/jjgong7/Database-Systems-Concepts-and-Design/raw/master/Phase%203/images/5d.SearchResults.png&quot; alt=&quot;SearchResources4&quot; /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;4a-search-incident-md-2-volcano&quot;&gt;4a. Search Incident: MD-2: Volcano&lt;/h3&gt;
+&lt;h4 id=&quot;search-criteria---esf-transportation-location-5000-incident-md-2-volcano&quot;&gt;Search Criteria - ESF: Transportation; Location: 5000; Incident: MD-2: Volcano&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/jjgong7/Database-Systems-Concepts-and-Design/raw/master/Phase%203/images/5e.SearchVolcano.png&quot; alt=&quot;SearchResources5&quot; /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;4b-search-ford---results&quot;&gt;4b. Search Ford - Results&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/jjgong7/Database-Systems-Concepts-and-Design/raw/master/Phase%203/images/5e.SearchResultsVolcano.png&quot; alt=&quot;SearchResources6&quot; /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;4c-search-ford---requested-fbi-police-car-pending-request&quot;&gt;4c. Search Ford - Requested FBI Police Car (Pending Request)&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/jjgong7/Database-Systems-Concepts-and-Design/raw/master/Phase%203/images/5e.SearchResultsVolcanoReq.png&quot; alt=&quot;SearchResources7&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;resource-status&quot;&gt;Resource Status&lt;/h2&gt;
+&lt;h3 id=&quot;1-resource-status-for-current-user-testindividual&quot;&gt;1. Resource Status for Current User (testindividual)&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/jjgong7/Database-Systems-Concepts-and-Design/raw/master/Phase%203/images/6a.ResourceStatus.png&quot; alt=&quot;ResourceStatus1&quot; /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;2-return-resource-other-users-resource---peters-other-fire-truck&quot;&gt;2. Return Resource (Other User’s Resource) - Peter’s Other Fire Truck&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/jjgong7/Database-Systems-Concepts-and-Design/raw/master/Phase%203/images/6b.ResourceStatusReturn.png&quot; alt=&quot;ResourceStatus2&quot; /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;3-deploy-resource-owned-resource---fire-truck&quot;&gt;3. Deploy Resource (Owned Resource) - Fire Truck&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/jjgong7/Database-Systems-Concepts-and-Design/raw/master/Phase%203/images/6c.ResourceRequestDeploy.png&quot; alt=&quot;ResourceStatus3&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;resource-report&quot;&gt;Resource Report&lt;/h2&gt;
+&lt;h3 id=&quot;resource-report-by-primary-esf&quot;&gt;Resource Report By Primary ESF&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/jjgong7/Database-Systems-Concepts-and-Design/raw/master/Phase%203/images/7a.ResourceReport.png&quot; alt=&quot;ResourceReport1&quot; /&gt;&lt;/p&gt;</content><author><name>Justin Gong</name></author><category term="python" /><category term="flask" /><category term="sql" /><summary type="html">Python, Javascript, Database Systems, MySQL, Flask</summary></entry><entry><title type="html">Computational Data Analytics Assignments</title><link href="http://localhost:4000/cda/" rel="alternate" type="text/html" title="Computational Data Analytics Assignments" /><published>2018-04-01T00:00:00-04:00</published><updated>2018-04-01T00:00:00-04:00</updated><id>http://localhost:4000/cda</id><content type="html" xml:base="http://localhost:4000/cda/">&lt;!-- 
+# Computational Data Analysis --&gt;
+
+&lt;h2 id=&quot;description&quot;&gt;Description:&lt;/h2&gt;
+&lt;p&gt;Course includes hands-on introduction to programming techniques relevant to data analysis and machine learning. Most of the programming exercises are based on Python and SQL.&lt;/p&gt;
+
+&lt;p&gt;Notebooks are built “from scratch,” of the basic components of a data analysis pipeline: collection, preprocessing, storage, analysis, and visualization. There are several examples of high-level data analysis questions, concepts and techniques for formalizing those questions into mathematical or computational tasks, and methods for translating those tasks into code. Beyond programming and best practices, notebooks include elementary data processing algorithms, notions of program correctness and efficiency, and numerical methods for linear
+algebra and mathematical optimization.&lt;/p&gt;
+
+&lt;h2 id=&quot;notebooks&quot;&gt;Notebooks:&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/jjgong7/Computational-Data-Analytics/tree/master/Notebook%201&quot;&gt;Notebook 1: Python Essentials&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/jjgong7/Computational-Data-Analytics/tree/master/Notebook%202&quot;&gt;Notebook 2: Pariwise Association Mining&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Notebook 3: Math Review (Not present)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/jjgong7/Computational-Data-Analytics/tree/master/Notebook%204&quot;&gt;Notebook 4: Representing Numbers&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/jjgong7/Computational-Data-Analytics/tree/master/Notebook%205&quot;&gt;Notebook 5: Preprocessing Unstructured Text (Regex)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/jjgong7/Computational-Data-Analytics/tree/master/Notebook%206&quot;&gt;Notebook 6: Mining the Web (BeautifulSoup, APIs, JSON)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/jjgong7/Computational-Data-Analytics/tree/master/Notebook%207&quot;&gt;Notebook 7: Tidying Data (Tibbles, Melting, and Casting)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/jjgong7/Computational-Data-Analytics/tree/master/Notebook%208&quot;&gt;Notebook 8: Visualizing Data and Results (Bokeh, Seaborn)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/jjgong7/Computational-Data-Analytics/tree/master/Notebook%209&quot;&gt;Notebook 9: Relational Data (SQL, SQLite3)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/jjgong7/Computational-Data-Analytics/tree/master/Notebook%2010&quot;&gt;Notebook 10: Numerical Computing with Numpy/Scipy (Sparse Matrix, COO, CSR)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/jjgong7/Computational-Data-Analytics/tree/master/Notebook%2011&quot;&gt;Notebook 11: Ranking Relational Objects (Markov Chain Analysis)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/jjgong7/Computational-Data-Analytics/tree/master/Notebook%2012&quot;&gt;Notebook 12: Linear Regression&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/jjgong7/Computational-Data-Analytics/tree/master/Notebook%2013&quot;&gt;Notebook 13: Classification (Logistic Regression)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/jjgong7/Computational-Data-Analytics/tree/master/Notebook%2014&quot;&gt;Notebook 14: Clustering via k-means&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/jjgong7/Computational-Data-Analytics/tree/master/Notebook%2015&quot;&gt;Notebook 15: Compression via PCA&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/jjgong7/Computational-Data-Analytics/tree/master/Notebook%2016&quot;&gt;Notebook 16: Eigenfaces&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;Languages:&lt;/strong&gt;&lt;br /&gt;
+Python 3.6, SQL&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Libraries:&lt;/strong&gt;&lt;br /&gt;
+Pandas, NumPy, SciPy, re, matplotlib, seaborn, bokeh, collections, itertools&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Relational Database Management System:&lt;/strong&gt;&lt;br /&gt;
+SQLite3&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Environments:&lt;/strong&gt;&lt;br /&gt;
+Jupyter Notebooks&lt;/p&gt;</content><author><name>Justin Gong</name></author><category term="machine learning" /><category term="python" /><category term="supervised learning" /><summary type="html">Python, Numpy, Pandas, Supervised Learning, Data Science, Machine Learning</summary></entry></feed>
