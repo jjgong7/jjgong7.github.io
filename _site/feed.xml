@@ -1,4 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-07-09T16:01:40-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Justin Gong</title><subtitle>Data Science Portfolio</subtitle><author><name>Justin Gong</name></author><entry><title type="html">Supervised Learning</title><link href="http://localhost:4000/sl/" rel="alternate" type="text/html" title="Supervised Learning" /><published>2018-06-03T00:00:00-04:00</published><updated>2018-06-03T00:00:00-04:00</updated><id>http://localhost:4000/sl</id><content type="html" xml:base="http://localhost:4000/sl/">&lt;!-- # Supervised Learning --&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-07-11T18:24:21-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Justin Gong</title><subtitle>Data Science Portfolio</subtitle><author><name>Justin Gong</name></author><entry><title type="html">Supervised Learning</title><link href="http://localhost:4000/sl/" rel="alternate" type="text/html" title="Supervised Learning" /><published>2018-06-03T00:00:00-04:00</published><updated>2018-06-03T00:00:00-04:00</updated><id>http://localhost:4000/sl</id><content type="html" xml:base="http://localhost:4000/sl/">&lt;h2 id=&quot;objective&quot;&gt;Objective:&lt;/h2&gt;
+
+&lt;p&gt;Details for this project are available on &lt;a href=&quot;https://github.com/jjgong7/Machine-Learning/tree/master/1%20-%20Supervised%20Learning&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+
 &lt;p&gt;Analyze two datasets using five different supervised learning algorithms. Weka, a suite of machine learning software written in Java, is used for analysis.&lt;/p&gt;
 
 &lt;h2 id=&quot;datasets-used&quot;&gt;Datasets used:&lt;/h2&gt;
@@ -68,6 +71,8 @@ Identifying phishing websites can:&lt;/p&gt;
 &lt;hr /&gt;
 
 &lt;h3 id=&quot;1-decision-tree&quot;&gt;1. Decision Tree:&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;../images/ml-sup/dt.jpg&quot; alt=&quot;Decision Tree&quot; width=&quot;500px&quot; /&gt;&lt;/p&gt;
+
 &lt;p&gt;This is a top down learning algorithm that splits the best attributes (decision nodes) based on information gain. The branches are the outcomes of the binary splits (≥,≤ or T, F) and the leaf nodes represent a classifying label.&lt;/p&gt;
 
 &lt;p&gt;Hyperparameters:&lt;/p&gt;
@@ -84,24 +89,24 @@ Identifying phishing websites can:&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;Faulty Steel Plates&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Faulty Steel Plates: Decision Tree&lt;/strong&gt;&lt;/p&gt;
 &lt;h4 id=&quot;learning-curve&quot;&gt;Learning Curve&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&quot;../images/ml-sup/DT_LC_FP.png&quot; alt=&quot;DT_LC_FP&quot; width=&quot;300px&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../images/ml-sup/DT_LC_FP.png&quot; alt=&quot;DT_LC_FP&quot; width=&quot;350px&quot; /&gt;&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;High Variance/Low Bias (Overfitting)&lt;/li&gt;
   &lt;li&gt;Training accuracy ~93% while validation accuracy ~70%&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h4 id=&quot;model-complexity&quot;&gt;Model Complexity&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&quot;../images/ml-sup/DT_MC_FP.png&quot; alt=&quot;DT_MC_FP&quot; width=&quot;300px&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../images/ml-sup/DT_MC_FP.png&quot; alt=&quot;DT_MC_FP&quot; width=&quot;350px&quot; /&gt;&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Adjusted confidence factor from 0.1 to 0.5&lt;/li&gt;
-  &lt;li&gt;With confidence factor = 0.5, tree size is 432, and has second highest cv-accuracy after the unpruned tree.&lt;/li&gt;
+  &lt;li&gt;With confidence factor = 0.2, tree size is 257 with 129 leaves, cv-accuracy is 73.32%.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;Phishing Websites&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Phishing Websites: Decision Tree&lt;/strong&gt;&lt;/p&gt;
 &lt;h4 id=&quot;learning-curve-1&quot;&gt;Learning Curve&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&quot;../images/ml-sup/DT_LC_PW.png&quot; alt=&quot;DT_LC_PW&quot; width=&quot;300px&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../images/ml-sup/DT_LC_PW.png&quot; alt=&quot;DT_LC_PW&quot; width=&quot;350px&quot; /&gt;&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Low Variance/Low Bias (Good Model)&lt;/li&gt;
   &lt;li&gt;Accuracy is high for both training and validation set&lt;/li&gt;
@@ -109,14 +114,16 @@ Identifying phishing websites can:&lt;/p&gt;
 &lt;/ul&gt;
 
 &lt;h4 id=&quot;model-complexity-1&quot;&gt;Model Complexity&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&quot;../images/ml-sup/DT_MC_PW.png&quot; alt=&quot;DT_MC_PW&quot; width=&quot;300px&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../images/ml-sup/DT_MC_PW.png&quot; alt=&quot;DT_MC_PW&quot; width=&quot;350px&quot; /&gt;&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;With confidence factor = 0.2, tree size is 257 with 129 leaves, CV-accuracy is 73.32%.&lt;/li&gt;
+  &lt;li&gt;With confidence factor = 0.5, tree size is 432, and has second highest cv-accuracy after the unpruned tree.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Phishing websites has a much better classification accuracy than faulty plates. This can be because faulty plates dataset has seven different class labels, while phishing websites only has a binary label.&lt;/p&gt;
 
 &lt;h3 id=&quot;2-boosting&quot;&gt;2. Boosting:&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;../images/ml-sup/bs.png&quot; alt=&quot;Boosting&quot; width=&quot;500px&quot; /&gt;&lt;/p&gt;
+
 &lt;p&gt;Boosting is an ensemble learning method that incrementally builds the model by placing more weight on the misclassified data. It basically turns a set of weak learners, which always do better than chance, into a single strong learner. In Weka, the boosting algorithm is called AdaBoostM1.&lt;/p&gt;
 
 &lt;p&gt;Hyperparameters:&lt;/p&gt;
@@ -136,31 +143,31 @@ Identifying phishing websites can:&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;Faulty Steel Plates&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Faulty Steel Plates: Boosting&lt;/strong&gt;&lt;/p&gt;
 &lt;h4 id=&quot;learning-curve-2&quot;&gt;Learning Curve&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&quot;../images/ml-sup/BS_LC_FP.png&quot; alt=&quot;BS_LC_FP&quot; width=&quot;300px&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../images/ml-sup/BS_LC_FP.png&quot; alt=&quot;BS_LC_FP&quot; width=&quot;350px&quot; /&gt;&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;High Variance/Low Bias (Overfitting)&lt;/li&gt;
   &lt;li&gt;100% accuracy on training set while validation set only has around 71% accuracy, so it doesn’t generalize well&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h4 id=&quot;model-complexity-2&quot;&gt;Model Complexity&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&quot;../images/ml-sup/BS_MC_FP.png&quot; alt=&quot;BS_MC_FP&quot; width=&quot;300px&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../images/ml-sup/BS_MC_FP.png&quot; alt=&quot;BS_MC_FP&quot; width=&quot;350px&quot; /&gt;&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Test iterations from 10 to 50 to improve weak learners&lt;/li&gt;
   &lt;li&gt;Best cv-accuracy at 79.70% when iterations = 40. Tree size is 293 with 147 leaves.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;Phishing Websites&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Phishing Websites: Boosting&lt;/strong&gt;&lt;/p&gt;
 &lt;h4 id=&quot;learning-curve-3&quot;&gt;Learning Curve&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&quot;../images/ml-sup/BS_LC_PW.png&quot; alt=&quot;BS_LC_PW&quot; width=&quot;300px&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../images/ml-sup/BS_LC_PW.png&quot; alt=&quot;BS_LC_PW&quot; width=&quot;350px&quot; /&gt;&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Low Variance/Low Bias (Good model)&lt;/li&gt;
-  &lt;li&gt;Training and validation data both above ~92%&lt;/li&gt;
+  &lt;li&gt;Training and validation data are both above ~92%&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h4 id=&quot;model-complexity-3&quot;&gt;Model Complexity&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&quot;../images/ml-sup/BS_MC_PW.png&quot; alt=&quot;BS_MC_PW&quot; width=&quot;300px&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../images/ml-sup/BS_MC_PW.png&quot; alt=&quot;BS_MC_PW&quot; width=&quot;350px&quot; /&gt;&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Test iterations from 10 to 50 to improve weak learners&lt;/li&gt;
   &lt;li&gt;Best cv-accuracy at 96.96% when iterations = 30. Tree size is lowest at 19.&lt;/li&gt;
@@ -175,6 +182,8 @@ Identifying phishing websites can:&lt;/p&gt;
 &lt;p&gt;This shows with more training data, the model is able to generalize better and achieve a lower variance/bias. Boosting does better than the original decision tree because it improves upon our decision tree base classifier by turning weak learners into a set of strong learners.&lt;/p&gt;
 
 &lt;h3 id=&quot;3-neural-network&quot;&gt;3. Neural Network:&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;../images/ml-sup/nn.jpeg&quot; alt=&quot;Neural Network&quot; width=&quot;500px&quot; /&gt;&lt;/p&gt;
+
 &lt;p&gt;A neural network tries to mimic the brain in mapping inputs to outputs. Weka uses MultiLayerPerceptron - a network of perceptions.&lt;/p&gt;
 
 &lt;p&gt;Hyperparameters:&lt;/p&gt;
@@ -197,25 +206,60 @@ Identifying phishing websites can:&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;Faulty Steel Plates&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Faulty Steel Plates: Neural Network&lt;/strong&gt;&lt;/p&gt;
 &lt;h4 id=&quot;learning-curve-4&quot;&gt;Learning Curve&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&quot;../images/ml-sup/NN_LC_FP.png&quot; alt=&quot;NN_LC_FP&quot; width=&quot;300px&quot; /&gt;&lt;br /&gt;
-What this means is&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../images/ml-sup/NN_LC_FP.png&quot; alt=&quot;NN_LC_FP&quot; width=&quot;350px&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;High Variance/Low Bias (Overfitting)&lt;/li&gt;
+  &lt;li&gt;Variance decreases as more of the data is used for training since training and cv-accuracy slightly converge.&lt;/li&gt;
+  &lt;li&gt;Bias increases slightly as the model performs worse on training set.&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h4 id=&quot;model-complexity-4&quot;&gt;Model Complexity&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&quot;../images/ml-sup/NN_MC_FP.png&quot; alt=&quot;NN_MC_FP&quot; width=&quot;300px&quot; /&gt;&lt;br /&gt;
-What this mean&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../images/ml-sup/NN_MC_FP.png&quot; alt=&quot;NN_MC_FP&quot; width=&quot;350px&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Altered amount of neurons for hidden layer, optimal was 16 neurons = [(attributes+classes)/2] neurons&lt;/li&gt;
+  &lt;li&gt;As number of hidden layers increased, the cv-accuracy decreased&lt;/li&gt;
+  &lt;li&gt;Altered learning rate (default=0.2) and momentum (default=0.3)
+    &lt;ul&gt;
+      &lt;li&gt;Lower rates produced better results (smaller steps in calculating the weight change), but also longer training time.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Optimal: 1 hidden layer, 16 neurons, and learning rate and momentum of 0.1
+    &lt;ul&gt;
+      &lt;li&gt;cv-accuracy of 72.87%&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;Phishing Websites&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Phishing Websites: Neural Network&lt;/strong&gt;&lt;/p&gt;
 &lt;h4 id=&quot;learning-curve-5&quot;&gt;Learning Curve&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&quot;../images/ml-sup/NN_LC_PW.png&quot; alt=&quot;NN_LC_PW&quot; width=&quot;300px&quot; /&gt;&lt;br /&gt;
-What this mean&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../images/ml-sup/NN_LC_PW.png&quot; alt=&quot;NN_LC_PW&quot; width=&quot;350px&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Low Variance/Low Bias (Good model)&lt;/li&gt;
+  &lt;li&gt;Variance decreases with more training data&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h4 id=&quot;model-complexity-5&quot;&gt;Model Complexity&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&quot;../images/ml-sup/NN_MC_PW.png&quot; alt=&quot;NN_MC_PW&quot; width=&quot;300px&quot; /&gt;&lt;br /&gt;
-What this mean&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../images/ml-sup/NN_MC_PW.png&quot; alt=&quot;NN_MC_PW&quot; width=&quot;350px&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Altered amount of neurons for hidden layer, optimal was 16 neurons = [(attributes+classes)/2] neurons&lt;/li&gt;
+  &lt;li&gt;As number of hidden layers increased, the cv-accuracy decreased&lt;/li&gt;
+  &lt;li&gt;Altered learning rate (default=0.2) and momentum (default=0.3)
+    &lt;ul&gt;
+      &lt;li&gt;Lower rates produced better results (smaller steps in calculating the weight change), but also longer training time.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Optimal: 1 hidden layer, 16 neurons, and learning rate and momentum of 0.1
+    &lt;ul&gt;
+      &lt;li&gt;cv-accuracy of 96.69%&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h3 id=&quot;4-support-vector-machines-svm&quot;&gt;4. Support Vector Machines (SVM):&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;../images/ml-sup/svm.png&quot; alt=&quot;SVM&quot; width=&quot;500px&quot; /&gt;&lt;/p&gt;
+
 &lt;p&gt;Support Vector Machines uses hyperplanes to maximize the margins between the different classes. The larger the distance between the hyperplanes, the better the generalization and separation of classes. In Weka, LibSVM is the most popular and robust SVM algorithm. LibSVM uses one vs one classification, where each different pair of labels has a separately trained classifier.&lt;/p&gt;
 
 &lt;p&gt;Hyperparameters:&lt;/p&gt;
@@ -227,25 +271,40 @@ What this mean&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;Faulty Steel Plates&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Faulty Steel Plates: SVM&lt;/strong&gt;&lt;/p&gt;
 &lt;h4 id=&quot;learning-curve-6&quot;&gt;Learning Curve&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&quot;../images/ml-sup/SVM_LC_FP.png&quot; alt=&quot;SVM_LC_FP&quot; width=&quot;300px&quot; /&gt;&lt;br /&gt;
-What this means is&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../images/ml-sup/SVM_LC_FP.png&quot; alt=&quot;SVM_LC_FP&quot; width=&quot;350px&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;High Variance/Low Bias (Overfitting)&lt;/li&gt;
+  &lt;li&gt;Training set has 100% accuracy, while the validation set only performs around 62% - the worst performing algorithm yet!&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h4 id=&quot;model-complexity-6&quot;&gt;Model Complexity&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&quot;../images/ml-sup/SVM_MC_FP.png&quot; alt=&quot;SVM_MC_FP&quot; width=&quot;300px&quot; /&gt;&lt;br /&gt;
-What this mean&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../images/ml-sup/SVM_MC_FP.png&quot; alt=&quot;SVM_MC_FP&quot; width=&quot;350px&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Linear kernel performs best with a cv-accuracy of 69.91%&lt;/li&gt;
+  &lt;li&gt;Poorest performing algorithm for faulty plates, most likely because the hyperplanes aren’t able to separate the seven classes well. It performs better on binary classification.&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;Phishing Websites&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Phishing Websites: SVM&lt;/strong&gt;&lt;/p&gt;
 &lt;h4 id=&quot;learning-curve-7&quot;&gt;Learning Curve&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&quot;../images/ml-sup/SVM_LC_PW.png&quot; alt=&quot;SVM_LC_PW&quot; width=&quot;300px&quot; /&gt;&lt;br /&gt;
-What this mean&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../images/ml-sup/SVM_LC_PW.png&quot; alt=&quot;SVM_LC_PW&quot; width=&quot;350px&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Low Variance/Low Bias&lt;/li&gt;
+  &lt;li&gt;Training accuracy and cv-accuracy are almost identical&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h4 id=&quot;model-complexity-7&quot;&gt;Model Complexity&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&quot;../images/ml-sup/SVM_MC_PW.png&quot; alt=&quot;SVM_MC_PW&quot; width=&quot;300px&quot; /&gt;&lt;br /&gt;
-What this mean&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../images/ml-sup/SVM_MC_PW.png&quot; alt=&quot;SVM_MC_PW&quot; width=&quot;350px&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Radial Basis Function kernel with default hyperparameters performs best with ~94% accuracy.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Based on the learning curves, both models generalize better as the training set increases.&lt;/p&gt;
 
 &lt;h3 id=&quot;5-k-nearest-neighbors-knn&quot;&gt;5. k-Nearest Neighbors (kNN):&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;../images/ml-sup/knn.png&quot; alt=&quot;KNN&quot; width=&quot;500px&quot; /&gt;&lt;/p&gt;
+
 &lt;p&gt;The k-Nearest Neighbor algorithm outputs a classification based on the majority of the number of neighbors. This is an instance based, lazy learner, which means it does nothing until you have to make a prediction. In Weka, IBK is used.&lt;/p&gt;
 
 &lt;p&gt;Hyperparameters:&lt;/p&gt;
@@ -262,34 +321,695 @@ What this mean&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;Faulty Steel Plates&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Faulty Steel Plates: kNN&lt;/strong&gt;&lt;/p&gt;
 &lt;h4 id=&quot;learning-curve-8&quot;&gt;Learning Curve&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&quot;../images/ml-sup/KNN_LC_FP.png&quot; alt=&quot;KNN_LC_FP&quot; width=&quot;300px&quot; /&gt;&lt;br /&gt;
-What this means is&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../images/ml-sup/KNN_LC_FP.png&quot; alt=&quot;KNN_LC_FP&quot; width=&quot;350px&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;High Variance/Low Bias (Overfitting)&lt;/li&gt;
+  &lt;li&gt;Training set shows 100% accuracy, while cv-accuracy is 71%&lt;/li&gt;
+  &lt;li&gt;Model doesn’t improve much with more training data&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h4 id=&quot;model-complexity-8&quot;&gt;Model Complexity&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&quot;../images/ml-sup/KNN_MC_FP.png&quot; alt=&quot;KNN_MC_FP&quot; width=&quot;300px&quot; /&gt;&lt;br /&gt;
-What this mean&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../images/ml-sup/KNN_MC_FP.png&quot; alt=&quot;KNN_MC_FP&quot; width=&quot;350px&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Number of nearest neighbors adjusted from 1 to 20
+    &lt;ul&gt;
+      &lt;li&gt;As number of neighbors increases, more bias is introduced because the cv-accuracy and training accuracy get worse.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Optimal number of neighbors is k=5, with 71.59% cv-accuracy&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;Phishing Websites&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Phishing Websites: kNN&lt;/strong&gt;&lt;/p&gt;
 &lt;h4 id=&quot;learning-curve-9&quot;&gt;Learning Curve&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&quot;../images/ml-sup/KNN_LC_PW.png&quot; alt=&quot;KNN_LC_PW&quot; width=&quot;300px&quot; /&gt;&lt;br /&gt;
-What this mean&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../images/ml-sup/KNN_LC_PW.png&quot; alt=&quot;KNN_LC_PW&quot; width=&quot;350px&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Low Variance/Low Bias&lt;/li&gt;
+  &lt;li&gt;Model improves significantly with more training data, cv-accuracy improves by over 6% from 10% training data to 100%. Variance decreases.&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h4 id=&quot;model-complexity-9&quot;&gt;Model Complexity&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&quot;../images/ml-sup/KNN_MC_PW.png&quot; alt=&quot;KNN_MC_PW&quot; width=&quot;300px&quot; /&gt;&lt;br /&gt;
-What this mean&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../images/ml-sup/KNN_MC_PW.png&quot; alt=&quot;KNN_MC_PW&quot; width=&quot;350px&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Number of nearest neighbors adjusted from 1 to 20
+    &lt;ul&gt;
+      &lt;li&gt;As number of neighbors increases, more bias is introduced because the cv-accuracy and training accuracy get worse.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Optimal number of neighbors is k=1, with 97.04% cv-accuracy&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;!-- ![e](../images/ml-sup/Conclusion.png)   --&gt;
+&lt;h3 id=&quot;conclusion&quot;&gt;Conclusion:&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;../images/ml-sup/Conclusion.png&quot; alt=&quot;Summary&quot; width=&quot;500px&quot; /&gt;&lt;/p&gt;
 
-&lt;!-- #### Learning Curve
-**Faulty Steel Plates**
-**Phishing Websites**
+&lt;ul&gt;
+  &lt;li&gt;After hyperparameter tuning and selecting the best hyperparameters, test set is used to determine the final performance and quality of the models.&lt;/li&gt;
+  &lt;li&gt;Accuracy and confusion matrix were used to determine the best models&lt;/li&gt;
+  &lt;li&gt;Faulty Steel Plates Dataset:
+    &lt;ul&gt;
+      &lt;li&gt;Boosting Algorithm with Decision Tree Base Classifier produces the best test accuracy at 77.12%. Decision Tree was second.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Phishing Websites Dataset:
+    &lt;ul&gt;
+      &lt;li&gt;Decision Tree, Boosting, and Multilayer Perceptron all do well with an accuracy of ~96%&lt;/li&gt;
+      &lt;li&gt;KNN performs best on the test set with 97.06% accuracy&lt;/li&gt;
+      &lt;li&gt;KNN also a fast algorithm since it’s a lazy learner that only tests for 5 nearest neighbors&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Justin Gong</name></author><category term="supervised learning" /><category term="python" /><summary type="html">Supervised Learning, Decision Trees, Boosting, Neural Networks, Support Vector Machines, k-Nearest Neighbors</summary></entry><entry><title type="html">Space Shuttle Challenger</title><link href="http://localhost:4000/bay/" rel="alternate" type="text/html" title="Space Shuttle Challenger" /><published>2018-06-02T00:00:00-04:00</published><updated>2018-06-02T00:00:00-04:00</updated><id>http://localhost:4000/bay</id><content type="html" xml:base="http://localhost:4000/bay/">&lt;p&gt;Code for this project is available on &lt;a href=&quot;https://github.com/jjgong7/Bayesian-Statistics&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;</content><author><name>Justin Gong</name></author><category term="bayesian statistics" /><category term="WinBUGS" /><summary type="html">Bayesian Statistics, WinBugs</summary></entry><entry><title type="html">Unsupervised Learning</title><link href="http://localhost:4000/ul/" rel="alternate" type="text/html" title="Unsupervised Learning" /><published>2018-06-02T00:00:00-04:00</published><updated>2018-06-02T00:00:00-04:00</updated><id>http://localhost:4000/ul</id><content type="html" xml:base="http://localhost:4000/ul/">&lt;h2 id=&quot;objective&quot;&gt;Objective:&lt;/h2&gt;
+&lt;p&gt;Details for this project are available on &lt;a href=&quot;https://github.com/jjgong7/Machine-Learning/tree/master/3%20-%20Unsupervised%20Learning%20and%20Dimensionality%20Reduction&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
 
-#### Model Complexity
-**Faulty Steel Plates**
-**Phishing Websites** --&gt;</content><author><name>Justin Gong</name></author><category term="supervised learning" /><category term="python" /><summary type="html">Supervised Learning, Decision Trees, Boosting, Neural Networks, Support Vector Machines, k-Nearest Neighbors</summary></entry><entry><title type="html">Space Shuttle Challenger</title><link href="http://localhost:4000/bay/" rel="alternate" type="text/html" title="Space Shuttle Challenger" /><published>2018-06-02T00:00:00-04:00</published><updated>2018-06-02T00:00:00-04:00</updated><id>http://localhost:4000/bay</id><content type="html" xml:base="http://localhost:4000/bay/"></content><author><name>Justin Gong</name></author><category term="bayesian statistics" /><category term="WinBUGS" /><summary type="html">Bayesian Statistics, WinBugs</summary></entry><entry><title type="html">Database Systems - Emergency Resource Management System</title><link href="http://localhost:4000/dbm/" rel="alternate" type="text/html" title="Database Systems - Emergency Resource Management System" /><published>2018-06-01T00:00:00-04:00</published><updated>2018-06-01T00:00:00-04:00</updated><id>http://localhost:4000/dbm</id><content type="html" xml:base="http://localhost:4000/dbm/">&lt;!-- # Emergency Resource Management System (ERMS) --&gt;
+&lt;p&gt;Six different algorithms are implemented; the first two are clustering – k-means clustering and Expectation Maximization and the last four are dimensionality reduction algorithms – PCA, ICA, Randomized Projections, and Random Forest. The experiments are split into four main parts. All algorithms are evaluated using Scikit-learn in Python.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Part 1:
+    &lt;ul&gt;
+      &lt;li&gt;Applies clustering on both datasets&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Part 2:
+    &lt;ul&gt;
+      &lt;li&gt;Applies dimensionality reduction algorithms on both datasets&lt;/li&gt;
+      &lt;li&gt;Reproduces clustering experiments with dimensionality reduction on both datasets&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Part 3:
+    &lt;ul&gt;
+      &lt;li&gt;Applies dimensionality reduction algorithms to the Faulty Plates datasets&lt;/li&gt;
+      &lt;li&gt;Run Neural Network on the data&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Part 4:
+    &lt;ul&gt;
+      &lt;li&gt;Applies clustering algorithms and uses the clusters as new features for the Neural Network on the Faulty Plates dataset&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;datasets-used&quot;&gt;Datasets used:&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Faulty Steel Plates&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;1,941 instances; 27 attributes; 7 labels&lt;/li&gt;
+  &lt;li&gt;Steel Plates are classified into 7 different faulty categories - Pastry, Z_Scratch, K_Scratch, Stains, Dirtiness, Bumps, and Other_Faults&lt;/li&gt;
+  &lt;li&gt;Other_Faults ~ 35%, Bumps ~ 20%, K_Scratch ~ 20%&lt;/li&gt;
+  &lt;li&gt;All features are numerical&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Breast Cancer&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;569 instances, 31 attributes, binary label&lt;/li&gt;
+  &lt;li&gt;Features are measurements calculated from a digitized image of a breast mass&lt;/li&gt;
+  &lt;li&gt;Classifies whether a breast mass is malignant or benign&lt;/li&gt;
+  &lt;li&gt;357 Benign, 212 Malignant&lt;/li&gt;
+  &lt;li&gt;All features are real valued&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;why-are-the-datasets-interesting&quot;&gt;Why are the datasets interesting?&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Faulty Steel Plates&lt;/strong&gt;&lt;br /&gt;
+Identifying faulty steel plates:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Improve safety and reduce costs (return fees)&lt;/li&gt;
+  &lt;li&gt;Reduce amount of defective plates used and in circulation&lt;/li&gt;
+  &lt;li&gt;Applicable to evaluating other types of defective metals&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Breast Cancer&lt;/strong&gt;&lt;br /&gt;
+Identifying breast cancer:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Breast Cancer affects about 200,000 women a year in the U.S.&lt;/li&gt;
+  &lt;li&gt;About 12% of U.S. women develop breast cancer in their lifteime&lt;/li&gt;
+  &lt;li&gt;Early identification of malignant breast mass cells using machine learning is very beneficial for prevention, treatment, and potentially saves lives.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Algorithms Used:&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Clustering (k-means and EM)&lt;/li&gt;
+  &lt;li&gt;Neural Network&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Dimensionality Reduction&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Principal Component Analysis (PCA)&lt;/li&gt;
+  &lt;li&gt;Independent Component Analysis (ICA)&lt;/li&gt;
+  &lt;li&gt;Random Projections (RP)&lt;/li&gt;
+  &lt;li&gt;Random Forest (RF)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;part-1-clustering&quot;&gt;Part 1: Clustering&lt;/h2&gt;
+&lt;p&gt;Clustering is an unsupervised learning algorithm that groups a set of observations together that are similar to each other compared to those in other groups.&lt;/p&gt;
+
+&lt;p&gt;K-Means:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Takes in a parameter k, for the amount of clusters, and randomly generates k means&lt;/li&gt;
+  &lt;li&gt;K-clusters are formed based on associating each observation to the closest mean&lt;/li&gt;
+  &lt;li&gt;The least squared Euclidean distance is used for measurement&lt;/li&gt;
+  &lt;li&gt;The center of each of the clusters becomes the new mean&lt;/li&gt;
+  &lt;li&gt;These steps are iterated until convergence is reached&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Expectation-Maximization:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Iterative method using maximum likelihood to find the clusters means&lt;/li&gt;
+  &lt;li&gt;Alternates between a soft clustering (Expectation) and computing the means of a soft cluster (Maximization)&lt;/li&gt;
+  &lt;li&gt;Expectation calculates the likelihood that the observation is in a certain cluster based on the mean&lt;/li&gt;
+  &lt;li&gt;Maximization computes the means from likelihoods, using weighted averages of the data points&lt;/li&gt;
+  &lt;li&gt;Each step maximizes the likelihood of the distribution until convergence.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;To find a good k:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;K-means:
+    &lt;ul&gt;
+      &lt;li&gt;Sum of Squared Distances within clusters vs # of clusters
+        &lt;ul&gt;
+          &lt;li&gt;Elbow point where SSE decreases sharply, can be used to determine k&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Expectation-Maximization:
+    &lt;ul&gt;
+      &lt;li&gt;Log-likelihood
+        &lt;ul&gt;
+          &lt;li&gt;Calculates the likelihood that the data is to be generated by the parameters estimated&lt;/li&gt;
+          &lt;li&gt;Higher likelihood means that the data is more likely to be generated by the estimated parameters (tradeoff with overfitting)&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Both:
+    &lt;ul&gt;
+      &lt;li&gt;Silhouette Score:
+        &lt;ul&gt;
+          &lt;li&gt;Takes into account both intra and inter cluster distances
+            &lt;ul&gt;
+              &lt;li&gt;Explains how similar an observation is to its own cluster compared to other clusters.&lt;/li&gt;
+              &lt;li&gt;Range is from -1 to 1
+                &lt;ul&gt;
+                  &lt;li&gt;1 best value meaning it matches well with its own cluster and far from other clusters&lt;/li&gt;
+                  &lt;li&gt;0 indicates overlapping clusters&lt;/li&gt;
+                &lt;/ul&gt;
+              &lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Evaluation of clusters:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Accuracy
+    &lt;ul&gt;
+      &lt;li&gt;Measures the percentage of the predicted label matching with the true label&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Adjusted Mutual Information Score
+    &lt;ul&gt;
+      &lt;li&gt;Measures the similarity between two labels of the same data between two clusters&lt;/li&gt;
+      &lt;li&gt;Takes into account chance&lt;/li&gt;
+      &lt;li&gt;Range is from 0 to 1
+        &lt;ul&gt;
+          &lt;li&gt;1 means that the labels agree&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;Faulty Steel Plates: Clustering&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&quot;evaluation&quot;&gt;Evaluation:&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;../images/ml-unsup/FP_Clustering.png&quot; alt=&quot;FP Clustering&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;K-means: SSE
+    &lt;ul&gt;
+      &lt;li&gt;Elbow at k=9&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;EM: Log-Likelihood
+    &lt;ul&gt;
+      &lt;li&gt;Spike at k=7 and k=9&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Silhouette Score
+    &lt;ul&gt;
+      &lt;li&gt;Spike at k=9 for k-means, but dip for EM&lt;/li&gt;
+      &lt;li&gt;k=6 experiences a spike for both clustering methods&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Accuracy and Adjusted Mutual Information
+    &lt;ul&gt;
+      &lt;li&gt;Peaks at k=9 for both&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;k=7 makes sense since there are seven different labels for the faulty steel plates datasets. k=9 also makes sense because there is an “other” category that could contain two distinct faulty plates labeled as “other”.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Breast Cancer: Clustering&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&quot;evaluation-1&quot;&gt;Evaluation:&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;../images/ml-unsup/BC_Clustering.png&quot; alt=&quot;BC Clustering&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;K-means: SSE
+    &lt;ul&gt;
+      &lt;li&gt;Elbow at k=7&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;EM: Log-Likelihood
+    &lt;ul&gt;
+      &lt;li&gt;Spike at k=7&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Silhouette Score
+    &lt;ul&gt;
+      &lt;li&gt;Spike at k=7 for both&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Accuracy and Adjusted Mutual Information
+    &lt;ul&gt;
+      &lt;li&gt;Accuracy highest at k=7 and AdjMI leveled out somewhat at k=7&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;k=7 can make sense because there could possibly be seven different types of breast mass cells that could be identified as either malignant or benign.&lt;/p&gt;
+
+&lt;h2 id=&quot;part-2-dimensionality-reduction-and-clustering&quot;&gt;Part 2. Dimensionality Reduction and Clustering:&lt;/h2&gt;
+&lt;h3 id=&quot;principal-component-analysis-pca&quot;&gt;Principal Component Analysis (PCA):&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Principal component analysis uses orthogonal transformation and linear combination to identify important components that maximizes variance&lt;/li&gt;
+  &lt;li&gt;PCA is used to reduce a large set of features into a subset that still contains most of the information&lt;/li&gt;
+  &lt;li&gt;To determine dimensional reduction for PCA, examine:
+    &lt;ul&gt;
+      &lt;li&gt;The variance explained by the components&lt;/li&gt;
+      &lt;li&gt;Distribution of eigenvalues&lt;/li&gt;
+      &lt;li&gt;Elbow method can be used to evaluate the number of principal components to choose&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Faulty Steel Plates: PCA&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../images/ml-unsup/FP_PCA.png&quot; alt=&quot;FP PCA&quot; width=&quot;350px&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Most of the variance can be explained by the first 12 principal components&lt;/li&gt;
+  &lt;li&gt;Original dataset has 27 features, now reduced to 12 principal components&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Faulty Steel Plates: PCA Clustering&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../images/ml-unsup/FP_PCA_Clustering.png&quot; alt=&quot;FP PCA Clustering&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Using 12 principal components for clustering:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;K-means: SSE
+    &lt;ul&gt;
+      &lt;li&gt;Slight elbow at k=7&lt;/li&gt;
+      &lt;li&gt;Reduces SSE from 24,000 to 14,000, does well reducing inter cluster error&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;EM: Log-Likelihood
+    &lt;ul&gt;
+      &lt;li&gt;Slight spike at k=7&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Silhouette Score
+    &lt;ul&gt;
+      &lt;li&gt;Low silhouette score for EM shows that it doesn’t do as well as k-means in separating the clusters. Possible overlapping clusters.&lt;/li&gt;
+      &lt;li&gt;Slight spike for k=7 for both&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Accuracy and Adjusted Mutual Information
+    &lt;ul&gt;
+      &lt;li&gt;Shows that EM has relatively good prediction accuracy compared to k-means&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Good cluster at k=7&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Breast Cancer: PCA&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../images/ml-unsup/BC_PCA.png&quot; alt=&quot;FP PCA&quot; width=&quot;350px&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Most of the variance is explained by the first 7 principal components&lt;/li&gt;
+  &lt;li&gt;Original dataset has 30 features, now reduced to 7 principal components&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Breast Cancer: PCA Clustering&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../images/ml-unsup/BC_PCA_Clustering.png&quot; alt=&quot;FP PCA Clustering&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Using 7 principal components for clustering:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;K-means: SSE
+    &lt;ul&gt;
+      &lt;li&gt;Elbow method doesn’t show a clear dip&lt;/li&gt;
+      &lt;li&gt;SSE shows a reduction of 1/3 from original clustering error, which means PCA reduces within cluster error, but does worse intra-cluster&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;EM: Log-Likelihood
+    &lt;ul&gt;
+      &lt;li&gt;Slight spike at k=6&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Silhouette Score
+    &lt;ul&gt;
+      &lt;li&gt;Low silhouette score for EM shows that it doesn’t do as well as k-means in separating the clusters&lt;/li&gt;
+      &lt;li&gt;Slight spike for k=6 for k-means&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Accuracy and Adjusted Mutual Information
+    &lt;ul&gt;
+      &lt;li&gt;PCA clustering doesn’t do as well accuracy wise compared to regular clustering&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Good cluster at k=6&lt;/p&gt;
+
+&lt;h3 id=&quot;independent-component-analysis-ica&quot;&gt;Independent Component Analysis (ICA):&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Independent component analysis tries to decompose data into independent non-Gaussian components&lt;/li&gt;
+  &lt;li&gt;Maximizes mutual information between the original data and the independent components&lt;/li&gt;
+  &lt;li&gt;The sub-components are assumed to be non-Gaussian and independent from each other
+Evaluation:&lt;/li&gt;
+  &lt;li&gt;The number of independent components to choose can be evaluated by their kurtosis values since kurtosis measures gaussianity and ICA tries to maximize non-gaussianity&lt;/li&gt;
+  &lt;li&gt;A kurtosis near 3 is gaussian, so it’s best to find a kurtosis that has the highest absolute value of the mean of the kurtosis&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Faulty Steel Plates: ICA&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../images/ml-unsup/FP_ICA.png&quot; alt=&quot;FP ICA&quot; width=&quot;350px&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Kurtosis peaks at 4&lt;/li&gt;
+  &lt;li&gt;Original dataset has 27 features and now 4 indpenedent components are selected. A huge reduction in dimensionality&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Faulty Steel Plates: ICA Clustering&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../images/ml-unsup/FP_ICA_Clustering.png&quot; alt=&quot;FP ICA Clustering&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Using 4 independent components for clustering:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;K-means: SSE
+    &lt;ul&gt;
+      &lt;li&gt;Elbow at k=5&lt;/li&gt;
+      &lt;li&gt;The within cluster SSE decreases significantly compared to the original dataset&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;EM: Log-Likelihood
+    &lt;ul&gt;
+      &lt;li&gt;Slight spike at k=7&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Silhouette Score
+    &lt;ul&gt;
+      &lt;li&gt;Low silhouette score for EM shows that it doesn’t do as well as k-means in separating the clusters. Possible overlapping clusters.&lt;/li&gt;
+      &lt;li&gt;Slight spike for k=7 for both&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Accuracy and Adjusted Mutual Information
+    &lt;ul&gt;
+      &lt;li&gt;Shows that EM has relatively good prediction accuracy compared to k-means&lt;/li&gt;
+      &lt;li&gt;Peaks at k=7 for both
+Good cluster at k=7&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Breast Cancer: ICA&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../images/ml-unsup/BC_ICA.png&quot; alt=&quot;FP ICA&quot; width=&quot;350px&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Kurtosis keeps increasing, meaning non-gaussianity increases as the number of independent components increases&lt;/li&gt;
+  &lt;li&gt;Original dataset has 30 features, but 25 independent components is enough since it starts leveling off&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Breast Cancer: ICA Clustering&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../images/ml-unsup/BC_ICA_Clustering.png&quot; alt=&quot;FP ICA Clustering&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Using 25 independent components for clustering:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;K-means: SSE
+    &lt;ul&gt;
+      &lt;li&gt;Elbow method doesn’t show a clear dip&lt;/li&gt;
+      &lt;li&gt;SSE decreases from the original clustering&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;EM: Log-Likelihood
+    &lt;ul&gt;
+      &lt;li&gt;Clear peak at k=6 and 8&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Silhouette Score
+    &lt;ul&gt;
+      &lt;li&gt;Produces similar cluster distances for k-means and EM&lt;/li&gt;
+      &lt;li&gt;Slight spike for k=6 for k-means&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Accuracy and Adjusted Mutual Information
+    &lt;ul&gt;
+      &lt;li&gt;ICA clustering has less accuracy than PCA and the original dataset&lt;/li&gt;
+      &lt;li&gt;EM has highest accuracy at k=7&lt;/li&gt;
+      &lt;li&gt;K-means has peak at k=7
+Good cluster at k=6 and k=7&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;random-projection-rp&quot;&gt;Random Projection (RP):&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Reduces dimensions randomly using a Gaussian distribution&lt;/li&gt;
+  &lt;li&gt;Benefits of random projections that it’s computationally efficient and works well on low dimensions&lt;/li&gt;
+  &lt;li&gt;May perform pretty poorly based on one random generation, so 10 iterations are run and averaged for evaluation.&lt;/li&gt;
+  &lt;li&gt;Goal of random projection:
+    &lt;ul&gt;
+      &lt;li&gt;Average Pairwise Distance Correlation: preserve the pairwise distances between any two samples of the dataset, so we want to maximize the variance and average pairwise distance correlation&lt;/li&gt;
+      &lt;li&gt;Average Reconstruction Error: minimize the reconstruction error, which is the squared distance between the original data and the estimate&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Faulty Steel Plates: RP&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../images/ml-unsup/FP_RP.png&quot; alt=&quot;FP RP&quot; width=&quot;350px&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Average Pairwise Distance Correlation starts leveling off around 7 dimensions&lt;/li&gt;
+  &lt;li&gt;The Average Reconstruction error keeps decreasing for higher dimensions
+    &lt;ul&gt;
+      &lt;li&gt;Tradeoff between overfitting and computational time&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Faulty Steel Plates: RP Clustering&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../images/ml-unsup/FP_RP_Clustering.png&quot; alt=&quot;FP RP Clustering&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Using 7 dimensions for clustering:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;K-means: SSE
+    &lt;ul&gt;
+      &lt;li&gt;Slight elbow at k=5&lt;/li&gt;
+      &lt;li&gt;The within cluster SSE decreases significantly compared to the original dataset&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;EM: Log-Likelihood
+    &lt;ul&gt;
+      &lt;li&gt;Slight spike at k=9&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Silhouette Score
+    &lt;ul&gt;
+      &lt;li&gt;Spike at k=7 for both&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Accuracy and Adjusted Mutual Information
+    &lt;ul&gt;
+      &lt;li&gt;Accuracy for EM shows that k=9 is a good cluster&lt;/li&gt;
+      &lt;li&gt;Accuracy for k-means shows that k=7 is a good cluster&lt;/li&gt;
+      &lt;li&gt;Accuracy for RP EM is the highest so far for all dim algorithms at k=9&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Good cluster at k=7&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Breast Cancer: RP&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../images/ml-unsup/BC_RP.png&quot; alt=&quot;FP RP&quot; width=&quot;350px&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Average Pairwise Distance Correlation starts levling off around 7 dimensions&lt;/li&gt;
+  &lt;li&gt;Average reconstruction error keeps decreasing for higher dimensions&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Breast Cancer: RP Clustering&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../images/ml-unsup/BC_RP_Clustering.png&quot; alt=&quot;FP RP Clustering&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Using 7 dimensions for clustering:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;K-means: SSE
+    &lt;ul&gt;
+      &lt;li&gt;Elbow at k=5&lt;/li&gt;
+      &lt;li&gt;SSE decreases from the original clustering due to dim reduction&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;EM: Log-Likelihood
+    &lt;ul&gt;
+      &lt;li&gt;Peak around k=8&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Silhouette Score
+    &lt;ul&gt;
+      &lt;li&gt;On average has improved for k-means from the original clustering&lt;/li&gt;
+      &lt;li&gt;Peak at k=8 for EM&lt;/li&gt;
+      &lt;li&gt;Peak at k=5 for k-means&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Accuracy and Adjusted Mutual Information
+    &lt;ul&gt;
+      &lt;li&gt;Accuracy is much lower than the original dataset&lt;/li&gt;
+      &lt;li&gt;Peaks at k=5&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Good cluster at k=5&lt;/p&gt;
+
+&lt;h3 id=&quot;random-forest-rf&quot;&gt;Random Forest (RF):&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Strong learner that is an ensemble of weak learner decision trees&lt;/li&gt;
+  &lt;li&gt;Feature selection for Random Forest is based on feature importance&lt;/li&gt;
+  &lt;li&gt;Feature importance is measured by Gini importance, which is the total decrease in node impurity reaching that node averaged over all trees of the ensemble.
+    &lt;ul&gt;
+      &lt;li&gt;The higher the Gini importance value, the more important the feature&lt;/li&gt;
+      &lt;li&gt;Elbow method used to evaluate the number of features to use&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Faulty Steel Plates: RF&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../images/ml-unsup/FP_RF.png&quot; alt=&quot;FP RF&quot; width=&quot;350px&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Faulty Plates dataset has a lot of important features, and has a sharp decline at 25 features.&lt;/li&gt;
+  &lt;li&gt;Decrease in dimensionality from 27 to 24&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Faulty Steel Plates: RF Clustering&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../images/ml-unsup/FP_RF_Clustering.png&quot; alt=&quot;FP RF Clustering&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Using 25 dimensions for clustering:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;K-means: SSE
+    &lt;ul&gt;
+      &lt;li&gt;Doesn’t really have an elbow point&lt;/li&gt;
+      &lt;li&gt;Doesn’t decrease within cluster error in k-means as much as the other algorithms&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;EM: Log-Likelihood
+    &lt;ul&gt;
+      &lt;li&gt;Peak at k=7&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Silhouette Score
+    &lt;ul&gt;
+      &lt;li&gt;k=7 for k-means&lt;/li&gt;
+      &lt;li&gt;k=8 for EM&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Accuracy and Adjusted Mutual Information
+    &lt;ul&gt;
+      &lt;li&gt;Accuracy shows that k=9 and k=4
+Good clusters at k=4 and k=9&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Breast Cancer: RF&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../images/ml-unsup/BC_RF.png&quot; alt=&quot;FP RF&quot; width=&quot;350px&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;10 important features, because Gini Importance starts to level off after that&lt;/li&gt;
+  &lt;li&gt;Features reduced from 30 to 10 using Random Forest&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Breast Cancer: RF Clustering&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../images/ml-unsup/BC_RF_Clustering.png&quot; alt=&quot;FP RF Clustering&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Using 10 dimensions for clustering:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;K-means: SSE
+    &lt;ul&gt;
+      &lt;li&gt;Elbow at k=7&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;EM: Log-Likelihood
+    &lt;ul&gt;
+      &lt;li&gt;Leveling out around k=9&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Silhouette Score
+    &lt;ul&gt;
+      &lt;li&gt;For both shows a consistent decrease&lt;/li&gt;
+      &lt;li&gt;As the number of clusters get larger, the cluster distances for both start decreasing, hard to tell what a good k is&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Accuracy and Adjusted Mutual Information
+    &lt;ul&gt;
+      &lt;li&gt;Accuracy shows that k=3, 6, and 10 are good clusters
+Good clusters at k=3, 6, and 10&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;part-3-dimensionality-reduction-algorithms-with-neural-network&quot;&gt;Part 3: Dimensionality Reduction Algorithms with Neural Network&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;The faulty plates dataset is used to evaluate the dimensional reduction algorithms as inputs with the Neural Network compared to the baseline Neural Network&lt;/li&gt;
+  &lt;li&gt;The baseline for the Neural Network is a 71.9% with hyperparameters of learning rate = 0.1, momentum = 0.3, and one hidden layer with 14 neurons.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;../images/ml-unsup/DR_NN.png&quot; alt=&quot;DR NN&quot; width=&quot;500px&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Compares accuracy of different reduction algorithms on the Neural Network to the benchmark Neural Network&lt;/li&gt;
+  &lt;li&gt;Accuracy shows that PCA and Random Projection perform well on the NN at higher components&lt;/li&gt;
+  &lt;li&gt;With around 15 components, the accuracy is close to the benchmark&lt;/li&gt;
+  &lt;li&gt;Dimensions are much lower than the original 27 features, so it simplifies model complexity&lt;/li&gt;
+  &lt;li&gt;Compute times are similar between the benchmark, random projection, and PCA.
+    &lt;h2 id=&quot;part-4-cluster-features-with-neural-network&quot;&gt;Part 4: Cluster Features with Neural Network&lt;/h2&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Clusters are used as features for the neural network&lt;/li&gt;
+  &lt;li&gt;Baseline is the same as above&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;../images/ml-unsup/CF_NN.png&quot; alt=&quot;CF NN&quot; width=&quot;350px&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;When clusters are used as features, it doesn’t do a good job of predicting the labels&lt;/li&gt;
+  &lt;li&gt;Performs far below benchmark accuracy of 71.9%&lt;/li&gt;
+  &lt;li&gt;Seems like accuracy is best for EM and k-means when k=6&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion:&lt;/h2&gt;
+&lt;p&gt;The dimensions for each of the components in the clustering algorithms in Part 2 were as follows:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../images/ml-unsup/Conclusion.png&quot; alt=&quot;Conclusion&quot; width=&quot;350px&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Computational times were similar for PCA and ICA based on the dimensions&lt;/li&gt;
+  &lt;li&gt;Random preojection did best in computational time and in lower dimensions&lt;/li&gt;
+  &lt;li&gt;Random Forest used as feature selection takes too much computational time&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Most of the dimensionality reductions do help in reducing SSE within clusters. PCA and ICA do not increase the intra-cluster distance, but Random Projection and Random Forest does.&lt;/p&gt;</content><author><name>Justin Gong</name></author><category term="unsupervised learning" /><category term="python" /><category term="jython" /><summary type="html">Unsupervised Learning, Dimensionality Reduction, Clustering, PCA, ICA</summary></entry><entry><title type="html">Database Systems - Emergency Resource Management System</title><link href="http://localhost:4000/dbm/" rel="alternate" type="text/html" title="Database Systems - Emergency Resource Management System" /><published>2018-06-01T00:00:00-04:00</published><updated>2018-06-01T00:00:00-04:00</updated><id>http://localhost:4000/dbm</id><content type="html" xml:base="http://localhost:4000/dbm/">&lt;!-- # Emergency Resource Management System (ERMS) --&gt;
 &lt;h2 id=&quot;database-systems---team-project&quot;&gt;Database Systems - Team Project&lt;/h2&gt;
+&lt;p&gt;Code for this project is available on &lt;a href=&quot;https://github.com/jjgong7/Database-Systems-Concepts-and-Design&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Team Members:&lt;/strong&gt;&lt;br /&gt;
 Evan Althouse, Chang-Zhou Gong, Tich Mangono, David Ribeiro&lt;/p&gt;
@@ -480,6 +1200,7 @@ MariaDB (MySQL)&lt;/p&gt;
 &lt;h3 id=&quot;resource-report-by-primary-esf&quot;&gt;Resource Report By Primary ESF&lt;/h3&gt;
 &lt;p&gt;&lt;img src=&quot;https://github.com/jjgong7/Database-Systems-Concepts-and-Design/raw/master/Phase%203/images/7a.ResourceReport.png&quot; alt=&quot;ResourceReport1&quot; /&gt;&lt;/p&gt;</content><author><name>Justin Gong</name></author><category term="python" /><category term="flask" /><category term="sql" /><summary type="html">Python, Javascript, Database Systems, MySQL, Flask</summary></entry><entry><title type="html">Computational Data Analytics Assignments</title><link href="http://localhost:4000/cda/" rel="alternate" type="text/html" title="Computational Data Analytics Assignments" /><published>2018-04-01T00:00:00-04:00</published><updated>2018-04-01T00:00:00-04:00</updated><id>http://localhost:4000/cda</id><content type="html" xml:base="http://localhost:4000/cda/">&lt;!-- 
 # Computational Data Analysis --&gt;
+&lt;p&gt;Code for this project is available on &lt;a href=&quot;https://github.com/jjgong7/Computational-Data-Analytics&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;description&quot;&gt;Description:&lt;/h2&gt;
 &lt;p&gt;Course includes hands-on introduction to programming techniques relevant to data analysis and machine learning. Most of the programming exercises are based on Python and SQL.&lt;/p&gt;
@@ -491,7 +1212,7 @@ algebra and mathematical optimization.&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;&lt;a href=&quot;https://github.com/jjgong7/Computational-Data-Analytics/tree/master/Notebook%201&quot;&gt;Notebook 1: Python Essentials&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/jjgong7/Computational-Data-Analytics/tree/master/Notebook%202&quot;&gt;Notebook 2: Pariwise Association Mining&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/jjgong7/Computational-Data-Analytics/tree/master/Notebook%202&quot;&gt;Notebook 2: Pairwise Association Mining&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;Notebook 3: Math Review (Not present)&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://github.com/jjgong7/Computational-Data-Analytics/tree/master/Notebook%204&quot;&gt;Notebook 4: Representing Numbers&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://github.com/jjgong7/Computational-Data-Analytics/tree/master/Notebook%205&quot;&gt;Notebook 5: Preprocessing Unstructured Text (Regex)&lt;/a&gt;&lt;/li&gt;

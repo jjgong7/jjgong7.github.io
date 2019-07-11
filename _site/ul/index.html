@@ -1,0 +1,1218 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.16.4 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Unsupervised Learning - Justin Gong</title>
+<meta name="description" content="Unsupervised Learning, Dimensionality Reduction, Clustering, PCA, ICA">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Justin Gong">
+<meta property="og:title" content="Unsupervised Learning">
+<meta property="og:url" content="http://localhost:4000/ul/">
+
+
+  <meta property="og:description" content="Unsupervised Learning, Dimensionality Reduction, Clustering, PCA, ICA">
+
+
+
+  <meta property="og:image" content="http://localhost:4000/">
+
+
+
+
+
+  <meta property="article:published_time" content="2018-06-02T00:00:00-04:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/ul/">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Justin Gong",
+      "url": "http://localhost:4000",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Justin Gong Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE ]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">Justin Gong</a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/index.html" >Home</a>
+            </li><li class="masthead__menu-item">
+              <a href="/about/" >About</a>
+            </li><li class="masthead__menu-item">
+              <a href="/resume/" >Resume</a>
+            </li><li class="masthead__menu-item">
+              <a href="/machine-learning/" >Machine Learning Projects</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+  
+
+
+
+
+
+
+
+
+
+
+
+<div class="page__hero"
+  style=" "
+>
+  
+    <img src="" alt="Unsupervised Learning" class="page__hero-image">
+  
+  
+</div>
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+
+      
+        <img src="https://avatars3.githubusercontent.com/u/29085635?s=400&u=d711d1e7ac6007b219e9c9e621f4cf56b4f00458&v=4" alt="Justin Gong" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Justin Gong</h3>
+    
+    
+      <p class="author__bio" itemprop="description">
+        Data Science Portfolio
+      </p>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">NYC/SF Bay Area</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="mailto:jjgong7@gmail.com" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email</a></li>
+          
+        
+          
+            <li><a href="https://www.gong-jj.com/" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-link" aria-hidden="true"></i> Website</a></li>
+          
+        
+          
+            <li><a href="https://github.com/jjgong7" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+          
+        
+          
+            <li><a href="https://www.linkedin.com/in/justin-gong/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Unsupervised Learning">
+    <meta itemprop="description" content="Unsupervised Learning, Dimensionality Reduction, Clustering, PCA, ICA">
+    <meta itemprop="datePublished" content="June 02, 2018">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Unsupervised Learning
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  10 minute read
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <h2 id="objective">Objective:</h2>
+<p>Details for this project are available on <a href="https://github.com/jjgong7/Machine-Learning/tree/master/3%20-%20Unsupervised%20Learning%20and%20Dimensionality%20Reduction">GitHub</a>.</p>
+
+<p>Six different algorithms are implemented; the first two are clustering – k-means clustering and Expectation Maximization and the last four are dimensionality reduction algorithms – PCA, ICA, Randomized Projections, and Random Forest. The experiments are split into four main parts. All algorithms are evaluated using Scikit-learn in Python.</p>
+
+<ul>
+  <li>Part 1:
+    <ul>
+      <li>Applies clustering on both datasets</li>
+    </ul>
+  </li>
+  <li>Part 2:
+    <ul>
+      <li>Applies dimensionality reduction algorithms on both datasets</li>
+      <li>Reproduces clustering experiments with dimensionality reduction on both datasets</li>
+    </ul>
+  </li>
+  <li>Part 3:
+    <ul>
+      <li>Applies dimensionality reduction algorithms to the Faulty Plates datasets</li>
+      <li>Run Neural Network on the data</li>
+    </ul>
+  </li>
+  <li>Part 4:
+    <ul>
+      <li>Applies clustering algorithms and uses the clusters as new features for the Neural Network on the Faulty Plates dataset</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="datasets-used">Datasets used:</h2>
+<p><strong>Faulty Steel Plates</strong></p>
+<ul>
+  <li>1,941 instances; 27 attributes; 7 labels</li>
+  <li>Steel Plates are classified into 7 different faulty categories - Pastry, Z_Scratch, K_Scratch, Stains, Dirtiness, Bumps, and Other_Faults</li>
+  <li>Other_Faults ~ 35%, Bumps ~ 20%, K_Scratch ~ 20%</li>
+  <li>All features are numerical</li>
+</ul>
+
+<p><strong>Breast Cancer</strong></p>
+<ul>
+  <li>569 instances, 31 attributes, binary label</li>
+  <li>Features are measurements calculated from a digitized image of a breast mass</li>
+  <li>Classifies whether a breast mass is malignant or benign</li>
+  <li>357 Benign, 212 Malignant</li>
+  <li>All features are real valued</li>
+</ul>
+
+<h2 id="why-are-the-datasets-interesting">Why are the datasets interesting?</h2>
+<p><strong>Faulty Steel Plates</strong><br />
+Identifying faulty steel plates:</p>
+<ul>
+  <li>Improve safety and reduce costs (return fees)</li>
+  <li>Reduce amount of defective plates used and in circulation</li>
+  <li>Applicable to evaluating other types of defective metals</li>
+</ul>
+
+<p><strong>Breast Cancer</strong><br />
+Identifying breast cancer:</p>
+<ul>
+  <li>Breast Cancer affects about 200,000 women a year in the U.S.</li>
+  <li>About 12% of U.S. women develop breast cancer in their lifteime</li>
+  <li>Early identification of malignant breast mass cells using machine learning is very beneficial for prevention, treatment, and potentially saves lives.</li>
+</ul>
+
+<p><strong>Algorithms Used:</strong></p>
+<ol>
+  <li>Clustering (k-means and EM)</li>
+  <li>Neural Network</li>
+</ol>
+
+<p>Dimensionality Reduction</p>
+<ol>
+  <li>Principal Component Analysis (PCA)</li>
+  <li>Independent Component Analysis (ICA)</li>
+  <li>Random Projections (RP)</li>
+  <li>Random Forest (RF)</li>
+</ol>
+
+<h2 id="part-1-clustering">Part 1: Clustering</h2>
+<p>Clustering is an unsupervised learning algorithm that groups a set of observations together that are similar to each other compared to those in other groups.</p>
+
+<p>K-Means:</p>
+<ul>
+  <li>Takes in a parameter k, for the amount of clusters, and randomly generates k means</li>
+  <li>K-clusters are formed based on associating each observation to the closest mean</li>
+  <li>The least squared Euclidean distance is used for measurement</li>
+  <li>The center of each of the clusters becomes the new mean</li>
+  <li>These steps are iterated until convergence is reached</li>
+</ul>
+
+<p>Expectation-Maximization:</p>
+<ul>
+  <li>Iterative method using maximum likelihood to find the clusters means</li>
+  <li>Alternates between a soft clustering (Expectation) and computing the means of a soft cluster (Maximization)</li>
+  <li>Expectation calculates the likelihood that the observation is in a certain cluster based on the mean</li>
+  <li>Maximization computes the means from likelihoods, using weighted averages of the data points</li>
+  <li>Each step maximizes the likelihood of the distribution until convergence.</li>
+</ul>
+
+<p><strong>To find a good k:</strong></p>
+<ul>
+  <li>K-means:
+    <ul>
+      <li>Sum of Squared Distances within clusters vs # of clusters
+        <ul>
+          <li>Elbow point where SSE decreases sharply, can be used to determine k</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Expectation-Maximization:
+    <ul>
+      <li>Log-likelihood
+        <ul>
+          <li>Calculates the likelihood that the data is to be generated by the parameters estimated</li>
+          <li>Higher likelihood means that the data is more likely to be generated by the estimated parameters (tradeoff with overfitting)</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Both:
+    <ul>
+      <li>Silhouette Score:
+        <ul>
+          <li>Takes into account both intra and inter cluster distances
+            <ul>
+              <li>Explains how similar an observation is to its own cluster compared to other clusters.</li>
+              <li>Range is from -1 to 1
+                <ul>
+                  <li>1 best value meaning it matches well with its own cluster and far from other clusters</li>
+                  <li>0 indicates overlapping clusters</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>Evaluation of clusters:</p>
+<ol>
+  <li>Accuracy
+    <ul>
+      <li>Measures the percentage of the predicted label matching with the true label</li>
+    </ul>
+  </li>
+  <li>Adjusted Mutual Information Score
+    <ul>
+      <li>Measures the similarity between two labels of the same data between two clusters</li>
+      <li>Takes into account chance</li>
+      <li>Range is from 0 to 1
+        <ul>
+          <li>1 means that the labels agree</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ol>
+
+<p><strong>Faulty Steel Plates: Clustering</strong></p>
+<h4 id="evaluation">Evaluation:</h4>
+<p><img src="../images/ml-unsup/FP_Clustering.png" alt="FP Clustering" /></p>
+<ul>
+  <li>K-means: SSE
+    <ul>
+      <li>Elbow at k=9</li>
+    </ul>
+  </li>
+  <li>EM: Log-Likelihood
+    <ul>
+      <li>Spike at k=7 and k=9</li>
+    </ul>
+  </li>
+  <li>Silhouette Score
+    <ul>
+      <li>Spike at k=9 for k-means, but dip for EM</li>
+      <li>k=6 experiences a spike for both clustering methods</li>
+    </ul>
+  </li>
+  <li>Accuracy and Adjusted Mutual Information
+    <ul>
+      <li>Peaks at k=9 for both</li>
+    </ul>
+  </li>
+</ul>
+
+<p>k=7 makes sense since there are seven different labels for the faulty steel plates datasets. k=9 also makes sense because there is an “other” category that could contain two distinct faulty plates labeled as “other”.</p>
+
+<p><strong>Breast Cancer: Clustering</strong></p>
+<h4 id="evaluation-1">Evaluation:</h4>
+<p><img src="../images/ml-unsup/BC_Clustering.png" alt="BC Clustering" /></p>
+<ul>
+  <li>K-means: SSE
+    <ul>
+      <li>Elbow at k=7</li>
+    </ul>
+  </li>
+  <li>EM: Log-Likelihood
+    <ul>
+      <li>Spike at k=7</li>
+    </ul>
+  </li>
+  <li>Silhouette Score
+    <ul>
+      <li>Spike at k=7 for both</li>
+    </ul>
+  </li>
+  <li>Accuracy and Adjusted Mutual Information
+    <ul>
+      <li>Accuracy highest at k=7 and AdjMI leveled out somewhat at k=7</li>
+    </ul>
+  </li>
+</ul>
+
+<p>k=7 can make sense because there could possibly be seven different types of breast mass cells that could be identified as either malignant or benign.</p>
+
+<h2 id="part-2-dimensionality-reduction-and-clustering">Part 2. Dimensionality Reduction and Clustering:</h2>
+<h3 id="principal-component-analysis-pca">Principal Component Analysis (PCA):</h3>
+<ul>
+  <li>Principal component analysis uses orthogonal transformation and linear combination to identify important components that maximizes variance</li>
+  <li>PCA is used to reduce a large set of features into a subset that still contains most of the information</li>
+  <li>To determine dimensional reduction for PCA, examine:
+    <ul>
+      <li>The variance explained by the components</li>
+      <li>Distribution of eigenvalues</li>
+      <li>Elbow method can be used to evaluate the number of principal components to choose</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Faulty Steel Plates: PCA</strong></p>
+
+<p><img src="../images/ml-unsup/FP_PCA.png" alt="FP PCA" width="350px" /></p>
+<ul>
+  <li>Most of the variance can be explained by the first 12 principal components</li>
+  <li>Original dataset has 27 features, now reduced to 12 principal components</li>
+</ul>
+
+<p><strong>Faulty Steel Plates: PCA Clustering</strong></p>
+
+<p><img src="../images/ml-unsup/FP_PCA_Clustering.png" alt="FP PCA Clustering" /></p>
+
+<p>Using 12 principal components for clustering:</p>
+<ul>
+  <li>K-means: SSE
+    <ul>
+      <li>Slight elbow at k=7</li>
+      <li>Reduces SSE from 24,000 to 14,000, does well reducing inter cluster error</li>
+    </ul>
+  </li>
+  <li>EM: Log-Likelihood
+    <ul>
+      <li>Slight spike at k=7</li>
+    </ul>
+  </li>
+  <li>Silhouette Score
+    <ul>
+      <li>Low silhouette score for EM shows that it doesn’t do as well as k-means in separating the clusters. Possible overlapping clusters.</li>
+      <li>Slight spike for k=7 for both</li>
+    </ul>
+  </li>
+  <li>Accuracy and Adjusted Mutual Information
+    <ul>
+      <li>Shows that EM has relatively good prediction accuracy compared to k-means</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Good cluster at k=7</p>
+
+<p><strong>Breast Cancer: PCA</strong></p>
+
+<p><img src="../images/ml-unsup/BC_PCA.png" alt="FP PCA" width="350px" /></p>
+<ul>
+  <li>Most of the variance is explained by the first 7 principal components</li>
+  <li>Original dataset has 30 features, now reduced to 7 principal components</li>
+</ul>
+
+<p><strong>Breast Cancer: PCA Clustering</strong></p>
+
+<p><img src="../images/ml-unsup/BC_PCA_Clustering.png" alt="FP PCA Clustering" /></p>
+
+<p>Using 7 principal components for clustering:</p>
+<ul>
+  <li>K-means: SSE
+    <ul>
+      <li>Elbow method doesn’t show a clear dip</li>
+      <li>SSE shows a reduction of 1/3 from original clustering error, which means PCA reduces within cluster error, but does worse intra-cluster</li>
+    </ul>
+  </li>
+  <li>EM: Log-Likelihood
+    <ul>
+      <li>Slight spike at k=6</li>
+    </ul>
+  </li>
+  <li>Silhouette Score
+    <ul>
+      <li>Low silhouette score for EM shows that it doesn’t do as well as k-means in separating the clusters</li>
+      <li>Slight spike for k=6 for k-means</li>
+    </ul>
+  </li>
+  <li>Accuracy and Adjusted Mutual Information
+    <ul>
+      <li>PCA clustering doesn’t do as well accuracy wise compared to regular clustering</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Good cluster at k=6</p>
+
+<h3 id="independent-component-analysis-ica">Independent Component Analysis (ICA):</h3>
+<ul>
+  <li>Independent component analysis tries to decompose data into independent non-Gaussian components</li>
+  <li>Maximizes mutual information between the original data and the independent components</li>
+  <li>The sub-components are assumed to be non-Gaussian and independent from each other
+Evaluation:</li>
+  <li>The number of independent components to choose can be evaluated by their kurtosis values since kurtosis measures gaussianity and ICA tries to maximize non-gaussianity</li>
+  <li>A kurtosis near 3 is gaussian, so it’s best to find a kurtosis that has the highest absolute value of the mean of the kurtosis</li>
+</ul>
+
+<p><strong>Faulty Steel Plates: ICA</strong></p>
+
+<p><img src="../images/ml-unsup/FP_ICA.png" alt="FP ICA" width="350px" /></p>
+<ul>
+  <li>Kurtosis peaks at 4</li>
+  <li>Original dataset has 27 features and now 4 indpenedent components are selected. A huge reduction in dimensionality</li>
+</ul>
+
+<p><strong>Faulty Steel Plates: ICA Clustering</strong></p>
+
+<p><img src="../images/ml-unsup/FP_ICA_Clustering.png" alt="FP ICA Clustering" /></p>
+
+<p>Using 4 independent components for clustering:</p>
+<ul>
+  <li>K-means: SSE
+    <ul>
+      <li>Elbow at k=5</li>
+      <li>The within cluster SSE decreases significantly compared to the original dataset</li>
+    </ul>
+  </li>
+  <li>EM: Log-Likelihood
+    <ul>
+      <li>Slight spike at k=7</li>
+    </ul>
+  </li>
+  <li>Silhouette Score
+    <ul>
+      <li>Low silhouette score for EM shows that it doesn’t do as well as k-means in separating the clusters. Possible overlapping clusters.</li>
+      <li>Slight spike for k=7 for both</li>
+    </ul>
+  </li>
+  <li>Accuracy and Adjusted Mutual Information
+    <ul>
+      <li>Shows that EM has relatively good prediction accuracy compared to k-means</li>
+      <li>Peaks at k=7 for both
+Good cluster at k=7</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Breast Cancer: ICA</strong></p>
+
+<p><img src="../images/ml-unsup/BC_ICA.png" alt="FP ICA" width="350px" /></p>
+<ul>
+  <li>Kurtosis keeps increasing, meaning non-gaussianity increases as the number of independent components increases</li>
+  <li>Original dataset has 30 features, but 25 independent components is enough since it starts leveling off</li>
+</ul>
+
+<p><strong>Breast Cancer: ICA Clustering</strong></p>
+
+<p><img src="../images/ml-unsup/BC_ICA_Clustering.png" alt="FP ICA Clustering" /></p>
+
+<p>Using 25 independent components for clustering:</p>
+<ul>
+  <li>K-means: SSE
+    <ul>
+      <li>Elbow method doesn’t show a clear dip</li>
+      <li>SSE decreases from the original clustering</li>
+    </ul>
+  </li>
+  <li>EM: Log-Likelihood
+    <ul>
+      <li>Clear peak at k=6 and 8</li>
+    </ul>
+  </li>
+  <li>Silhouette Score
+    <ul>
+      <li>Produces similar cluster distances for k-means and EM</li>
+      <li>Slight spike for k=6 for k-means</li>
+    </ul>
+  </li>
+  <li>Accuracy and Adjusted Mutual Information
+    <ul>
+      <li>ICA clustering has less accuracy than PCA and the original dataset</li>
+      <li>EM has highest accuracy at k=7</li>
+      <li>K-means has peak at k=7
+Good cluster at k=6 and k=7</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="random-projection-rp">Random Projection (RP):</h3>
+<ul>
+  <li>Reduces dimensions randomly using a Gaussian distribution</li>
+  <li>Benefits of random projections that it’s computationally efficient and works well on low dimensions</li>
+  <li>May perform pretty poorly based on one random generation, so 10 iterations are run and averaged for evaluation.</li>
+  <li>Goal of random projection:
+    <ul>
+      <li>Average Pairwise Distance Correlation: preserve the pairwise distances between any two samples of the dataset, so we want to maximize the variance and average pairwise distance correlation</li>
+      <li>Average Reconstruction Error: minimize the reconstruction error, which is the squared distance between the original data and the estimate</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Faulty Steel Plates: RP</strong></p>
+
+<p><img src="../images/ml-unsup/FP_RP.png" alt="FP RP" width="350px" /></p>
+<ul>
+  <li>Average Pairwise Distance Correlation starts leveling off around 7 dimensions</li>
+  <li>The Average Reconstruction error keeps decreasing for higher dimensions
+    <ul>
+      <li>Tradeoff between overfitting and computational time</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Faulty Steel Plates: RP Clustering</strong></p>
+
+<p><img src="../images/ml-unsup/FP_RP_Clustering.png" alt="FP RP Clustering" /></p>
+
+<p>Using 7 dimensions for clustering:</p>
+<ul>
+  <li>K-means: SSE
+    <ul>
+      <li>Slight elbow at k=5</li>
+      <li>The within cluster SSE decreases significantly compared to the original dataset</li>
+    </ul>
+  </li>
+  <li>EM: Log-Likelihood
+    <ul>
+      <li>Slight spike at k=9</li>
+    </ul>
+  </li>
+  <li>Silhouette Score
+    <ul>
+      <li>Spike at k=7 for both</li>
+    </ul>
+  </li>
+  <li>Accuracy and Adjusted Mutual Information
+    <ul>
+      <li>Accuracy for EM shows that k=9 is a good cluster</li>
+      <li>Accuracy for k-means shows that k=7 is a good cluster</li>
+      <li>Accuracy for RP EM is the highest so far for all dim algorithms at k=9</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Good cluster at k=7</p>
+
+<p><strong>Breast Cancer: RP</strong></p>
+
+<p><img src="../images/ml-unsup/BC_RP.png" alt="FP RP" width="350px" /></p>
+<ul>
+  <li>Average Pairwise Distance Correlation starts levling off around 7 dimensions</li>
+  <li>Average reconstruction error keeps decreasing for higher dimensions</li>
+</ul>
+
+<p><strong>Breast Cancer: RP Clustering</strong></p>
+
+<p><img src="../images/ml-unsup/BC_RP_Clustering.png" alt="FP RP Clustering" /></p>
+
+<p>Using 7 dimensions for clustering:</p>
+<ul>
+  <li>K-means: SSE
+    <ul>
+      <li>Elbow at k=5</li>
+      <li>SSE decreases from the original clustering due to dim reduction</li>
+    </ul>
+  </li>
+  <li>EM: Log-Likelihood
+    <ul>
+      <li>Peak around k=8</li>
+    </ul>
+  </li>
+  <li>Silhouette Score
+    <ul>
+      <li>On average has improved for k-means from the original clustering</li>
+      <li>Peak at k=8 for EM</li>
+      <li>Peak at k=5 for k-means</li>
+    </ul>
+  </li>
+  <li>Accuracy and Adjusted Mutual Information
+    <ul>
+      <li>Accuracy is much lower than the original dataset</li>
+      <li>Peaks at k=5</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Good cluster at k=5</p>
+
+<h3 id="random-forest-rf">Random Forest (RF):</h3>
+<ul>
+  <li>Strong learner that is an ensemble of weak learner decision trees</li>
+  <li>Feature selection for Random Forest is based on feature importance</li>
+  <li>Feature importance is measured by Gini importance, which is the total decrease in node impurity reaching that node averaged over all trees of the ensemble.
+    <ul>
+      <li>The higher the Gini importance value, the more important the feature</li>
+      <li>Elbow method used to evaluate the number of features to use</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Faulty Steel Plates: RF</strong></p>
+
+<p><img src="../images/ml-unsup/FP_RF.png" alt="FP RF" width="350px" /></p>
+<ul>
+  <li>Faulty Plates dataset has a lot of important features, and has a sharp decline at 25 features.</li>
+  <li>Decrease in dimensionality from 27 to 24</li>
+</ul>
+
+<p><strong>Faulty Steel Plates: RF Clustering</strong></p>
+
+<p><img src="../images/ml-unsup/FP_RF_Clustering.png" alt="FP RF Clustering" /></p>
+
+<p>Using 25 dimensions for clustering:</p>
+<ul>
+  <li>K-means: SSE
+    <ul>
+      <li>Doesn’t really have an elbow point</li>
+      <li>Doesn’t decrease within cluster error in k-means as much as the other algorithms</li>
+    </ul>
+  </li>
+  <li>EM: Log-Likelihood
+    <ul>
+      <li>Peak at k=7</li>
+    </ul>
+  </li>
+  <li>Silhouette Score
+    <ul>
+      <li>k=7 for k-means</li>
+      <li>k=8 for EM</li>
+    </ul>
+  </li>
+  <li>Accuracy and Adjusted Mutual Information
+    <ul>
+      <li>Accuracy shows that k=9 and k=4
+Good clusters at k=4 and k=9</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Breast Cancer: RF</strong></p>
+
+<p><img src="../images/ml-unsup/BC_RF.png" alt="FP RF" width="350px" /></p>
+<ul>
+  <li>10 important features, because Gini Importance starts to level off after that</li>
+  <li>Features reduced from 30 to 10 using Random Forest</li>
+</ul>
+
+<p><strong>Breast Cancer: RF Clustering</strong></p>
+
+<p><img src="../images/ml-unsup/BC_RF_Clustering.png" alt="FP RF Clustering" /></p>
+
+<p>Using 10 dimensions for clustering:</p>
+<ul>
+  <li>K-means: SSE
+    <ul>
+      <li>Elbow at k=7</li>
+    </ul>
+  </li>
+  <li>EM: Log-Likelihood
+    <ul>
+      <li>Leveling out around k=9</li>
+    </ul>
+  </li>
+  <li>Silhouette Score
+    <ul>
+      <li>For both shows a consistent decrease</li>
+      <li>As the number of clusters get larger, the cluster distances for both start decreasing, hard to tell what a good k is</li>
+    </ul>
+  </li>
+  <li>Accuracy and Adjusted Mutual Information
+    <ul>
+      <li>Accuracy shows that k=3, 6, and 10 are good clusters
+Good clusters at k=3, 6, and 10</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="part-3-dimensionality-reduction-algorithms-with-neural-network">Part 3: Dimensionality Reduction Algorithms with Neural Network</h2>
+<ul>
+  <li>The faulty plates dataset is used to evaluate the dimensional reduction algorithms as inputs with the Neural Network compared to the baseline Neural Network</li>
+  <li>The baseline for the Neural Network is a 71.9% with hyperparameters of learning rate = 0.1, momentum = 0.3, and one hidden layer with 14 neurons.</li>
+</ul>
+
+<p><img src="../images/ml-unsup/DR_NN.png" alt="DR NN" width="500px" /></p>
+<ul>
+  <li>Compares accuracy of different reduction algorithms on the Neural Network to the benchmark Neural Network</li>
+  <li>Accuracy shows that PCA and Random Projection perform well on the NN at higher components</li>
+  <li>With around 15 components, the accuracy is close to the benchmark</li>
+  <li>Dimensions are much lower than the original 27 features, so it simplifies model complexity</li>
+  <li>Compute times are similar between the benchmark, random projection, and PCA.
+    <h2 id="part-4-cluster-features-with-neural-network">Part 4: Cluster Features with Neural Network</h2>
+  </li>
+  <li>Clusters are used as features for the neural network</li>
+  <li>Baseline is the same as above</li>
+</ul>
+
+<p><img src="../images/ml-unsup/CF_NN.png" alt="CF NN" width="350px" /></p>
+<ul>
+  <li>When clusters are used as features, it doesn’t do a good job of predicting the labels</li>
+  <li>Performs far below benchmark accuracy of 71.9%</li>
+  <li>Seems like accuracy is best for EM and k-means when k=6</li>
+</ul>
+
+<h2 id="conclusion">Conclusion:</h2>
+<p>The dimensions for each of the components in the clustering algorithms in Part 2 were as follows:</p>
+
+<p><img src="../images/ml-unsup/Conclusion.png" alt="Conclusion" width="350px" /></p>
+<ul>
+  <li>Computational times were similar for PCA and ICA based on the dimensions</li>
+  <li>Random preojection did best in computational time and in lower dimensions</li>
+  <li>Random Forest used as feature selection takes too much computational time</li>
+</ul>
+
+<p>Most of the dimensionality reductions do help in reducing SSE within clusters. PCA and ICA do not increase the intra-cluster distance, but Random Projection and Random Forest does.</p>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#jython" class="page__taxonomy-item" rel="tag">jython</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#python" class="page__taxonomy-item" rel="tag">python</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#unsupervised-learning" class="page__taxonomy-item" rel="tag">unsupervised learning</a>
+    
+    </span>
+  </p>
+
+
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2018-06-02T00:00:00-04:00">June 02, 2018</time></p>
+        
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Unsupervised+Learning%20http%3A%2F%2Flocalhost%3A4000%2Ful%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Ful%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Ful%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/bay/" class="pagination--pager" title="Space Shuttle Challenger
+">Previous</a>
+    
+    
+      <a href="/sl/" class="pagination--pager" title="Supervised Learning
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You may also enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/sl/" rel="permalink">Supervised Learning
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  7 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Supervised Learning, Decision Trees, Boosting, Neural Networks, Support Vector Machines, k-Nearest Neighbors
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/bay/" rel="permalink">Space Shuttle Challenger
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  less than 1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Bayesian Statistics, WinBugs
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/dbm/" rel="permalink">Database Systems - Emergency Resource Management System
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  3 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Python, Javascript, Database Systems, MySQL, Flask
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/cda/" rel="permalink">Computational Data Analytics Assignments
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Python, Numpy, Pandas, Supervised Learning, Data Science, Machine Learning
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><input type="search" id="search" aria-placeholder="Enter your search term..." class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+    <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://github.com/jjgong7" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="https://www.linkedin.com/in/justin-gong/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2019 Justin Gong. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.8.2/js/all.js" integrity="sha384-DJ25uNYET2XCl5ZF++U8eNxPWqcKohUUBUpKGlNLMchM7q4Wjg2CUpjHLaL8yYPH" crossorigin="anonymous"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>

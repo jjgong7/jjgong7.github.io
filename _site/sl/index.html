@@ -321,7 +321,7 @@
 
 
 
-  4 minute read
+  7 minute read
 </p>
           
         </header>
@@ -329,7 +329,10 @@
 
       <section class="page__content" itemprop="text">
         
-        <!-- # Supervised Learning -->
+        <h2 id="objective">Objective:</h2>
+
+<p>Details for this project are available on <a href="https://github.com/jjgong7/Machine-Learning/tree/master/1%20-%20Supervised%20Learning">GitHub</a>.</p>
+
 <p>Analyze two datasets using five different supervised learning algorithms. Weka, a suite of machine learning software written in Java, is used for analysis.</p>
 
 <h2 id="datasets-used">Datasets used:</h2>
@@ -399,6 +402,8 @@ Identifying phishing websites can:</p>
 <hr />
 
 <h3 id="1-decision-tree">1. Decision Tree:</h3>
+<p><img src="../images/ml-sup/dt.jpg" alt="Decision Tree" width="500px" /></p>
+
 <p>This is a top down learning algorithm that splits the best attributes (decision nodes) based on information gain. The branches are the outcomes of the binary splits (≥,≤ or T, F) and the leaf nodes represent a classifying label.</p>
 
 <p>Hyperparameters:</p>
@@ -415,24 +420,24 @@ Identifying phishing websites can:</p>
   </li>
 </ul>
 
-<p><strong>Faulty Steel Plates</strong></p>
+<p><strong>Faulty Steel Plates: Decision Tree</strong></p>
 <h4 id="learning-curve">Learning Curve</h4>
-<p><img src="../images/ml-sup/DT_LC_FP.png" alt="DT_LC_FP" width="300px" /></p>
+<p><img src="../images/ml-sup/DT_LC_FP.png" alt="DT_LC_FP" width="350px" /></p>
 <ul>
   <li>High Variance/Low Bias (Overfitting)</li>
   <li>Training accuracy ~93% while validation accuracy ~70%</li>
 </ul>
 
 <h4 id="model-complexity">Model Complexity</h4>
-<p><img src="../images/ml-sup/DT_MC_FP.png" alt="DT_MC_FP" width="300px" /></p>
+<p><img src="../images/ml-sup/DT_MC_FP.png" alt="DT_MC_FP" width="350px" /></p>
 <ul>
   <li>Adjusted confidence factor from 0.1 to 0.5</li>
-  <li>With confidence factor = 0.5, tree size is 432, and has second highest cv-accuracy after the unpruned tree.</li>
+  <li>With confidence factor = 0.2, tree size is 257 with 129 leaves, cv-accuracy is 73.32%.</li>
 </ul>
 
-<p><strong>Phishing Websites</strong></p>
+<p><strong>Phishing Websites: Decision Tree</strong></p>
 <h4 id="learning-curve-1">Learning Curve</h4>
-<p><img src="../images/ml-sup/DT_LC_PW.png" alt="DT_LC_PW" width="300px" /></p>
+<p><img src="../images/ml-sup/DT_LC_PW.png" alt="DT_LC_PW" width="350px" /></p>
 <ul>
   <li>Low Variance/Low Bias (Good Model)</li>
   <li>Accuracy is high for both training and validation set</li>
@@ -440,14 +445,16 @@ Identifying phishing websites can:</p>
 </ul>
 
 <h4 id="model-complexity-1">Model Complexity</h4>
-<p><img src="../images/ml-sup/DT_MC_PW.png" alt="DT_MC_PW" width="300px" /></p>
+<p><img src="../images/ml-sup/DT_MC_PW.png" alt="DT_MC_PW" width="350px" /></p>
 <ul>
-  <li>With confidence factor = 0.2, tree size is 257 with 129 leaves, CV-accuracy is 73.32%.</li>
+  <li>With confidence factor = 0.5, tree size is 432, and has second highest cv-accuracy after the unpruned tree.</li>
 </ul>
 
 <p>Phishing websites has a much better classification accuracy than faulty plates. This can be because faulty plates dataset has seven different class labels, while phishing websites only has a binary label.</p>
 
 <h3 id="2-boosting">2. Boosting:</h3>
+<p><img src="../images/ml-sup/bs.png" alt="Boosting" width="500px" /></p>
+
 <p>Boosting is an ensemble learning method that incrementally builds the model by placing more weight on the misclassified data. It basically turns a set of weak learners, which always do better than chance, into a single strong learner. In Weka, the boosting algorithm is called AdaBoostM1.</p>
 
 <p>Hyperparameters:</p>
@@ -467,31 +474,31 @@ Identifying phishing websites can:</p>
   </li>
 </ul>
 
-<p><strong>Faulty Steel Plates</strong></p>
+<p><strong>Faulty Steel Plates: Boosting</strong></p>
 <h4 id="learning-curve-2">Learning Curve</h4>
-<p><img src="../images/ml-sup/BS_LC_FP.png" alt="BS_LC_FP" width="300px" /></p>
+<p><img src="../images/ml-sup/BS_LC_FP.png" alt="BS_LC_FP" width="350px" /></p>
 <ul>
   <li>High Variance/Low Bias (Overfitting)</li>
   <li>100% accuracy on training set while validation set only has around 71% accuracy, so it doesn’t generalize well</li>
 </ul>
 
 <h4 id="model-complexity-2">Model Complexity</h4>
-<p><img src="../images/ml-sup/BS_MC_FP.png" alt="BS_MC_FP" width="300px" /></p>
+<p><img src="../images/ml-sup/BS_MC_FP.png" alt="BS_MC_FP" width="350px" /></p>
 <ul>
   <li>Test iterations from 10 to 50 to improve weak learners</li>
   <li>Best cv-accuracy at 79.70% when iterations = 40. Tree size is 293 with 147 leaves.</li>
 </ul>
 
-<p><strong>Phishing Websites</strong></p>
+<p><strong>Phishing Websites: Boosting</strong></p>
 <h4 id="learning-curve-3">Learning Curve</h4>
-<p><img src="../images/ml-sup/BS_LC_PW.png" alt="BS_LC_PW" width="300px" /></p>
+<p><img src="../images/ml-sup/BS_LC_PW.png" alt="BS_LC_PW" width="350px" /></p>
 <ul>
   <li>Low Variance/Low Bias (Good model)</li>
-  <li>Training and validation data both above ~92%</li>
+  <li>Training and validation data are both above ~92%</li>
 </ul>
 
 <h4 id="model-complexity-3">Model Complexity</h4>
-<p><img src="../images/ml-sup/BS_MC_PW.png" alt="BS_MC_PW" width="300px" /></p>
+<p><img src="../images/ml-sup/BS_MC_PW.png" alt="BS_MC_PW" width="350px" /></p>
 <ul>
   <li>Test iterations from 10 to 50 to improve weak learners</li>
   <li>Best cv-accuracy at 96.96% when iterations = 30. Tree size is lowest at 19.</li>
@@ -506,6 +513,8 @@ Identifying phishing websites can:</p>
 <p>This shows with more training data, the model is able to generalize better and achieve a lower variance/bias. Boosting does better than the original decision tree because it improves upon our decision tree base classifier by turning weak learners into a set of strong learners.</p>
 
 <h3 id="3-neural-network">3. Neural Network:</h3>
+<p><img src="../images/ml-sup/nn.jpeg" alt="Neural Network" width="500px" /></p>
+
 <p>A neural network tries to mimic the brain in mapping inputs to outputs. Weka uses MultiLayerPerceptron - a network of perceptions.</p>
 
 <p>Hyperparameters:</p>
@@ -528,25 +537,60 @@ Identifying phishing websites can:</p>
   </li>
 </ul>
 
-<p><strong>Faulty Steel Plates</strong></p>
+<p><strong>Faulty Steel Plates: Neural Network</strong></p>
 <h4 id="learning-curve-4">Learning Curve</h4>
-<p><img src="../images/ml-sup/NN_LC_FP.png" alt="NN_LC_FP" width="300px" /><br />
-What this means is</p>
+<p><img src="../images/ml-sup/NN_LC_FP.png" alt="NN_LC_FP" width="350px" /></p>
+<ul>
+  <li>High Variance/Low Bias (Overfitting)</li>
+  <li>Variance decreases as more of the data is used for training since training and cv-accuracy slightly converge.</li>
+  <li>Bias increases slightly as the model performs worse on training set.</li>
+</ul>
 
 <h4 id="model-complexity-4">Model Complexity</h4>
-<p><img src="../images/ml-sup/NN_MC_FP.png" alt="NN_MC_FP" width="300px" /><br />
-What this mean</p>
+<p><img src="../images/ml-sup/NN_MC_FP.png" alt="NN_MC_FP" width="350px" /></p>
+<ul>
+  <li>Altered amount of neurons for hidden layer, optimal was 16 neurons = [(attributes+classes)/2] neurons</li>
+  <li>As number of hidden layers increased, the cv-accuracy decreased</li>
+  <li>Altered learning rate (default=0.2) and momentum (default=0.3)
+    <ul>
+      <li>Lower rates produced better results (smaller steps in calculating the weight change), but also longer training time.</li>
+    </ul>
+  </li>
+  <li>Optimal: 1 hidden layer, 16 neurons, and learning rate and momentum of 0.1
+    <ul>
+      <li>cv-accuracy of 72.87%</li>
+    </ul>
+  </li>
+</ul>
 
-<p><strong>Phishing Websites</strong></p>
+<p><strong>Phishing Websites: Neural Network</strong></p>
 <h4 id="learning-curve-5">Learning Curve</h4>
-<p><img src="../images/ml-sup/NN_LC_PW.png" alt="NN_LC_PW" width="300px" /><br />
-What this mean</p>
+<p><img src="../images/ml-sup/NN_LC_PW.png" alt="NN_LC_PW" width="350px" /></p>
+<ul>
+  <li>Low Variance/Low Bias (Good model)</li>
+  <li>Variance decreases with more training data</li>
+</ul>
 
 <h4 id="model-complexity-5">Model Complexity</h4>
-<p><img src="../images/ml-sup/NN_MC_PW.png" alt="NN_MC_PW" width="300px" /><br />
-What this mean</p>
+<p><img src="../images/ml-sup/NN_MC_PW.png" alt="NN_MC_PW" width="350px" /></p>
+<ul>
+  <li>Altered amount of neurons for hidden layer, optimal was 16 neurons = [(attributes+classes)/2] neurons</li>
+  <li>As number of hidden layers increased, the cv-accuracy decreased</li>
+  <li>Altered learning rate (default=0.2) and momentum (default=0.3)
+    <ul>
+      <li>Lower rates produced better results (smaller steps in calculating the weight change), but also longer training time.</li>
+    </ul>
+  </li>
+  <li>Optimal: 1 hidden layer, 16 neurons, and learning rate and momentum of 0.1
+    <ul>
+      <li>cv-accuracy of 96.69%</li>
+    </ul>
+  </li>
+</ul>
 
 <h3 id="4-support-vector-machines-svm">4. Support Vector Machines (SVM):</h3>
+<p><img src="../images/ml-sup/svm.png" alt="SVM" width="500px" /></p>
+
 <p>Support Vector Machines uses hyperplanes to maximize the margins between the different classes. The larger the distance between the hyperplanes, the better the generalization and separation of classes. In Weka, LibSVM is the most popular and robust SVM algorithm. LibSVM uses one vs one classification, where each different pair of labels has a separately trained classifier.</p>
 
 <p>Hyperparameters:</p>
@@ -558,25 +602,40 @@ What this mean</p>
   </li>
 </ul>
 
-<p><strong>Faulty Steel Plates</strong></p>
+<p><strong>Faulty Steel Plates: SVM</strong></p>
 <h4 id="learning-curve-6">Learning Curve</h4>
-<p><img src="../images/ml-sup/SVM_LC_FP.png" alt="SVM_LC_FP" width="300px" /><br />
-What this means is</p>
+<p><img src="../images/ml-sup/SVM_LC_FP.png" alt="SVM_LC_FP" width="350px" /></p>
+<ul>
+  <li>High Variance/Low Bias (Overfitting)</li>
+  <li>Training set has 100% accuracy, while the validation set only performs around 62% - the worst performing algorithm yet!</li>
+</ul>
 
 <h4 id="model-complexity-6">Model Complexity</h4>
-<p><img src="../images/ml-sup/SVM_MC_FP.png" alt="SVM_MC_FP" width="300px" /><br />
-What this mean</p>
+<p><img src="../images/ml-sup/SVM_MC_FP.png" alt="SVM_MC_FP" width="350px" /></p>
+<ul>
+  <li>Linear kernel performs best with a cv-accuracy of 69.91%</li>
+  <li>Poorest performing algorithm for faulty plates, most likely because the hyperplanes aren’t able to separate the seven classes well. It performs better on binary classification.</li>
+</ul>
 
-<p><strong>Phishing Websites</strong></p>
+<p><strong>Phishing Websites: SVM</strong></p>
 <h4 id="learning-curve-7">Learning Curve</h4>
-<p><img src="../images/ml-sup/SVM_LC_PW.png" alt="SVM_LC_PW" width="300px" /><br />
-What this mean</p>
+<p><img src="../images/ml-sup/SVM_LC_PW.png" alt="SVM_LC_PW" width="350px" /></p>
+<ul>
+  <li>Low Variance/Low Bias</li>
+  <li>Training accuracy and cv-accuracy are almost identical</li>
+</ul>
 
 <h4 id="model-complexity-7">Model Complexity</h4>
-<p><img src="../images/ml-sup/SVM_MC_PW.png" alt="SVM_MC_PW" width="300px" /><br />
-What this mean</p>
+<p><img src="../images/ml-sup/SVM_MC_PW.png" alt="SVM_MC_PW" width="350px" /></p>
+<ul>
+  <li>Radial Basis Function kernel with default hyperparameters performs best with ~94% accuracy.</li>
+</ul>
+
+<p>Based on the learning curves, both models generalize better as the training set increases.</p>
 
 <h3 id="5-k-nearest-neighbors-knn">5. k-Nearest Neighbors (kNN):</h3>
+<p><img src="../images/ml-sup/knn.png" alt="KNN" width="500px" /></p>
+
 <p>The k-Nearest Neighbor algorithm outputs a classification based on the majority of the number of neighbors. This is an instance based, lazy learner, which means it does nothing until you have to make a prediction. In Weka, IBK is used.</p>
 
 <p>Hyperparameters:</p>
@@ -593,34 +652,64 @@ What this mean</p>
   </li>
 </ul>
 
-<p><strong>Faulty Steel Plates</strong></p>
+<p><strong>Faulty Steel Plates: kNN</strong></p>
 <h4 id="learning-curve-8">Learning Curve</h4>
-<p><img src="../images/ml-sup/KNN_LC_FP.png" alt="KNN_LC_FP" width="300px" /><br />
-What this means is</p>
+<p><img src="../images/ml-sup/KNN_LC_FP.png" alt="KNN_LC_FP" width="350px" /></p>
+<ul>
+  <li>High Variance/Low Bias (Overfitting)</li>
+  <li>Training set shows 100% accuracy, while cv-accuracy is 71%</li>
+  <li>Model doesn’t improve much with more training data</li>
+</ul>
 
 <h4 id="model-complexity-8">Model Complexity</h4>
-<p><img src="../images/ml-sup/KNN_MC_FP.png" alt="KNN_MC_FP" width="300px" /><br />
-What this mean</p>
+<p><img src="../images/ml-sup/KNN_MC_FP.png" alt="KNN_MC_FP" width="350px" /></p>
+<ul>
+  <li>Number of nearest neighbors adjusted from 1 to 20
+    <ul>
+      <li>As number of neighbors increases, more bias is introduced because the cv-accuracy and training accuracy get worse.</li>
+    </ul>
+  </li>
+  <li>Optimal number of neighbors is k=5, with 71.59% cv-accuracy</li>
+</ul>
 
-<p><strong>Phishing Websites</strong></p>
+<p><strong>Phishing Websites: kNN</strong></p>
 <h4 id="learning-curve-9">Learning Curve</h4>
-<p><img src="../images/ml-sup/KNN_LC_PW.png" alt="KNN_LC_PW" width="300px" /><br />
-What this mean</p>
+<p><img src="../images/ml-sup/KNN_LC_PW.png" alt="KNN_LC_PW" width="350px" /></p>
+<ul>
+  <li>Low Variance/Low Bias</li>
+  <li>Model improves significantly with more training data, cv-accuracy improves by over 6% from 10% training data to 100%. Variance decreases.</li>
+</ul>
 
 <h4 id="model-complexity-9">Model Complexity</h4>
-<p><img src="../images/ml-sup/KNN_MC_PW.png" alt="KNN_MC_PW" width="300px" /><br />
-What this mean</p>
+<p><img src="../images/ml-sup/KNN_MC_PW.png" alt="KNN_MC_PW" width="350px" /></p>
+<ul>
+  <li>Number of nearest neighbors adjusted from 1 to 20
+    <ul>
+      <li>As number of neighbors increases, more bias is introduced because the cv-accuracy and training accuracy get worse.</li>
+    </ul>
+  </li>
+  <li>Optimal number of neighbors is k=1, with 97.04% cv-accuracy</li>
+</ul>
 
-<!-- ![e](../images/ml-sup/Conclusion.png)   -->
+<h3 id="conclusion">Conclusion:</h3>
+<p><img src="../images/ml-sup/Conclusion.png" alt="Summary" width="500px" /></p>
 
-<!-- #### Learning Curve
-**Faulty Steel Plates**
-**Phishing Websites**
-
-#### Model Complexity
-**Faulty Steel Plates**
-**Phishing Websites** -->
-
+<ul>
+  <li>After hyperparameter tuning and selecting the best hyperparameters, test set is used to determine the final performance and quality of the models.</li>
+  <li>Accuracy and confusion matrix were used to determine the best models</li>
+  <li>Faulty Steel Plates Dataset:
+    <ul>
+      <li>Boosting Algorithm with Decision Tree Base Classifier produces the best test accuracy at 77.12%. Decision Tree was second.</li>
+    </ul>
+  </li>
+  <li>Phishing Websites Dataset:
+    <ul>
+      <li>Decision Tree, Boosting, and Multilayer Perceptron all do well with an accuracy of ~96%</li>
+      <li>KNN performs best on the test set with 97.06% accuracy</li>
+      <li>KNN also a fast algorithm since it’s a lazy learner that only tests for 5 nearest neighbors</li>
+    </ul>
+  </li>
+</ul>
 
         
       </section>
@@ -674,7 +763,7 @@ What this mean</p>
       
   <nav class="pagination">
     
-      <a href="/bay/" class="pagination--pager" title="Space Shuttle Challenger
+      <a href="/ul/" class="pagination--pager" title="Unsupervised Learning
 ">Previous</a>
     
     
@@ -692,6 +781,34 @@ What this mean</p>
     <div class="page__related">
       <h4 class="page__related-title">You may also enjoy</h4>
       <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/ul/" rel="permalink">Unsupervised Learning
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  10 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Unsupervised Learning, Dimensionality Reduction, Clustering, PCA, ICA
+</p>
+  </article>
+</div>
+
         
           
 
