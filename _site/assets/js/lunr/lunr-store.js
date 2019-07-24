@@ -23,4 +23,9 @@ var store = [{
         "excerpt":"Objective: Details for this project are available on GitHub. Analyze two datasets using five different supervised learning algorithms. Weka, a suite of machine learning software written in Java, is used for analysis. Datasets used: Faulty Steel Plates 1,941 instances; 27 attributes; 7 labels Steel Plates are classified into 7 different...","categories": [],
         "tags": ["supervised learning","python"],
         "url": "http://localhost:4000/sl/",
+        "teaser":null},{
+        "title": "Practicum - NHANES",
+        "excerpt":"Objective: The objective of the practicum is to identify the prevalence and risk factors of hospital utilization and major diseases over time using publicly reported qualitative and quantitative data. To help answer this objective, I will explore five main questions: What factors predict the likelihood of a patient utilizing hospital...","categories": [],
+        "tags": ["practicum","python","R","supervised learning"],
+        "url": "http://localhost:4000/nhanes/",
         "teaser":null}]

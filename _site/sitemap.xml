@@ -21,6 +21,10 @@
 <lastmod>2018-06-03T00:00:00-04:00</lastmod>
 </url>
 <url>
+<loc>http://localhost:4000/nhanes/</loc>
+<lastmod>2019-05-01T00:00:00-04:00</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/_pages/404/</loc>
 </url>
 <url>
@@ -34,6 +38,9 @@
 </url>
 <url>
 <loc>http://localhost:4000/resume/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/page2/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/images/Resume.pdf</loc>

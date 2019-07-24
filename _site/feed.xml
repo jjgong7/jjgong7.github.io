@@ -1,4 +1,770 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-07-11T18:24:21-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Justin Gong</title><subtitle>Data Science Portfolio</subtitle><author><name>Justin Gong</name></author><entry><title type="html">Supervised Learning</title><link href="http://localhost:4000/sl/" rel="alternate" type="text/html" title="Supervised Learning" /><published>2018-06-03T00:00:00-04:00</published><updated>2018-06-03T00:00:00-04:00</updated><id>http://localhost:4000/sl</id><content type="html" xml:base="http://localhost:4000/sl/">&lt;h2 id=&quot;objective&quot;&gt;Objective:&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-07-24T15:29:38-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Justin Gong</title><subtitle>Data Science Portfolio</subtitle><author><name>Justin Gong</name></author><entry><title type="html">Practicum - NHANES</title><link href="http://localhost:4000/nhanes/" rel="alternate" type="text/html" title="Practicum - NHANES" /><published>2019-05-01T00:00:00-04:00</published><updated>2019-05-01T00:00:00-04:00</updated><id>http://localhost:4000/nhanes</id><content type="html" xml:base="http://localhost:4000/nhanes/">&lt;h2 id=&quot;objective&quot;&gt;Objective:&lt;/h2&gt;
+&lt;!-- 
+Details for this project are available on [GitHub](https://github.com/jjgong7/Machine-Learning/tree/master/1%20-%20Supervised%20Learning). --&gt;
+
+&lt;p&gt;The objective of the practicum is to identify the prevalence and risk factors of hospital utilization and major diseases over time using publicly reported qualitative and quantitative data. To help answer this objective, I will explore five main questions:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;What factors predict the likelihood of a patient utilizing hospital resources?&lt;/li&gt;
+  &lt;li&gt;Are there different risk factors associated with different clinical categories or clusters of patients?&lt;/li&gt;
+  &lt;li&gt;How can the prevalence of major diseases and risk factors be depicted visually to policy makers?&lt;/li&gt;
+  &lt;li&gt;The prevalence of certain diseases has been thought to be increasing over time. As disease prevalence increases, has the use of hospital resources also increased? Additionally, what socio-economic factors are associated with increases in disease prevalence?&lt;/li&gt;
+  &lt;li&gt;Has the prevalence of undiagnosed conditions increased in rural populations over time, compared to non-rural populations?&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;This project is split into six parts:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Part one:
+    &lt;ul&gt;
+      &lt;li&gt;Identify the risk factors and prevalence of hospital utilization.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Parts two to five:
+    &lt;ul&gt;
+      &lt;li&gt;Identify the risk factors and prevalence of four major diseases – Heart Disease, Cancer, Chronic Lung Disease and Diabetes.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Part six:
+    &lt;ul&gt;
+      &lt;li&gt;Identify the prevalence of undiagnosed Diabetes, where BMI &amp;gt; 30.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;introduction-to-nhanes&quot;&gt;Introduction to NHANES&lt;/h2&gt;
+&lt;p&gt;The NHANES interview includes demographic, socioeconomic, dietary, and health-related questions. The examination component consists of medical, dental, and physiological measurements, as well as laboratory tests administered by highly trained medical personnel. Findings from this survey will be used to determine the prevalence of major diseases and risk factors for diseases.&lt;/p&gt;
+
+&lt;h2 id=&quot;dataset&quot;&gt;Dataset&lt;/h2&gt;
+&lt;p&gt;The data is presented in 2 year groups from 1999 to 2016 (1999-2000, 2001-2002, etc.). The 18-year data consists of 1,222 XPT files for about ~3.2 GB. Each 2-year span includes information about demographic, dietary, examination, laboratory, and questionnaire data. An individual in each 2-year span has a unique id labeled ‘SEQN’.&lt;/p&gt;
+
+&lt;h2 id=&quot;data-cleaning-and-processing&quot;&gt;Data Cleaning and Processing&lt;/h2&gt;
+&lt;p&gt;The following data files are used for this project:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Demographics Data&lt;/li&gt;
+  &lt;li&gt;Dietary Data: Dietary Interview for First Day&lt;/li&gt;
+  &lt;li&gt;Examination Data: Blood Pressure Measurement, Total Cholesterol, LDL – Cholesterol, HDL – Cholesterol, Body Measures&lt;/li&gt;
+  &lt;li&gt;Questionnaire Data: Alcohol Use, Blood Pressure, Diabetes, Health Insurance, Hospital Utilization, Medical Conditions, Physical Activity, Respiratory Health, Smoking, Household Smoking, Weight History&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;a-data-cleaning&quot;&gt;a. Data Cleaning&lt;/h3&gt;
+&lt;p&gt;Data cleaning and processing are performed in Python using Jupyter notebooks. The files were converted from XPT to CSV format into the appropriate folders. Features were renamed and values were mapped to maintain consistency across the years. Records with values that were missing, “Refused”, or “Don’t Know” were removed since most of it consisted of less than 10% of the data. The cleaned data is uploaded to a local NoSQL (MongoDB) database.&lt;/p&gt;
+
+&lt;h3 id=&quot;b-data-processing&quot;&gt;b. Data Processing&lt;/h3&gt;
+&lt;p&gt;For hospital utilization and major disease analysis, an inner join was performed on the IDs for the appropriate data files. One-hot encoding was performed on categorical variables since Scikit-learn’s Random Forest requires it. Labels for each analysis part was remapped as 1 indicating the minority and 0 indicating the majority class. This is reversed from the default in NHANES (0-Yes, 1-No). The collections for analysis are uploaded to a local uploaded to a local NoSQL (MongoDB) database as well.&lt;/p&gt;
+
+&lt;h2 id=&quot;algorithms-used&quot;&gt;Algorithms Used&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Random Forest:&lt;/strong&gt;
+This is a supervised learning ensemble method that can be used for classification and regression. I will be using it for classification. Random forests are composed of multiple decisions trees with randomly selected subsets of features for each tree. It produces an output of the majority vote of the classes. Random forests use bagging to train each decision tree, which means it selects a random sample of about 2/3 of the training data with replacement and then uses the remaining 1/3 data, the Out-Of-Bag, to produce a generalization error. Bagging or bootstrap aggregating performs better since it’s able to decrease the variance of the model, without increasing bias. The features are split via Gini importance, which is computed as the (normalized) total reduction of the criterion brought by that feature.&lt;/p&gt;
+
+&lt;p&gt;The benefits of random forests are that it corrects for decision trees’ overfitting to the training set, features don’t have to be scaled, it can handle missing values, and it gives good indication of feature importance. Scikit-learn in Python is used for analysis and to get the feature importance.&lt;/p&gt;
+
+&lt;p&gt;The following hyperparameters are tuned for the Random Forest algorithm via GridSearchCV:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;n_estimators: The number of trees in the forest&lt;/li&gt;
+  &lt;li&gt;max_features: The number of features to consider at each split&lt;/li&gt;
+  &lt;li&gt;max_depth: Maximum depth of the tree&lt;/li&gt;
+  &lt;li&gt;criterion: Function to measure split (Gini)&lt;/li&gt;
+  &lt;li&gt;class_weight: Weights associated with the classes (Imbalanced class)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;XGBoost:&lt;/strong&gt; 
+This is a supervised algorithm that has been popular among Kaggle competitions. XGBoost stands for eXtreme Gradient Boosting and implements a gradient boosted decision tree algorithm for classification or regression. Gradient Boosting uses weighting to convert weak learners (ones that do slightly better than chance) into a strong learner. Errors in the previous trees are thus reduced. Boosting also makes use of trees with fewer splits to prevent overfitting.&lt;/p&gt;
+
+&lt;p&gt;The benefits also include model performance, execution speed, handle missing values, and the ability to provide feature importance. Scikit-learn and XGBoost Classifier in Python is used for analysis and to get the feature importance.&lt;/p&gt;
+
+&lt;p&gt;The following hyperparameters are tuned for the XGBoost algorithm via GridSearchCV:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;n_estimators: The number of trees in the forest&lt;/li&gt;
+  &lt;li&gt;max_depth: Maximum depth of tree&lt;/li&gt;
+  &lt;li&gt;subsample: Subsample ratio of the training instances (prevent overfitting)&lt;/li&gt;
+  &lt;li&gt;colsample_bytree: Subsampling ratio of columns when constructing each tree&lt;/li&gt;
+  &lt;li&gt;scale_pos_weight: Control the balance of positive and negative weights, useful for unbalanced classes.&lt;/li&gt;
+  &lt;li&gt;learning_rate: Step size shrinkage used in updates to prevent overfitting.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;analysis&quot;&gt;Analysis&lt;/h2&gt;
+&lt;p&gt;The analysis for parts one through five have very similar procedures:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Data is retrieved from the local MongoDB.&lt;/li&gt;
+  &lt;li&gt;Exploratory Data Analysis is performed.
+    &lt;ul&gt;
+      &lt;li&gt;A count plot is created for categorical features to see the distribution of categories and a box plot for numerical data to identify quartiles, variability, and outliers. Class distribution is plotted overall and across the 18 years to identify any trends.&lt;/li&gt;
+      &lt;li&gt;A Pearson’s Coefficient Correlation plot is created for numerical data - primarily dietary data, cholesterol, and blood pressure, to show the correlation of variables and remove any highly correlated variables (measuring the same factor in different scale)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Data is split into training and test sets 80% and 20%, respectively, and stratified across years.&lt;/li&gt;
+  &lt;li&gt;Data is Upsampled (SMOTE) and Downsampled (Tomek Links). Since we are working with health data, the class labels are highly imbalanced and up and down sampling is performed to see if models can be better fitted.
+    &lt;ul&gt;
+      &lt;li&gt;SMOTE, Synthetic Minority Over-sampling Technique, is a common up sampling technique that considers its k-nearest neighbors and the current point and creates a synthetic data point using features between them.&lt;/li&gt;
+      &lt;li&gt;Tomek links works by removing overlap between classes. Majority class links are removed until all minimally distanced nearest pairs are of the same class. This puts kind of a buffer, or border, between the classes. This creates less data overall.&lt;/li&gt;
+      &lt;li&gt;Imbalanced-learn in Python is used for the sampling.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Unnecessary features are removed such as MEC and Dietary 18 Year weights along with years.&lt;/li&gt;
+  &lt;li&gt;A filtering method for feature selection is performed.
+    &lt;ul&gt;
+      &lt;li&gt;Chi-2 analysis is performed to get a sense of the important features (Risk Factors). However, in this analysis, dietary information with high values are weighted heavily.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Random Forest Analysis:
+    &lt;ul&gt;
+      &lt;li&gt;The regular, Upsampled, and Downsampled data are all used.&lt;/li&gt;
+      &lt;li&gt;A parameter grid is defined for GridSearchCV for hyperparameter tuning of the hyperparameters stated above.&lt;/li&gt;
+      &lt;li&gt;The best hyperparameters are selected for the Regular, Upsampled, and Downsampled datasets.&lt;/li&gt;
+      &lt;li&gt;Random Forest Classifiers are set using the best parameters and fit using the data.&lt;/li&gt;
+      &lt;li&gt;Feature importance plot is generated&lt;/li&gt;
+      &lt;li&gt;Testing Metrics: Test Data is used for Evaluation
+        &lt;ul&gt;
+          &lt;li&gt;Confusion Matrix&lt;/li&gt;
+          &lt;li&gt;Precision and Recall&lt;/li&gt;
+          &lt;li&gt;F1-Score (Main evaluation metric used)
+            &lt;ul&gt;
+              &lt;li&gt;The F1 score is the harmonic mean of precision and recall: 2TP/(2TP+FP+FN).&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+          &lt;li&gt;ROC AUC Scores&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Since classifiers are classifying based on probability over a certain amount (0.5 default), different probabilities are iterated over to see if it would produce better f1-scores. A box plot is generated for each cutoff value. Most of the time, the optimal cutoff is still 0.5. The adjusted cutoff value is then compared to the 0.5 cutoff.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;XGBoost Analysis:
+    &lt;ul&gt;
+      &lt;li&gt;The regular, Upsampled, and Downsampled data are all used.&lt;/li&gt;
+      &lt;li&gt;A parameter grid is defined for GridSearchCV for hyperparameter tuning of the hyperparameters stated above.&lt;/li&gt;
+      &lt;li&gt;The best hyperparameters are selected for the Regular, Upsampled, and Downsampled datasets.&lt;/li&gt;
+      &lt;li&gt;XGBoost Classifiers are set using the best parameters and fit using the data.&lt;/li&gt;
+      &lt;li&gt;Testing Metrics: Test Data is used for Evaluation
+        &lt;ul&gt;
+          &lt;li&gt;Confusion Matrix&lt;/li&gt;
+          &lt;li&gt;Precision and Recall&lt;/li&gt;
+          &lt;li&gt;F1-Score (Main evaluation metric used)
+            &lt;ul&gt;
+              &lt;li&gt;The F1 score is the harmonic mean of precision and recall: 2TP/(2TP+FP+FN).&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+          &lt;li&gt;ROC AUC Scores&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Feature importance plot is generated. XGBoost has two different feature importance measurements
+        &lt;ul&gt;
+          &lt;li&gt;One is based on scoring feature of f1-score and another feature importance.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;XGBoost is compared to Random Forest Analysis&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Identifying the Risk Factors
+    &lt;ul&gt;
+      &lt;li&gt;Risk factors are identified by feature importance from Random Forest and XGBoost and also feature selection using Chi-2 analysis. The top 10 feature importance are extracted from the Chi-2 analysis, (Regular, Upsample, Downsample) from Random Forest feature importance, XGBoost F1-score importance, and XGBoost feature importance. The top ten for each are weighted 0.025, .15, .10, and 0.075, respectively, to get the overall feature importance for identifying risk factors.
+        &lt;ul&gt;
+          &lt;li&gt;0.025 x [Chi-2] + .15 [Reg RF + Up RF + Down RF] + .10 [Reg XGB F1 + Up XGB F1 + Down XGB F1] + 0.075 [Reg XGB FI + Up XGB FI + Down XGB FI]&lt;/li&gt;
+          &lt;li&gt;Weights add up to 1: 0.025 + 3 x .15 + 3 x .10 + 3 x 0.075 = 1&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;data-visualization-prevalence-of-major-diseases-and-risk-factors-over-time&quot;&gt;Data Visualization: Prevalence of Major Diseases and Risk Factors over time&lt;/h2&gt;
+&lt;p&gt;Data visualization (ggplot2) was performed in R. The survey library was used to take into account the complex survey design of NHANES. Error box plots with confidence intervals were generated to show the prevalence of major diseases based on risk factors and prevalence of major diseases over time.&lt;/p&gt;
+
+&lt;h3 id=&quot;part-1-hospital-utilization&quot;&gt;Part 1: Hospital Utilization&lt;/h3&gt;
+&lt;p&gt;To predict the likelihood of hospital utilization, the label ‘HUQ050’ is used in the HUQ – Hospital Utilization file. This label indicates the number of times an individual received healthcare over the past year.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Initially five classes from 0 (No Hospital Utilization) to 5 (Thirteen or more times received healthcare).&lt;/li&gt;
+  &lt;li&gt;There were too many classes, so I mapped the classes to 0 [Received Healthcare (Majority Class)] and 1 [Didn’t Receive Healthcare (Minority Class)].&lt;/li&gt;
+  &lt;li&gt;There are 64,583 records with 52 features and ~14% are in the minority class (Didn’t Receive Healthcare).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Random Forest:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Hyperparameters:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Class_weight hyperparameter was heavily weighted towards the minority class {0: 0.2, 1: 0.8} for the regular and downsampled data.&lt;/li&gt;
+  &lt;li&gt;The upsampled data required a larger max_depth at 15, since it has more balanced data and so class_weight = ‘balanced’.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;F1 Score:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Regular data produced the best F1 Score on minority class (No Hospital Utilization)
+    &lt;ul&gt;
+      &lt;li&gt;F1 Score: 0.50&lt;/li&gt;
+      &lt;li&gt;Precision: 0.45
+        &lt;ul&gt;
+          &lt;li&gt;0.45 selected items are relevant&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Recall: 0.55
+        &lt;ul&gt;
+          &lt;li&gt;0.55 relevant items are selected&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The output of feature importance for Random Forest (Left) and XGBoost (Right):&lt;br /&gt;
+&lt;img src=&quot;../images/practicum/P1_HU_RFXG.png&quot; alt=&quot;P1_HU_RFXG&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;XGBoost:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Hyperparameters:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Scale_pos_weight hyperparameter was weighted towards the minority class by 3 for the regular and downsampled data.&lt;/li&gt;
+  &lt;li&gt;The upsampled data required a larger max_depth at 4 compared to 2, since it has more balanced data and so scale_pos_weight was also less at 2.&lt;/li&gt;
+  &lt;li&gt;The max depth is much less than random forest.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;F1 Score:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Regular data produced the best F1 Score on minority class (No Hospital Utilization)
+    &lt;ul&gt;
+      &lt;li&gt;F1 Score: 0.51&lt;/li&gt;
+      &lt;li&gt;Precision: 0.47&lt;/li&gt;
+      &lt;li&gt;Recall: 0.55&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;XGBoost versus Random Forest:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;XGBoost improved F1 score by 0.01 for both classes, and improved precision by 0.02 for the minority class&lt;/li&gt;
+  &lt;li&gt;XGBoost outperforms random forest&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Risk Factors:&lt;/strong&gt;&lt;br /&gt;
+The following combines the weighted feature importance of the algorithms to identify the risk factors of hospital utilization.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../images/practicum/P1_HU_RF.png&quot; alt=&quot;P1_HU_RF&quot; width=&quot;450px&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This shows that some of the important risk factors for hospital utilization are:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;HUQ030_2.0– Routine place to go for healthcare (0 – Yes, 1 - No)&lt;/li&gt;
+  &lt;li&gt;HID010_2.0 – Covered by health insurance (0 – Yes, 1 - No)&lt;/li&gt;
+  &lt;li&gt;RIAGENDR_2.0 – Male or Female (1 – Female)&lt;/li&gt;
+  &lt;li&gt;RIDAGEYR – Age at screening&lt;/li&gt;
+  &lt;li&gt;DMDCITZN_2.0 – Not a citizen of the U.S. (1 – Not a Citizen)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;Prevalence of Risk Factors:&lt;/strong&gt;&lt;br /&gt;
+The prevalence of Hospital Utiliztaion and its risk factors are depicted visually using ggplot2 in R.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../images/practicum/P1_HU_V1.png&quot; alt=&quot;P1_HU_V1&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Most people do have healthcare, are covered by health insurance, and are U.S. citizens so the proportions are higher, but the minority does seem relatively high for each.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;../images/practicum/P1_HU_V2.png&quot; alt=&quot;P1_HU_V2&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Females tend to go to the hospital more so than males.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;../images/practicum/P1_HU_V3.png&quot; alt=&quot;P1_HU_V3&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;As we further break down the age grouping, it shows that children 0 - 12 go to the hospital a lot and this makes sense. Young children are likely to get sick from school or go to the hospital for vaccines.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Hospital Utilization over Time:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../images/practicum/P1_HU_Time.png&quot; alt=&quot;P1_HU_Time&quot; width=&quot;450px&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;From 1999, there does seem to be a very slight increase in hospital utilization over time. The lowest was in 1999-2000 and the highest was most recently in 2013-2014.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;major-diseases-part-2-to-part-5&quot;&gt;Major Diseases: Part 2 to Part 5&lt;/h2&gt;
+&lt;p&gt;Question 2: Are there different risk factors associated with different clinical categories or clusters of patients?&lt;br /&gt;
+Question 3: How can the prevalence of major diseases and risk factors be depicted visually to policy makers?&lt;br /&gt;
+Question 4: The prevalence of certain diseases has been thought to be increasing over time. As disease prevalence increases, has the use of hospital resources also increased? Additionally, what socio-economic factors are associated with increases in disease prevalence?&lt;/p&gt;
+
+&lt;h3 id=&quot;part-2-heart-disease&quot;&gt;Part 2: Heart Disease&lt;/h3&gt;
+&lt;p&gt;To see different risk factors associated with heart disease, the label ‘MCQ160C’ is used in the MCQ – Medical Questionnaire file. This label indicates if “You were ever told you had coronary heart disease”.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Mapped the classes to 0 – No Heart Disease (Majority) and 1 – Heart Disease (Minority).&lt;/li&gt;
+  &lt;li&gt;There are 14,784 records with 65 features and ~4% are in the minority class (Heart Disease).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Random Forest:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Hyperparameters:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Class_weight hyperparameter was heavily weighted towards the minority class for the regular and downsampled data.&lt;/li&gt;
+  &lt;li&gt;The upsampled data required a larger max_depth at 15, since it has more data.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;F1 Score:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Regular data produced the best F1 Score on minority class (Heart Disease)
+    &lt;ul&gt;
+      &lt;li&gt;F1 Score: 0.30&lt;/li&gt;
+      &lt;li&gt;Precision: 0.20&lt;/li&gt;
+      &lt;li&gt;Recall: 0.59&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;../images/practicum/P2_HD_RFXG.png&quot; alt=&quot;P2_HD_RFXG&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;XGBoost:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Hyperparameters:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Scale_pos_weight hyperparameter was weighted towards the minority class with a value of 10 for the regular and downsampled data.&lt;/li&gt;
+  &lt;li&gt;The upsampled data required a larger max_depth at 6 compared to 3 since it has more data.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;F1 Score:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Regular data produced the best F1 Score on minority class (Heart Disease)
+    &lt;ul&gt;
+      &lt;li&gt;F1 Score: 0.32&lt;/li&gt;
+      &lt;li&gt;Precision: 0.22&lt;/li&gt;
+      &lt;li&gt;Recall: 0.61&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;XGBoost versus Random Forest:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;The max depth of the trees is much less than random forest at 6 vs 15 for the upsample.&lt;/li&gt;
+  &lt;li&gt;XGBoost improved f1-score by .02 for the minority class by improving precision and recall by 0.02 for the minority class.&lt;/li&gt;
+  &lt;li&gt;XGBoost performs better!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Risk Factors:&lt;/strong&gt;&lt;br /&gt;
+The following combines the weighted feature importance of the algorithms to identify the risk factors of heart disease.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../images/practicum/P2_HD_RF.png&quot; alt=&quot;P1_HU_RF&quot; width=&quot;450px&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This shows that some of the important risk factors for Heart Disease are:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;RIDAGEYR – Age at Screening&lt;/li&gt;
+  &lt;li&gt;BPQ020_2.0 – Ever told you had high blood pressure (0 – Yes, 1 – No)&lt;/li&gt;
+  &lt;li&gt;RIAGENDR_2.0 – Male or Female (1 – Female)&lt;/li&gt;
+  &lt;li&gt;LBXTC – Total cholesterol (mg/dL)&lt;/li&gt;
+  &lt;li&gt;LBDLDL – LDL-cholesterol (mg/dL)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Some of the features like HUQ010 (General health Condition) and HUQ050 (# Time Received Healthcare) are a result of the disease, so it’s not considered.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Prevalence of Risk Factors:&lt;/strong&gt;&lt;br /&gt;
+The prevalence of Heart Disease and its risk factors are depicted visually using ggplot2 in R.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../images/practicum/P2_HD_V1.png&quot; alt=&quot;P2_HD_V1&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Most people who identified as having heart disease did have desirable total cholesterol and LDL cholesterol levels. However, high total cholesterol and LDL levels are still a good indicator of heart disease.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;../images/practicum/P2_HD_V2.png&quot; alt=&quot;P2_HD_V2&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;There is more prevalence of heart disease in males than females. Those who do have high blood pressure also make up a large proportion of people who have heart disease.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;../images/practicum/P2_HD_V3.png&quot; alt=&quot;P2_HD_V3&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Those most affected by heart disease are within the 64-85 age range group. As we break it down further, 66-75 year old’s within that group are most affected.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Heart Disease and Hospital Utilization over Time:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../images/practicum/P2_HD_Time.png&quot; alt=&quot;P2_HD_Time&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Heart disease doesn’t seem to be increasing over time.&lt;/li&gt;
+  &lt;li&gt;Hospital utilization linked with those who responded to the MEC questionnaire seem to indicate an increase.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- ################################################################## --&gt;
+
+&lt;h3 id=&quot;part-3-cancer&quot;&gt;Part 3: Cancer&lt;/h3&gt;
+&lt;p&gt;To see different risk factors associated with cancer, the label ‘MCQ220’ is used in the MCQ – Medical Questionnaire file. This label indicates if “You were ever told you had cancer or malignancy”.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Mapped the classes to 0 – No Cancer (Majority) and 1 -  Cancer (Minority).&lt;/li&gt;
+  &lt;li&gt;There are 33,074 records with 59 features and ~9% are in the minority class (Cancer).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Random Forest:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Hyperparameters:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Class_weight hyperparameter was heavily weighted towards the minority class for the regular and downsampled data {0: 0.1, 1: 0.9}.&lt;/li&gt;
+  &lt;li&gt;The upsampled data required a larger max_depth at 15, since it has more data.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;F1 Score:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Regular data produced the best F1 Score on minority class (Cancer)
+    &lt;ul&gt;
+      &lt;li&gt;F1 Score: 0.36&lt;/li&gt;
+      &lt;li&gt;Precision: 0.24&lt;/li&gt;
+      &lt;li&gt;Recall: 0.66&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;A cutoff of 0.55 instead of 0.50 for classification actually improved the f1-score of both classes by 0.02.&lt;/p&gt;
+
+&lt;p&gt;The output of feature importance for Random Forest (Left) and XGBoost (Right):&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../images/practicum/P3_CA_RFXG.png&quot; alt=&quot;P3_CA_RFXG&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;XGBoost:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Hyperparameters:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Scale_pos_weight hyperparameter was weighted towards the minority class with a value of 8 for the regular and downsampled data.&lt;/li&gt;
+  &lt;li&gt;The upsampled data required a larger max_depth at 6 compared to 4 since it has more data.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;F1 Score:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Regular data produced the best F1 Score on minority class (Cancer)
+    &lt;ul&gt;
+      &lt;li&gt;F1 Score: 0.36&lt;/li&gt;
+      &lt;li&gt;Precision: 0.25&lt;/li&gt;
+      &lt;li&gt;Recall: 0.66&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;XGBoost versus Random Forest:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;The max depth of the trees is much less than random forest at 6 vs 15 for the upsample.&lt;/li&gt;
+  &lt;li&gt;XGBoost had the same f1-score for the minority class and only improved precision of the minority class slightly by 0.01.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Risk Factors:&lt;/strong&gt;&lt;br /&gt;
+The following combines the weighted feature importance of the algorithms to identify the risk factors of cancer.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../images/practicum/P3_CA_RF.png&quot; alt=&quot;P3_CA_RF&quot; width=&quot;450px&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This shows that some of the important risk factors for cancer are:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;RIDAGEYR – Age at Screening&lt;/li&gt;
+  &lt;li&gt;RIDRETH1_3.0 – Non-Hispanic White (0 – Yes, 1 – No)&lt;/li&gt;
+  &lt;li&gt;BPQ020_2.0 – Ever told you had high blood pressure (0 – Yes, 1 – No)&lt;/li&gt;
+  &lt;li&gt;HID010_2.0 – Covered by health insurance (0 – Yes, 1 - No)&lt;/li&gt;
+  &lt;li&gt;DMDHHSIZ – Number of people in the household (1 to 7 or more)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Some of the features like HUQ050 (# Time Received Healthcare) is a result of the disease, so it’s not considered.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Prevalence of Risk Factors:&lt;/strong&gt;&lt;br /&gt;
+The prevalence of Cancer and its risk factors are depicted visually using ggplot2 in R.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../images/practicum/P3_CA_V1.png&quot; alt=&quot;P3_CA_V1&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;There is higher prevalence of cancer for non-Hispanic whites&lt;/li&gt;
+  &lt;li&gt;There is higher prevalence of cancer in households with two members. The higher prevalence of cancer for two household members may be due to the fact that average household size is about 2.6 people.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;../images/practicum/P3_CA_V2.png&quot; alt=&quot;P3_CA_V2&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;There is higher prevalence of cancer in women than in men.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;../images/practicum/P3_CA_V3.png&quot; alt=&quot;P3_CA_V3&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Cancer affects mostly older individuals over the age of 64, more specifically, 66 to 75 years of age.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Cancer, Hospital Utilization &amp;amp; Proportion of No Healthcare Access over Time:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../images/practicum/P3_CA_Time.png&quot; alt=&quot;P3_CA_Time&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The plot of cancer over time shows that the prevalence is increasing.&lt;/li&gt;
+  &lt;li&gt;Among those who responded to the cancer questionnaire, there is an increase in hospital utilization, especially from 2009 to 2016, with the highest in 2016.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;../images/practicum/P3_CA_Time2.png&quot; alt=&quot;P3_CA_Time2&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Socio-economic factors such as proportion of individuals with no healthcare access who have cancer has increased over the time period from 2011 to 2016 as well.&lt;/li&gt;
+  &lt;li&gt;Also, not shown here, but prevalence of low household income levels and low education levels have decreased over time.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;part-4-chronic-lung-disease&quot;&gt;Part 4: Chronic Lung Disease&lt;/h3&gt;
+&lt;p&gt;To see different risk factors associated with Chronic Lung Disease, the label ‘MCQ160K’ is used in the MCQ – Medical Questionnaire file. This label indicates if “You were ever told you had bronchitis”.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Mapped the classes to 0 – No Chronic Lung Disease (Majority) and 1 -  Chronic Lung Disease (Minority).&lt;/li&gt;
+  &lt;li&gt;There are 33,009 records with 60 features and ~6% are in the minority class (Chronic Lung Disease).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Random Forest:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Hyperparameters:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Class_weight hyperparameter was heavily weighted towards the minority class for the regular and downsampled data {0: 0.1, 1: 0.9}.&lt;/li&gt;
+  &lt;li&gt;The upsampled data required a larger max_depth at 15, since it has more balanced data.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;F1 Score:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Regular data produced the best F1 Score on minority class (Chronic Lung Disease)
+    &lt;ul&gt;
+      &lt;li&gt;F1 Score: 0.31&lt;/li&gt;
+      &lt;li&gt;Precision: 0.28&lt;/li&gt;
+      &lt;li&gt;Recall: 0.36&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Changing cutoffs for probabilities did not improve the f1-score.&lt;/p&gt;
+
+&lt;p&gt;The output of feature importance for Random Forest (Left) and XGBoost (Right):&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../images/practicum/P4_CL_RFXG.png&quot; alt=&quot;P4_CL_RFXG&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;XGBoost:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Hyperparameters:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Scale_pos_weight hyperparameter was weighted towards the minority class with a value of 8 for the regular and downsampled data.&lt;/li&gt;
+  &lt;li&gt;The upsampled data required a larger max_depth at 6 compared to 3 since it has more balanced data.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;F1 Score:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Regular data produced the best F1 Score on minority class (Chronic Lung Disease)
+    &lt;ul&gt;
+      &lt;li&gt;F1 Score: 0.31&lt;/li&gt;
+      &lt;li&gt;Precision: 0.23&lt;/li&gt;
+      &lt;li&gt;Recall: 0.45&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;XGBoost versus Random Forest:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;The max depth of the trees is much less than random forest at 6 vs 15.&lt;/li&gt;
+  &lt;li&gt;XGBoost had the same f1-score for the minority class and improved recall by 0.09, but did worse in precision by 0.05.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Risk Factors:&lt;/strong&gt;&lt;br /&gt;
+The following combines the weighted feature importance of the algorithms to identify the risk factors of Chronic Lung Disease.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../images/practicum/P4_CL_RF.png&quot; alt=&quot;P4_CL_RF&quot; width=&quot;450px&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This shows that some of the important risk factors for Chronic Lung Disease are:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;MCQ010_2.0 – Ever been told you have asthma&lt;/li&gt;
+  &lt;li&gt;RIDAGEYR – Age at Screening&lt;/li&gt;
+  &lt;li&gt;RIAGENDR_2.0 – Male or Female (1 – Female)&lt;/li&gt;
+  &lt;li&gt;DMDBORN4_2.0 – Country of birth (1 – Other, 0 – U.S.)&lt;/li&gt;
+  &lt;li&gt;SMD410_2.0 – Does anyone smoke in the home? (0-Yes, 1-No)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Some of the features like HUQ010 (General health Condition) and HUQ050 (# Time Received Healthcare) are a result of the disease, so it’s not considered.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Prevalence of Risk Factors:&lt;/strong&gt;&lt;br /&gt;
+The prevalence of Chronic Lung Disease and its risk factors are depicted visually using ggplot2 in R.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../images/practicum/P4_CL_V1.png&quot; alt=&quot;P4_CL_V1&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;The prevalence of chronic lung disease for those with asthma is higher compared to those without. That could be a reason why it’s number one in feature importance.&lt;/li&gt;
+  &lt;li&gt;Chronic lung disease primarily affects individuals between the ages of 49 to 63.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;../images/practicum/P4_CL_V2.png&quot; alt=&quot;P4_CL_V2&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Females are more likely to be affected by chronic lung disease than males.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;../images/practicum/P4_CL_V3.png&quot; alt=&quot;P4_CL_V3&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;The prevalence of chronic lung disease for those with smoking in the household is very high compared to those without.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Chronic Lung Disease Over Time:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../images/practicum/P4_CL_Time.png&quot; alt=&quot;P4_CL_Time&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;There doesn’t seem to be any upward or downward trend in chronic lung disease over time.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;../images/practicum/P3_CA_Time2.png&quot; alt=&quot;P3_CA_Time2&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Socio-economic factors such as proportion of individuals with no healthcare access who have chronic lung disease has increased over the time period from 2011 to 2016 as well.&lt;/li&gt;
+  &lt;li&gt;Also, not shown here, but prevalence of low household income levels and low education levels have decreased over time.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;part-5-diabetes&quot;&gt;Part 5: Diabetes&lt;/h3&gt;
+&lt;p&gt;To see different risk factors associated with Diabetes, the label ‘DIQ010’ is used in the DIQ – Diabetes Questionnaire file. This label indicates if “Doctor told you have diabetes”.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Mapped the classes to 0 – No Diabetes (Majority) and 1 -  Diabetes (Minority).&lt;/li&gt;
+  &lt;li&gt;There are 15,105 records with 61 features and ~12% are in the minority class (Diabetes).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Random Forest:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Hyperparameters:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Class_weight hyperparameter was heavily weighted towards the minority class for the regular and downsampled data.&lt;/li&gt;
+  &lt;li&gt;The upsampled data required a larger max_depth at 15, since it has more balanced data.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;F1 Score:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Regular data produced the best F1 Score on minority class (Diabetes)
+    &lt;ul&gt;
+      &lt;li&gt;F1 Score: 0.47&lt;/li&gt;
+      &lt;li&gt;Precision: 0.36&lt;/li&gt;
+      &lt;li&gt;Recall: 0.67&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Changing cutoffs for probabilities did not improve the f1-score.&lt;/p&gt;
+
+&lt;p&gt;The output of feature importance for Random Forest (Left) and XGBoost (Right):&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../images/practicum/P5_DI_RFXG.png&quot; alt=&quot;P5_DI_RFXG&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;XGBoost:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Hyperparameters:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Scale_pos_weight hyperparameter was weighted towards the minority class with a value of 8 for the regular and downsampled data.&lt;/li&gt;
+  &lt;li&gt;The upsampled data required a larger max_depth at 6 compared to 4 since it  more balanced data.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;F1 Score:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Regular data produced the best F1 Score on minority class (Diabetes)
+    &lt;ul&gt;
+      &lt;li&gt;F1 Score: 0.49&lt;/li&gt;
+      &lt;li&gt;Precision: 0.38&lt;/li&gt;
+      &lt;li&gt;Recall: 0.71&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;XGBoost versus Random Forest:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;The max depth of the trees is much less than random forest at 6 vs 15 and 4 vs 8 for regular and downsampled.&lt;/li&gt;
+  &lt;li&gt;XGBoost improved f1-score of the minority class by 0.02 by increasing precision by 0.02 and recall by 0.04.&lt;/li&gt;
+  &lt;li&gt;XGBoost performs better!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Risk Factors:&lt;/strong&gt;&lt;br /&gt;
+The following combines the weighted feature importance of the algorithms to identify the risk factors of Diabetes.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../images/practicum/P5_DI_RF.png&quot; alt=&quot;P5_DI_RF&quot; width=&quot;450px&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This shows that some of the important risk factors for Diabetes are:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;RIDAGEYR – Age at Screening&lt;/li&gt;
+  &lt;li&gt;BPQ020_2.0 – Ever told you had high blood pressure (0 – Yes, 1 – No)&lt;/li&gt;
+  &lt;li&gt;BMXBMI – Body Mass Index&lt;/li&gt;
+  &lt;li&gt;LBXTC – Total cholesterol (mg/dL)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Some of the features like HUQ010 (General health Condition) and HUQ050 (# Time Received Healthcare) are a result of the disease, so it’s not considered.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Prevalence of Risk Factors:&lt;/strong&gt;&lt;br /&gt;
+The prevalence of Diabetes and its risk factors are depicted visually using ggplot2 in R.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../images/practicum/P5_DI_V1.png&quot; alt=&quot;P5_DI_V1&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Those who have high blood pressure also have a high prevalence of diabetes.&lt;/li&gt;
+  &lt;li&gt;As Body Mass Index increases, the prevalence of Diabetes increases substantially. BMI is highly correlated to diabetes.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;../images/practicum/P5_DI_V2.png&quot; alt=&quot;P5_DI_V2&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Diabetes is prevalent among individuals ages 49 and over.&lt;/li&gt;
+  &lt;li&gt;Most individuals who have diabetes have desirable total cholesterol levels.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Diabetes, Hospital Utilization and Proportion of No Healthcare Access Over Time:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../images/practicum/P5_DI_Time.png&quot; alt=&quot;P5_DI_Time&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Diabetes has an increasing trend every single year from 2003 and onwards.&lt;/li&gt;
+  &lt;li&gt;Hospital utilization has increased for those who answered the diabetes questionnaire.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;../images/practicum/P5_DI_Time2.png&quot; alt=&quot;P5_DI_Time2&quot; width=&quot;450px&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Socio-economic factors such as proportion of individuals with no healthcare access who have diabetes has increased over the time period from 2011 to 2016 as well.&lt;/li&gt;
+  &lt;li&gt;Also, not shown here, but prevalence of low household income levels and low education levels have decreased over time.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;undiagnosed-diseases&quot;&gt;Undiagnosed Diseases&lt;/h2&gt;
+&lt;h3 id=&quot;part-6-undiagnosed-diabetes-bmi--30&quot;&gt;Part 6: Undiagnosed Diabetes (BMI &amp;gt; 30)&lt;/h3&gt;
+&lt;p&gt;Question 5: Has the prevalence of undiagnosed conditions increased in rural populations over time, compared to non-rural populations?&lt;/p&gt;
+
+&lt;p&gt;From Part 5, since BMI levels are highly correlated to risk of diabetes, I will use BMI levels to visualize and see whether the prevalence of undiagnosed diabetes has increased in rural populations over time compared to non-rural populations.&lt;br /&gt;
+Individuals who have BMI levels greater than 30 are considered to have diabetes. I created a new column in my data with a value of “Undiagnosed Diabetes” or “Not Undiagnosed”. An individual who is coded “Undiagnosed Diabetes” has a value of 0 for DIQ010, indicating no doctor told them they have diabetes, and they also have a value &amp;gt;30 for BMXBMI. The graph below shows the error box plots of the interaction and prevalence between “Undiagnosed Diabetes” and “Year” over time from 1999 to 2016.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../images/practicum/P6_UNDIAG.png&quot; alt=&quot;P6_UNDIAG&quot; width=&quot;450px&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The plot shows that the prevalence of undiagnosed diabetes has indeed increased over time.&lt;/p&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion:&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Hospital Utilization&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Hospital utilization overall hasn’t increased much over time, but for individuals who responded to the cancer and diabetes questionnaire, hospital utilization has increased. Hospital utilization for those who have heart disease seems to have increased slightly.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Age is a huge factor in determining hospital utilization and risk of major diseases.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Major Diseases:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../images/practicum/Conclusion.png&quot; alt=&quot;Conclusion&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Heart Disease&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Risk factors include age, blood pressure, gender, and cholesterol.&lt;/li&gt;
+  &lt;li&gt;Prevalence of heart disease is high in individuals with desirable levels of cholesterol, so there may be some undiagnosed individuals.&lt;/li&gt;
+  &lt;li&gt;Heart disease is more prevalent in males and those with high blood pressure.&lt;/li&gt;
+  &lt;li&gt;Heart disease prevalence isn’t increasing over time.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Cancer&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Risk factors include gender, being a non-Hispanic white, household size, and age.&lt;/li&gt;
+  &lt;li&gt;Being female, having a household size of two, and non-Hispanic whites are indicative of a high prevalence of cancer.&lt;/li&gt;
+  &lt;li&gt;The prevalence of cancer is increasing a lot over time.
+    &lt;ul&gt;
+      &lt;li&gt;For individuals who repsonded to the cancer questionnaire, hospital utilization has also increased.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Chronic Lung Disease&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Risk factors include asthma, age, gender, and smoking.&lt;/li&gt;
+  &lt;li&gt;Prevalence is high for people with asthma and it’s almost double for females compared to males.&lt;/li&gt;
+  &lt;li&gt;The prevalence of chronic lung disease isn’t increasing over time.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Diabetes&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Risk factors for diabetes include body mass index, age, blood pressure, and cholesterol.&lt;/li&gt;
+  &lt;li&gt;High body mass index is highly correlated to diabetes.&lt;/li&gt;
+  &lt;li&gt;High blood pressure is also a good indicator of diabetes.&lt;/li&gt;
+  &lt;li&gt;The prevalence of diabetes is increasing a lot over time.
+    &lt;ul&gt;
+      &lt;li&gt;For individuals who repsonded to the diabetes questionnaire, hospital utilization has also increased over time.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Socio-economic Factors&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Socio-economic factors such as proportion of individuals with no healthcare access who have diabetes and chronic lung disease have increased over the time period from 2011 to 2016 as well.&lt;/li&gt;
+  &lt;li&gt;Also, not shown here, but prevalence of low household income levels and low education levels have actually decreased over time.&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Justin Gong</name></author><category term="practicum" /><category term="python" /><category term="R" /><category term="supervised learning" /><summary type="html">Supervised Learning, Python, R, XGBoost, Random Forest, Sci-kit Learn</summary></entry><entry><title type="html">Supervised Learning</title><link href="http://localhost:4000/sl/" rel="alternate" type="text/html" title="Supervised Learning" /><published>2018-06-03T00:00:00-04:00</published><updated>2018-06-03T00:00:00-04:00</updated><id>http://localhost:4000/sl</id><content type="html" xml:base="http://localhost:4000/sl/">&lt;h2 id=&quot;objective&quot;&gt;Objective:&lt;/h2&gt;
 
 &lt;p&gt;Details for this project are available on &lt;a href=&quot;https://github.com/jjgong7/Machine-Learning/tree/master/1%20-%20Supervised%20Learning&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
 
@@ -998,7 +1764,7 @@ Good clusters at k=3, 6, and 10&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;conclusion&quot;&gt;Conclusion:&lt;/h2&gt;
-&lt;p&gt;The dimensions for each of the components in the clustering algorithms in Part 2 were as follows:&lt;/p&gt;
+&lt;p&gt;The dimensions for each of the components in the clustering algorithms in Part 2 along with computational times were as follows:&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;../images/ml-unsup/Conclusion.png&quot; alt=&quot;Conclusion&quot; width=&quot;350px&quot; /&gt;&lt;/p&gt;
 &lt;ul&gt;
