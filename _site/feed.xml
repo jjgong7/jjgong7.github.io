@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-07-24T15:29:38-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Justin Gong</title><subtitle>Data Science Portfolio</subtitle><author><name>Justin Gong</name></author><entry><title type="html">Practicum - NHANES</title><link href="http://localhost:4000/nhanes/" rel="alternate" type="text/html" title="Practicum - NHANES" /><published>2019-05-01T00:00:00-04:00</published><updated>2019-05-01T00:00:00-04:00</updated><id>http://localhost:4000/nhanes</id><content type="html" xml:base="http://localhost:4000/nhanes/">&lt;h2 id=&quot;objective&quot;&gt;Objective:&lt;/h2&gt;
-&lt;!-- 
-Details for this project are available on [GitHub](https://github.com/jjgong7/Machine-Learning/tree/master/1%20-%20Supervised%20Learning). --&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-08-02T17:16:19-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Justin Gong</title><subtitle>Data Science Portfolio</subtitle><author><name>Justin Gong</name></author><entry><title type="html">Practicum - NHANES</title><link href="http://localhost:4000/nhanes/" rel="alternate" type="text/html" title="Practicum - NHANES" /><published>2019-05-01T00:00:00-04:00</published><updated>2019-05-01T00:00:00-04:00</updated><id>http://localhost:4000/nhanes</id><content type="html" xml:base="http://localhost:4000/nhanes/">&lt;h2 id=&quot;objective&quot;&gt;Objective:&lt;/h2&gt;
+&lt;p&gt;Details for this project are available on &lt;a href=&quot;https://github.com/jjgong7/NHANES-Practicum&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;The objective of the practicum is to identify the prevalence and risk factors of hospital utilization and major diseases over time using publicly reported qualitative and quantitative data. To help answer this objective, I will explore five main questions:&lt;/p&gt;
 
@@ -33,6 +32,10 @@ Details for this project are available on [GitHub](https://github.com/jjgong7/Ma
 &lt;/ol&gt;
 
 &lt;h2 id=&quot;introduction-to-nhanes&quot;&gt;Introduction to NHANES&lt;/h2&gt;
+&lt;p&gt;“The National Health and Nutrition Examination Survey (NHANES) is a program of studies designed to assess the health and nutritional status of adults and children in the United States. The survey is unique in that it combines interviews and physical examinations. NHANES is a major program of the National Center for Health Statistics (NCHS). NCHS is part of the Centers for Disease Control and Prevention (CDC) and has the responsibility for producing vital and health statistics for the Nation.&lt;/p&gt;
+
+&lt;p&gt;The NHANES program began in the early 1960s and has been conducted as a series of surveys focusing on different population groups or health topics. In 1999, the survey became a continuous program that has a changing focus on a variety of health and nutrition measurements to meet emerging needs. The survey examines a nationally representative sample of about 5,000 persons each year. These persons are located in counties across the country, 15 of which are visited each year.&lt;/p&gt;
+
 &lt;p&gt;The NHANES interview includes demographic, socioeconomic, dietary, and health-related questions. The examination component consists of medical, dental, and physiological measurements, as well as laboratory tests administered by highly trained medical personnel. Findings from this survey will be used to determine the prevalence of major diseases and risk factors for diseases.&lt;/p&gt;
 
 &lt;h2 id=&quot;dataset&quot;&gt;Dataset&lt;/h2&gt;
@@ -764,7 +767,7 @@ Individuals who have BMI levels greater than 30 are considered to have diabetes.
 &lt;ul&gt;
   &lt;li&gt;Socio-economic factors such as proportion of individuals with no healthcare access who have diabetes and chronic lung disease have increased over the time period from 2011 to 2016 as well.&lt;/li&gt;
   &lt;li&gt;Also, not shown here, but prevalence of low household income levels and low education levels have actually decreased over time.&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Justin Gong</name></author><category term="practicum" /><category term="python" /><category term="R" /><category term="supervised learning" /><summary type="html">Supervised Learning, Python, R, XGBoost, Random Forest, Sci-kit Learn</summary></entry><entry><title type="html">Supervised Learning</title><link href="http://localhost:4000/sl/" rel="alternate" type="text/html" title="Supervised Learning" /><published>2018-06-03T00:00:00-04:00</published><updated>2018-06-03T00:00:00-04:00</updated><id>http://localhost:4000/sl</id><content type="html" xml:base="http://localhost:4000/sl/">&lt;h2 id=&quot;objective&quot;&gt;Objective:&lt;/h2&gt;
+&lt;/ul&gt;</content><author><name>Justin Gong</name></author><category term="practicum" /><category term="python" /><category term="R" /><category term="supervised learning" /><summary type="html">Supervised Learning, R (ggplot2, survey), Python, XGBoost, Random Forest, Sci-kit Learn, Pandas</summary></entry><entry><title type="html">Supervised Learning</title><link href="http://localhost:4000/sl/" rel="alternate" type="text/html" title="Supervised Learning" /><published>2018-06-03T00:00:00-04:00</published><updated>2018-06-03T00:00:00-04:00</updated><id>http://localhost:4000/sl</id><content type="html" xml:base="http://localhost:4000/sl/">&lt;h2 id=&quot;objective&quot;&gt;Objective:&lt;/h2&gt;
 
 &lt;p&gt;Details for this project are available on &lt;a href=&quot;https://github.com/jjgong7/Machine-Learning/tree/master/1%20-%20Supervised%20Learning&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
 
@@ -1144,7 +1147,7 @@ Identifying phishing websites can:&lt;/p&gt;
       &lt;li&gt;KNN also a fast algorithm since it’s a lazy learner that only tests for 5 nearest neighbors&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Justin Gong</name></author><category term="supervised learning" /><category term="python" /><summary type="html">Supervised Learning, Decision Trees, Boosting, Neural Networks, Support Vector Machines, k-Nearest Neighbors</summary></entry><entry><title type="html">Space Shuttle Challenger</title><link href="http://localhost:4000/bay/" rel="alternate" type="text/html" title="Space Shuttle Challenger" /><published>2018-06-02T00:00:00-04:00</published><updated>2018-06-02T00:00:00-04:00</updated><id>http://localhost:4000/bay</id><content type="html" xml:base="http://localhost:4000/bay/">&lt;p&gt;Code for this project is available on &lt;a href=&quot;https://github.com/jjgong7/Bayesian-Statistics&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;</content><author><name>Justin Gong</name></author><category term="bayesian statistics" /><category term="WinBUGS" /><summary type="html">Bayesian Statistics, WinBugs</summary></entry><entry><title type="html">Unsupervised Learning</title><link href="http://localhost:4000/ul/" rel="alternate" type="text/html" title="Unsupervised Learning" /><published>2018-06-02T00:00:00-04:00</published><updated>2018-06-02T00:00:00-04:00</updated><id>http://localhost:4000/ul</id><content type="html" xml:base="http://localhost:4000/ul/">&lt;h2 id=&quot;objective&quot;&gt;Objective:&lt;/h2&gt;
+&lt;/ul&gt;</content><author><name>Justin Gong</name></author><category term="supervised learning" /><category term="python" /><summary type="html">Supervised Learning, Decision Trees, Boosting, Neural Networks, Support Vector Machines, k-Nearest Neighbors</summary></entry><entry><title type="html">Unsupervised Learning</title><link href="http://localhost:4000/ul/" rel="alternate" type="text/html" title="Unsupervised Learning" /><published>2018-06-02T00:00:00-04:00</published><updated>2018-06-02T00:00:00-04:00</updated><id>http://localhost:4000/ul</id><content type="html" xml:base="http://localhost:4000/ul/">&lt;h2 id=&quot;objective&quot;&gt;Objective:&lt;/h2&gt;
 &lt;p&gt;Details for this project are available on &lt;a href=&quot;https://github.com/jjgong7/Machine-Learning/tree/master/3%20-%20Unsupervised%20Learning%20and%20Dimensionality%20Reduction&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Six different algorithms are implemented; the first two are clustering – k-means clustering and Expectation Maximization and the last four are dimensionality reduction algorithms – PCA, ICA, Randomized Projections, and Random Forest. The experiments are split into four main parts. All algorithms are evaluated using Scikit-learn in Python.&lt;/p&gt;
@@ -1773,7 +1776,14 @@ Good clusters at k=3, 6, and 10&lt;/li&gt;
   &lt;li&gt;Random Forest used as feature selection takes too much computational time&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Most of the dimensionality reductions do help in reducing SSE within clusters. PCA and ICA do not increase the intra-cluster distance, but Random Projection and Random Forest does.&lt;/p&gt;</content><author><name>Justin Gong</name></author><category term="unsupervised learning" /><category term="python" /><category term="jython" /><summary type="html">Unsupervised Learning, Dimensionality Reduction, Clustering, PCA, ICA</summary></entry><entry><title type="html">Database Systems - Emergency Resource Management System</title><link href="http://localhost:4000/dbm/" rel="alternate" type="text/html" title="Database Systems - Emergency Resource Management System" /><published>2018-06-01T00:00:00-04:00</published><updated>2018-06-01T00:00:00-04:00</updated><id>http://localhost:4000/dbm</id><content type="html" xml:base="http://localhost:4000/dbm/">&lt;!-- # Emergency Resource Management System (ERMS) --&gt;
+&lt;p&gt;Most of the dimensionality reductions do help in reducing SSE within clusters. PCA and ICA do not increase the intra-cluster distance, but Random Projection and Random Forest does.&lt;/p&gt;</content><author><name>Justin Gong</name></author><category term="unsupervised learning" /><category term="python" /><category term="jython" /><summary type="html">Unsupervised Learning, Dimensionality Reduction, Clustering, PCA, ICA</summary></entry><entry><title type="html">MORE Application</title><link href="http://localhost:4000/more/" rel="alternate" type="text/html" title="MORE Application" /><published>2018-06-01T00:00:00-04:00</published><updated>2018-06-01T00:00:00-04:00</updated><id>http://localhost:4000/more</id><content type="html" xml:base="http://localhost:4000/more/">&lt;h2 id=&quot;details&quot;&gt;Details:&lt;/h2&gt;
+&lt;p&gt;Code for this project is available on &lt;a href=&quot;https://github.com/jjgong7/DVA-Project&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Deployed project on AWS Elastic Beanstalk is available &lt;a href=&quot;http://more-project.us-east-1.elasticbeanstalk.com/&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;poster&quot;&gt;Poster:&lt;/h2&gt;
+&lt;!-- &lt;img src=&quot;../images/more-app/poster.png&quot; alt=&quot;poster&quot; class=&quot;img&quot; style=&quot;cursor: zoom-in;&quot;&gt;   --&gt;
+&lt;p&gt;&lt;a href=&quot;../images/more-app/poster.png&quot;&gt; &lt;img src=&quot;../images/more-app/poster.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt;&lt;/p&gt;</content><author><name>Justin Gong</name></author><category term="python" /><category term="javascript" /><category term="SQL" /><category term="D3.js" /><summary type="html">Python, Javascript, SQL, D3.js</summary></entry><entry><title type="html">Space Shuttle Challenger</title><link href="http://localhost:4000/bay/" rel="alternate" type="text/html" title="Space Shuttle Challenger" /><published>2018-05-02T00:00:00-04:00</published><updated>2018-05-02T00:00:00-04:00</updated><id>http://localhost:4000/bay</id><content type="html" xml:base="http://localhost:4000/bay/">&lt;p&gt;Code for this project is available on &lt;a href=&quot;https://github.com/jjgong7/Bayesian-Statistics&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;</content><author><name>Justin Gong</name></author><category term="bayesian statistics" /><category term="WinBUGS" /><summary type="html">Bayesian Statistics, WinBugs</summary></entry><entry><title type="html">Database Systems - Emergency Resource Management System</title><link href="http://localhost:4000/dbm/" rel="alternate" type="text/html" title="Database Systems - Emergency Resource Management System" /><published>2018-05-01T00:00:00-04:00</published><updated>2018-05-01T00:00:00-04:00</updated><id>http://localhost:4000/dbm</id><content type="html" xml:base="http://localhost:4000/dbm/">&lt;!-- # Emergency Resource Management System (ERMS) --&gt;
 &lt;h2 id=&quot;database-systems---team-project&quot;&gt;Database Systems - Team Project&lt;/h2&gt;
 &lt;p&gt;Code for this project is available on &lt;a href=&quot;https://github.com/jjgong7/Database-Systems-Concepts-and-Design&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
 
@@ -2007,4 +2017,45 @@ Pandas, NumPy, SciPy, re, matplotlib, seaborn, bokeh, collections, itertools&lt;
 SQLite3&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Environments:&lt;/strong&gt;&lt;br /&gt;
-Jupyter Notebooks&lt;/p&gt;</content><author><name>Justin Gong</name></author><category term="machine learning" /><category term="python" /><category term="supervised learning" /><summary type="html">Python, Numpy, Pandas, Supervised Learning, Data Science, Machine Learning</summary></entry></feed>
+Jupyter Notebooks&lt;/p&gt;</content><author><name>Justin Gong</name></author><category term="machine learning" /><category term="python" /><category term="supervised learning" /><summary type="html">Python, Numpy, Pandas, Supervised Learning, Data Science, Machine Learning</summary></entry><entry><title type="html">Data and Visual Analytics</title><link href="http://localhost:4000/dva/" rel="alternate" type="text/html" title="Data and Visual Analytics" /><published>2018-03-01T00:00:00-05:00</published><updated>2018-03-01T00:00:00-05:00</updated><id>http://localhost:4000/dva</id><content type="html" xml:base="http://localhost:4000/dva/">&lt;h2 id=&quot;description&quot;&gt;Description:&lt;/h2&gt;
+&lt;p&gt;Four assignments demonstrating techniques and tools for analyzing and visualizing data at scale. Languages &amp;amp; Frameworks used: JavaScript (D3.js), Python, Java, Scala, Pig, SQL, HTML, CSS, Hadoop, Spark, and AWS.&lt;/p&gt;
+
+&lt;h2 id=&quot;data-and-visual-analytics-assignments&quot;&gt;Data and Visual Analytics Assignments:&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/jjgong7/Data-and-Visual-Analytics/tree/master/HW1-Python%2C%20SQLite%2C%20D3%2C%20Gephi%2C%20and%20OpenRefine&quot;&gt;HW1-Python, SQLite, D3, Gephi, and OpenRefine&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/jjgong7/Data-and-Visual-Analytics/tree/master/HW2-D3%20Graphs%20and%20Visualization&quot;&gt;HW2-D3 Graphs and Visualization&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/jjgong7/Data-and-Visual-Analytics/tree/master/HW3-Hadoop%2C%20Spark%2C%20Pig%2C%20and%20Azure&quot;&gt;HW3-Hadoop, Spark, Pig, AWS and Azure&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/jjgong7/Data-and-Visual-Analytics/tree/master/HW4-Scalable%20PageRank%2C%20Random%20Forest%2C%20Weka&quot;&gt;HW4-Scalable PageRank, Random Forest, Weka&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;Languages:&lt;/strong&gt;&lt;br /&gt;
+Javascript, Python (2.7), Java, Scala, Pig, SQL, HTML, CSS&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Libraries:&lt;/strong&gt;&lt;br /&gt;
+D3.js, TopoJSON, NumPy, SciPy&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Frameworks:&lt;/strong&gt;&lt;br /&gt;
+Flask, Hadoop, Spark&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Relational Database Management System:&lt;/strong&gt;&lt;br /&gt;
+SQLite3&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Software/Applications:&lt;/strong&gt;&lt;br /&gt;
+Weka, Gephi, OpenRefine, Tableau, VirtualBox (with VM image from CDH), Azure ML Studio&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Cloud Services:&lt;/strong&gt; &lt;br /&gt;
+Amazon Web Services (AWS):&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Storage (S3)&lt;/li&gt;
+  &lt;li&gt;Elastic Cloud Computing (EC2)&lt;/li&gt;
+  &lt;li&gt;Elastic MapReduce (EMR)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Microsoft Azure:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Azure Blob Storage&lt;/li&gt;
+  &lt;li&gt;HDInsight (Linux Cluster)&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Justin Gong</name></author><category term="python" /><category term="javascript" /><category term="SQL" /><category term="D3.js" /><category term="AWS" /><category term="Big Data" /><summary type="html">JavaScript (D3.js), Python, Java, Scala, Pig, SQL, HTML, CSS, Hadoop, Spark, AWS</summary></entry></feed>
