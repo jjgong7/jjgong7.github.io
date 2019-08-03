@@ -31,7 +31,7 @@
 
 
 
-  <meta property="article:published_time" content="2018-05-02T00:00:00-04:00">
+  <meta property="article:published_time" content="2018-04-01T00:00:00-04:00">
 
 
 
@@ -307,7 +307,7 @@
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="Space Shuttle Challenger">
     <meta itemprop="description" content="Bayesian Statistics, WinBugs">
-    <meta itemprop="datePublished" content="May 02, 2018">
+    <meta itemprop="datePublished" content="April 01, 2018">
     
 
     <div class="page__inner-wrap">
@@ -321,7 +321,7 @@
 
 
 
-  less than 1 minute read
+  7 minute read
 </p>
           
         </header>
@@ -330,6 +330,117 @@
       <section class="page__content" itemprop="text">
         
         <p>Code for this project is available on <a href="https://github.com/jjgong7/Bayesian-Statistics">GitHub</a>.</p>
+
+<h2 id="introduction">Introduction:</h2>
+
+<p>On January 28, 1986, space shuttle Challenger was due to takeoff from Kennedy Space Center on its tenth space mission to deploy satellites and observe Halley’s Comet among other things.</p>
+
+<p>Space shuttle Challenger contained two Solid Rocket Boosters (SRBs) that boosts the shuttle into space. Each booster has three field joints, which contains two O-rings (secondary and primary). These O-rings are 37 foot circles of special rubber that help pressure seal the gas and exhaust.</p>
+
+<p>It was an unusually cold morning that day, measuring 31 degrees Fahrenheit. Ice was visible around the launchpad and on the equipment. NASA had no experience launching at such cold temperatures with the coldest previous launch being 22 degrees warmer, at 53 degrees Fahrenheit. There was concern about the durability of the O-rings because they haven’t been tested at such low temperatures and could fail by erosion or blowby. However, there wasn’t enough support to abort and they decided to continue on with the mission.</p>
+
+<p>73 seconds after liftoff, at an altitude of 9 miles, the O-ring on one of the boosters malfunctioned. The rubber O-rings had become stiff under the cold and failed to seal the joint, letting a plume of exhaust to leak out. Hot gases enveloped the cold hull of an external tank full of gases and ruptured it, causing the shuttle to be torn apart by aerodynamic forces.</p>
+
+<p>The space shuttle had no escape hatch, so it went into a free fall and disintegrated going terminal velocity over the Atlantic Ocean near Cape Canaveral, Florida. The outcome of this terrible tragedy resulted in the death of 7 crewmembers and a nearly 3 year hiatus of the space program.</p>
+
+<p>This tragedy could have possibly been prevented with enough statistical analysis using Bayesian Linear Regression by predicting the Number of O-rings experiencing thermal distress given historical data from 23 shuttle flights previous to the Challenger disaster.</p>
+
+<h2 id="description-of-dataset">Description of Dataset:</h2>
+<p>The dataset is found on the UCI Machine Learning Repository. The donor of the data is David Draper of UCLA.</p>
+
+<ul>
+  <li>There are 23 instances with 4 attributes and a response variable.</li>
+  <li>The four attributes are:
+    <ol>
+      <li>The number of O-rings at risk on a given flight</li>
+      <li>Launch temperature (degrees Fahrenheit)</li>
+      <li>Leak-check pressure (psi)</li>
+      <li>Temporal order of flight.</li>
+    </ol>
+  </li>
+</ul>
+
+<p>The Number of O-rings is always 6 and the temporal order of flight isn’t necessary since the flights are independent of each other. The data for Number of O-rings at risk on a given flight and Temporal order of flight is still listed in the dataset in OpenBUGS, but not used for the linear regression models.</p>
+
+<p>As a result, there are really only two relevant attributes:</p>
+
+<ol>
+  <li>The Launch Temperature (degrees F)</li>
+  <li>Leak-Check pressure
+    <ul>
+      <li>The pressure (in psi) at which safety testing for field joint leaks was performed, was available, but the relevance to the problem was unclear.</li>
+    </ul>
+  </li>
+</ol>
+
+<p>Therefore, I will run two linear regression models:</p>
+<ol>
+  <li>One with 3 parameters – intercept, Launch Temperature (degrees F) and Leak-Check pressure and</li>
+  <li>One with 2 parameters – intercept and Launch Temperature (degrees F).</li>
+</ol>
+
+<p>The goal is to make a prediction of how many O-rings will experience thermal distress at 31 degrees Fahrenheit with Leak-Check pressure of 50, 100, and 200, and with temperature alone in the second model.</p>
+
+<h2 id="bayesian-linear-regression-vs-ols-linear-regression">Bayesian Linear Regression vs OLS Linear Regression:</h2>
+<p>The Bayesian approach compared to OLS is that instead of maximizing the likelihood function alone, we assume prior distributions for the parameters and use Bayes theorem. Since I don’t have any estimates for the prior parameters, I will be setting normal non-informative priors on the beta coefficients and a gamma prior on the precision parameter.</p>
+
+<p>By applying Bayes theorem, we obtain the posterior distribution of the parameters, which is an estimate that depends on both the data’s likelihood function and the prior belief. Bayesian Linear Regression doesn’t find the single “best” value of the model parameters, but determines the posterior distribution for the model parameters.</p>
+
+<p>Depending on priors, Bayesian analysis is generally more accurate in small samples such as this problem with only 23 instances. With more information in the data, the priors are less influential.</p>
+
+<h2 id="summary-of-data">Summary of Data:</h2>
+<p><a href="../images/bay/summary.png"> <img src="../images/bay/summary.png" alt="" /> </a></p>
+
+<p>Summary of the data shows:</p>
+<ul>
+  <li>The mean launch temp is 69.57 degrees Fahrenheit, which is much warmer than the temperature on that day.</li>
+  <li>Leak pressure is 152.2 psi on average, but it takes values of 50, 100, and 200.</li>
+  <li>There are 7 occurrences of O-rings experiencing thermal distress, with 5 involving 1 O-ring and 2 involving 2 O-rings.</li>
+</ul>
+
+<h2 id="analysis">Analysis:</h2>
+<p>Both are sampled at 1,000,000 iterations and 1,000 burned.</p>
+
+<p><strong>With 3 parameters: Intercept, Launch Temperature (degrees F) and Leak-Check pressure</strong></p>
+
+<p><a href="../images/bay/3_param.png"> <img src="../images/bay/3_param.png" alt="" /> </a></p>
+
+<p>Beta[1] is intercept, beta[2] is Launch Temperature, and beta[3] is Leak-Check Pressure. From the 95% Credible Set, I can see that the intercept and launch temperature coefficients are statistically significant because the set doesn’t contain 0. Leak-Check pressure has a 95% Credible Set of (-6.623E-4, 0.00656) and barely includes 0 in the lower bound. It is possible that this coefficient isn’t significant. This Leak Pressure will be taken out in the 2 parameter model.</p>
+
+<p>The mean response of the number of O-rings experiencing thermal distress when Launch temperature = 31 degrees Fahrenheit and Leak-check pressure (psi) = 50, 100, and 200 are as follows:</p>
+
+<p>Leak-check pressure (psi) = 50, Thermal distress = 1.96, with 95% Credible Set (0.5725, 3.35)</p>
+
+<p>Leak-check pressure (psi) = 100, Thermal distress = 2.11, with 95% Credible Set (0.7468, 3.466)</p>
+
+<p>Leak-check pressure (psi) = 200, Thermal distress = 2.40, with 95% Credible Set (1.027, 3.766)</p>
+
+<p>The 95% Credible Sets for prediction (new.TD_50, 100, 200) are much larger than the mean response, as expected, because there is more error in prediction.</p>
+
+<p>Since the mean for coefficient beta[3] is 0.002943, it means that each unit of Leak-check pressure (psi) increases the number of O-rings experiencing thermal distress by 0.002943. From 50 psi to 200 psi, there is almost a .5 increase in O-rings experiencing thermal distress. A higher leak-check pressure is not better. This is a little strange and contrary to what I would believe - that checking leaks at a higher pressures should mean it’s more safe. However, this could also mean that they are expecting the rocket booster to withstand more pressure based on cargo or whatever and believe it’s necessary to test at higher pressures.</p>
+
+<p>The R-squared = 0.2829 and the adjusted R-squared = 0.2112. The R-squared is a goodness-of-fit measure and explains the variability in the data. It’s small at .2 something. A higher R-squared is better and desired, but not possible with the given data. Adjusted R-squared modifies for the number of predictors in the model. The small R-squared could make the results more skeptical. The deviance is 39.19.</p>
+
+<p>Still, it’s quite clear that regardless of the leak-check pressure, due to a very lower than normal temperature at launch of 31 degrees Fahrenheit, the chance of O-ring malfunction is very high and that the mission should have been aborted. The mean response of the number of O-rings experiencing thermal distress is around 2 for the three different values of leak-check pressure.</p>
+
+<p><strong>With 2 parameters: Intercept and Launch Temperature (degrees F)</strong><br />
+<a href="../images/bay/2_param.png"> <img src="../images/bay/2_param.png" alt="" /> </a></p>
+
+<p>Beta[1] is intercept and beta[2] is Launch Temperature. From the 95% Credible Set, I can see that the intercept and launch temperature coefficients are statistically significant because the set doesn’t contain 0.</p>
+
+<p>The mean response of the number of O-rings experiencing thermal distress when Launch temperature = 31 degrees Fahrenheit is as follows:</p>
+
+<p>Thermal distress = 2.245, with 95% Credible Set (0.8436, 3.668)</p>
+
+<p>The 95% Credible Sets for prediction (new.TD) is much larger than the mean response as expected because there is more error in prediction.</p>
+
+<p>The R-squared = 0.184 and the adjusted R-squared = 0.1452. The R-squared is a goodness-of-fit measure and explains the variability in the data. The R-squared values are much worse without Leak-check pressure as a variable. The R-squared is 0.184 vs 0.2829 and R-squared adjusted is 0.1452 vs. 0.2112. The deviance is also higher at 41.11 vs 39.19 and variance (sigma squared) is higher as well.</p>
+
+<p>Due to a very lower than normal temperature at launch of 31 degrees Fahrenheit, the chance of O-ring malfunction is very high and that the mission should be aborted.</p>
+
+<h2 id="conclusion">Conclusion:</h2>
+<p>In comparing the two models, the 3 parameter model with the intercept, launch temperature and leak-check pressure performs better than the 2 parameter model. The 3 parameter model explains much more of the variability in the data with the higher R-squared and R-squared adjusted value and has a slightly lower deviance. Having the leak-check pressure coefficient also explains a 0.5 variability in the number of O-rings experiencing thermal distress from 50 to 200 psi. With both models, it’s clear that with a launch temperature of 31 degrees Fahrenheit, the number of O-rings experiencing thermal distress is very high at around 2. If they performed regression using data from the 23 previous flights, they could have concluded there was a high chance of malfunction predicted and that the mission should not have been flown.</p>
+
 
         
       </section>
@@ -363,7 +474,7 @@
 
 
         
-          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2018-05-02T00:00:00-04:00">May 02, 2018</time></p>
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2018-04-01T00:00:00-04:00">April 01, 2018</time></p>
         
       </footer>
 
@@ -387,7 +498,7 @@
 ">Previous</a>
     
     
-      <a href="/more/" class="pagination--pager" title="MORE Application
+      <a href="/mdp/" class="pagination--pager" title="Markov Decision Processes
 ">Next</a>
     
   </nav>
@@ -496,7 +607,7 @@
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/more/" rel="permalink">MORE Application
+        <a href="/more/" rel="permalink">M.O.R.E. Application
 </a>
       
     </h2>

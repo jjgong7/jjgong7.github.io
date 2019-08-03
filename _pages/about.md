@@ -9,4 +9,4 @@ author_profile: true
 * Proficient in Python, R, and SQL.  
 * Strong curiosity to learn, highly coachable, and excited to bring value to your team.
 
-In my free time I enjoy playing basketball, lifting weights, cooking healthy meals, exploring national parks, and trying different pizza and noodle places around New York City!  
+In his free time Justin enjoy playing basketball, lifting weights, cooking healthy meals, exploring national parks, and trying different pizza and noodle places around New York City!  

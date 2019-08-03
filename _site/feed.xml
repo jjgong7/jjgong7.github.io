@@ -1,5 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-08-02T17:16:19-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Justin Gong</title><subtitle>Data Science Portfolio</subtitle><author><name>Justin Gong</name></author><entry><title type="html">Practicum - NHANES</title><link href="http://localhost:4000/nhanes/" rel="alternate" type="text/html" title="Practicum - NHANES" /><published>2019-05-01T00:00:00-04:00</published><updated>2019-05-01T00:00:00-04:00</updated><id>http://localhost:4000/nhanes</id><content type="html" xml:base="http://localhost:4000/nhanes/">&lt;h2 id=&quot;objective&quot;&gt;Objective:&lt;/h2&gt;
-&lt;p&gt;Details for this project are available on &lt;a href=&quot;https://github.com/jjgong7/NHANES-Practicum&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-08-03T02:33:34-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Justin Gong</title><subtitle>Data Science Portfolio</subtitle><author><name>Justin Gong</name></author><entry><title type="html">Practicum - NHANES</title><link href="http://localhost:4000/nhanes/" rel="alternate" type="text/html" title="Practicum - NHANES" /><published>2019-05-01T00:00:00-04:00</published><updated>2019-05-01T00:00:00-04:00</updated><id>http://localhost:4000/nhanes</id><content type="html" xml:base="http://localhost:4000/nhanes/">&lt;p&gt;Details for this project are available on &lt;a href=&quot;https://github.com/jjgong7/NHANES-Practicum&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;objective&quot;&gt;Objective:&lt;/h2&gt;
 
 &lt;p&gt;The objective of the practicum is to identify the prevalence and risk factors of hospital utilization and major diseases over time using publicly reported qualitative and quantitative data. To help answer this objective, I will explore five main questions:&lt;/p&gt;
 
@@ -210,7 +211,8 @@ This is a supervised algorithm that has been popular among Kaggle competitions. 
 &lt;/ul&gt;
 
 &lt;p&gt;The output of feature importance for Random Forest (Left) and XGBoost (Right):&lt;br /&gt;
-&lt;img src=&quot;../images/practicum/P1_HU_RFXG.png&quot; alt=&quot;P1_HU_RFXG&quot; /&gt;&lt;/p&gt;
+&lt;!-- &lt;img src=&quot;../images/practicum/P1_HU_RFXG.png&quot; alt=&quot;P1_HU_RFXG&quot;&gt; --&gt;
+&lt;a href=&quot;../images/practicum/P1_HU_RFXG.png&quot;&gt; &lt;img src=&quot;../images/practicum/P1_HU_RFXG.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;XGBoost:&lt;/strong&gt;&lt;/p&gt;
 
@@ -255,17 +257,22 @@ The following combines the weighted feature importance of the algorithms to iden
 &lt;p&gt;&lt;strong&gt;Prevalence of Risk Factors:&lt;/strong&gt;&lt;br /&gt;
 The prevalence of Hospital Utiliztaion and its risk factors are depicted visually using ggplot2 in R.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../images/practicum/P1_HU_V1.png&quot; alt=&quot;P1_HU_V1&quot; /&gt;&lt;/p&gt;
+&lt;!-- &lt;img src=&quot;../images/practicum/P1_HU_V1.png&quot; alt=&quot;P1_HU_V1&quot;&gt; --&gt;
+&lt;p&gt;&lt;a href=&quot;../images/practicum/P1_HU_V1.png&quot;&gt; &lt;img src=&quot;../images/practicum/P1_HU_V1.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt;&lt;/p&gt;
+
 &lt;ul&gt;
   &lt;li&gt;Most people do have healthcare, are covered by health insurance, and are U.S. citizens so the proportions are higher, but the minority does seem relatively high for each.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;../images/practicum/P1_HU_V2.png&quot; alt=&quot;P1_HU_V2&quot; /&gt;&lt;/p&gt;
+&lt;!-- &lt;img src=&quot;../images/practicum/P1_HU_V2.png&quot; alt=&quot;P1_HU_V2&quot;&gt; --&gt;
+&lt;p&gt;&lt;a href=&quot;../images/practicum/P1_HU_V2.png&quot;&gt; &lt;img src=&quot;../images/practicum/P1_HU_V2.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt;&lt;/p&gt;
+
 &lt;ul&gt;
   &lt;li&gt;Females tend to go to the hospital more so than males.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;../images/practicum/P1_HU_V3.png&quot; alt=&quot;P1_HU_V3&quot; /&gt;&lt;/p&gt;
+&lt;!-- &lt;img src=&quot;../images/practicum/P1_HU_V3.png&quot; alt=&quot;P1_HU_V3&quot;&gt; --&gt;
+&lt;p&gt;&lt;a href=&quot;../images/practicum/P1_HU_V3.png&quot;&gt; &lt;img src=&quot;../images/practicum/P1_HU_V3.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;As we further break down the age grouping, it shows that children 0 - 12 go to the hospital a lot and this makes sense. Young children are likely to get sick from school or go to the hospital for vaccines.&lt;/li&gt;
 &lt;/ul&gt;
@@ -309,7 +316,8 @@ Question 4: The prevalence of certain diseases has been thought to be increasing
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;../images/practicum/P2_HD_RFXG.png&quot; alt=&quot;P2_HD_RFXG&quot; /&gt;&lt;/p&gt;
+&lt;!-- &lt;img src=&quot;../images/practicum/P2_HD_RFXG.png&quot; alt=&quot;P2_HD_RFXG&quot;&gt; --&gt;
+&lt;p&gt;&lt;a href=&quot;../images/practicum/P2_HD_RFXG.png&quot;&gt; &lt;img src=&quot;../images/practicum/P2_HD_RFXG.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;XGBoost:&lt;/strong&gt;&lt;/p&gt;
 
@@ -356,24 +364,30 @@ The following combines the weighted feature importance of the algorithms to iden
 &lt;p&gt;&lt;strong&gt;Prevalence of Risk Factors:&lt;/strong&gt;&lt;br /&gt;
 The prevalence of Heart Disease and its risk factors are depicted visually using ggplot2 in R.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../images/practicum/P2_HD_V1.png&quot; alt=&quot;P2_HD_V1&quot; /&gt;&lt;/p&gt;
+&lt;!-- &lt;img src=&quot;../images/practicum/P2_HD_V1.png&quot; alt=&quot;P2_HD_V1&quot;&gt; --&gt;
+&lt;p&gt;&lt;a href=&quot;../images/practicum/P2_HD_V1.png&quot;&gt; &lt;img src=&quot;../images/practicum/P2_HD_V1.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt;&lt;/p&gt;
+
 &lt;ul&gt;
   &lt;li&gt;Most people who identified as having heart disease did have desirable total cholesterol and LDL cholesterol levels. However, high total cholesterol and LDL levels are still a good indicator of heart disease.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;../images/practicum/P2_HD_V2.png&quot; alt=&quot;P2_HD_V2&quot; /&gt;&lt;/p&gt;
+&lt;!-- &lt;img src=&quot;../images/practicum/P2_HD_V2.png&quot; alt=&quot;P2_HD_V2&quot;&gt; --&gt;
+&lt;p&gt;&lt;a href=&quot;../images/practicum/P2_HD_V2.png&quot;&gt; &lt;img src=&quot;../images/practicum/P2_HD_V2.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt;&lt;/p&gt;
+
 &lt;ul&gt;
   &lt;li&gt;There is more prevalence of heart disease in males than females. Those who do have high blood pressure also make up a large proportion of people who have heart disease.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;../images/practicum/P2_HD_V3.png&quot; alt=&quot;P2_HD_V3&quot; /&gt;&lt;/p&gt;
+&lt;!-- &lt;img src=&quot;../images/practicum/P2_HD_V3.png&quot; alt=&quot;P2_HD_V3&quot;&gt; --&gt;
+&lt;p&gt;&lt;a href=&quot;../images/practicum/P2_HD_V3.png&quot;&gt; &lt;img src=&quot;../images/practicum/P2_HD_V3.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Those most affected by heart disease are within the 64-85 age range group. As we break it down further, 66-75 year old’s within that group are most affected.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;strong&gt;Heart Disease and Hospital Utilization over Time:&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../images/practicum/P2_HD_Time.png&quot; alt=&quot;P2_HD_Time&quot; /&gt;&lt;/p&gt;
+&lt;!-- &lt;img src=&quot;../images/practicum/P2_HD_Time.png&quot; alt=&quot;P2_HD_Time&quot;&gt; --&gt;
+&lt;p&gt;&lt;a href=&quot;../images/practicum/P2_HD_Time.png&quot;&gt; &lt;img src=&quot;../images/practicum/P2_HD_Time.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Heart disease doesn’t seem to be increasing over time.&lt;/li&gt;
@@ -412,7 +426,8 @@ The prevalence of Heart Disease and its risk factors are depicted visually using
 
 &lt;p&gt;The output of feature importance for Random Forest (Left) and XGBoost (Right):&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../images/practicum/P3_CA_RFXG.png&quot; alt=&quot;P3_CA_RFXG&quot; /&gt;&lt;/p&gt;
+&lt;!-- &lt;img src=&quot;../images/practicum/P3_CA_RFXG.png&quot; alt=&quot;P3_CA_RFXG&quot;&gt; --&gt;
+&lt;p&gt;&lt;a href=&quot;../images/practicum/P3_CA_RFXG.png&quot;&gt; &lt;img src=&quot;../images/practicum/P3_CA_RFXG.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;XGBoost:&lt;/strong&gt;&lt;/p&gt;
 
@@ -458,32 +473,39 @@ The following combines the weighted feature importance of the algorithms to iden
 &lt;p&gt;&lt;strong&gt;Prevalence of Risk Factors:&lt;/strong&gt;&lt;br /&gt;
 The prevalence of Cancer and its risk factors are depicted visually using ggplot2 in R.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../images/practicum/P3_CA_V1.png&quot; alt=&quot;P3_CA_V1&quot; /&gt;&lt;/p&gt;
+&lt;!-- &lt;img src=&quot;../images/practicum/P3_CA_V1.png&quot; alt=&quot;P3_CA_V1&quot;&gt; --&gt;
+&lt;p&gt;&lt;a href=&quot;../images/practicum/P3_CA_V1.png&quot;&gt; &lt;img src=&quot;../images/practicum/P3_CA_V1.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt;&lt;/p&gt;
+
 &lt;ul&gt;
   &lt;li&gt;There is higher prevalence of cancer for non-Hispanic whites&lt;/li&gt;
   &lt;li&gt;There is higher prevalence of cancer in households with two members. The higher prevalence of cancer for two household members may be due to the fact that average household size is about 2.6 people.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;../images/practicum/P3_CA_V2.png&quot; alt=&quot;P3_CA_V2&quot; /&gt;&lt;/p&gt;
+&lt;!-- &lt;img src=&quot;../images/practicum/P3_CA_V2.png&quot; alt=&quot;P3_CA_V2&quot;&gt; --&gt;
+&lt;p&gt;&lt;a href=&quot;../images/practicum/P3_CA_V2.png&quot;&gt; &lt;img src=&quot;../images/practicum/P3_CA_V2.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt;&lt;/p&gt;
+
 &lt;ul&gt;
   &lt;li&gt;There is higher prevalence of cancer in women than in men.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;../images/practicum/P3_CA_V3.png&quot; alt=&quot;P3_CA_V3&quot; /&gt;&lt;/p&gt;
+&lt;!-- &lt;img src=&quot;../images/practicum/P3_CA_V3.png&quot; alt=&quot;P3_CA_V3&quot;&gt; --&gt;
+&lt;p&gt;&lt;a href=&quot;../images/practicum/P3_CA_V3.png&quot;&gt; &lt;img src=&quot;../images/practicum/P3_CA_V3.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt;&lt;/p&gt;
+
 &lt;ul&gt;
   &lt;li&gt;Cancer affects mostly older individuals over the age of 64, more specifically, 66 to 75 years of age.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;strong&gt;Cancer, Hospital Utilization &amp;amp; Proportion of No Healthcare Access over Time:&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../images/practicum/P3_CA_Time.png&quot; alt=&quot;P3_CA_Time&quot; /&gt;&lt;/p&gt;
+&lt;!-- &lt;img src=&quot;../images/practicum/P3_CA_Time.png&quot; alt=&quot;P3_CA_Time&quot;&gt; --&gt;
+&lt;p&gt;&lt;a href=&quot;../images/practicum/P3_CA_Time.png&quot;&gt; &lt;img src=&quot;../images/practicum/P3_CA_Time.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;The plot of cancer over time shows that the prevalence is increasing.&lt;/li&gt;
   &lt;li&gt;Among those who responded to the cancer questionnaire, there is an increase in hospital utilization, especially from 2009 to 2016, with the highest in 2016.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;../images/practicum/P3_CA_Time2.png&quot; alt=&quot;P3_CA_Time2&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../images/practicum/P3_CA_Time2.png&quot; alt=&quot;P3_CA_Time2&quot; width=&quot;450px&quot; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Socio-economic factors such as proportion of individuals with no healthcare access who have cancer has increased over the time period from 2011 to 2016 as well.&lt;/li&gt;
@@ -520,7 +542,8 @@ The prevalence of Cancer and its risk factors are depicted visually using ggplot
 
 &lt;p&gt;The output of feature importance for Random Forest (Left) and XGBoost (Right):&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../images/practicum/P4_CL_RFXG.png&quot; alt=&quot;P4_CL_RFXG&quot; /&gt;&lt;/p&gt;
+&lt;!-- &lt;img src=&quot;../images/practicum/P4_CL_RFXG.png&quot; alt=&quot;P4_CL_RFXG&quot;&gt; --&gt;
+&lt;p&gt;&lt;a href=&quot;../images/practicum/P4_CL_RFXG.png&quot;&gt; &lt;img src=&quot;../images/practicum/P4_CL_RFXG.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;XGBoost:&lt;/strong&gt;&lt;/p&gt;
 
@@ -566,31 +589,36 @@ The following combines the weighted feature importance of the algorithms to iden
 &lt;p&gt;&lt;strong&gt;Prevalence of Risk Factors:&lt;/strong&gt;&lt;br /&gt;
 The prevalence of Chronic Lung Disease and its risk factors are depicted visually using ggplot2 in R.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../images/practicum/P4_CL_V1.png&quot; alt=&quot;P4_CL_V1&quot; /&gt;&lt;/p&gt;
+&lt;!-- &lt;img src=&quot;../images/practicum/P4_CL_V1.png&quot; alt=&quot;P4_CL_V1&quot;&gt; --&gt;
+&lt;p&gt;&lt;a href=&quot;../images/practicum/P4_CL_V1.png&quot;&gt; &lt;img src=&quot;../images/practicum/P4_CL_V1.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt;&lt;/p&gt;
+
 &lt;ul&gt;
   &lt;li&gt;The prevalence of chronic lung disease for those with asthma is higher compared to those without. That could be a reason why it’s number one in feature importance.&lt;/li&gt;
   &lt;li&gt;Chronic lung disease primarily affects individuals between the ages of 49 to 63.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;../images/practicum/P4_CL_V2.png&quot; alt=&quot;P4_CL_V2&quot; /&gt;&lt;/p&gt;
+&lt;!-- &lt;img src=&quot;../images/practicum/P4_CL_V2.png&quot; alt=&quot;P4_CL_V2&quot;&gt; --&gt;
+&lt;p&gt;&lt;a href=&quot;../images/practicum/P4_CL_V2.png&quot;&gt; &lt;img src=&quot;../images/practicum/P4_CL_V2.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt;&lt;/p&gt;
+
 &lt;ul&gt;
   &lt;li&gt;Females are more likely to be affected by chronic lung disease than males.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;../images/practicum/P4_CL_V3.png&quot; alt=&quot;P4_CL_V3&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../images/practicum/P4_CL_V3.png&quot; alt=&quot;P4_CL_V3&quot; width=&quot;450px&quot; /&gt;&lt;/p&gt;
+
 &lt;ul&gt;
   &lt;li&gt;The prevalence of chronic lung disease for those with smoking in the household is very high compared to those without.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;strong&gt;Chronic Lung Disease Over Time:&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../images/practicum/P4_CL_Time.png&quot; alt=&quot;P4_CL_Time&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../images/practicum/P4_CL_Time.png&quot; alt=&quot;P4_CL_Time&quot; width=&quot;450px&quot; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;There doesn’t seem to be any upward or downward trend in chronic lung disease over time.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;../images/practicum/P3_CA_Time2.png&quot; alt=&quot;P3_CA_Time2&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../images/practicum/P3_CA_Time2.png&quot; alt=&quot;P3_CA_Time2&quot; width=&quot;450px&quot; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Socio-economic factors such as proportion of individuals with no healthcare access who have chronic lung disease has increased over the time period from 2011 to 2016 as well.&lt;/li&gt;
@@ -627,7 +655,8 @@ The prevalence of Chronic Lung Disease and its risk factors are depicted visuall
 
 &lt;p&gt;The output of feature importance for Random Forest (Left) and XGBoost (Right):&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../images/practicum/P5_DI_RFXG.png&quot; alt=&quot;P5_DI_RFXG&quot; /&gt;&lt;/p&gt;
+&lt;!-- &lt;img src=&quot;../images/practicum/P5_DI_RFXG.png&quot; alt=&quot;P5_DI_RFXG&quot;&gt; --&gt;
+&lt;p&gt;&lt;a href=&quot;../images/practicum/P5_DI_RFXG.png&quot;&gt; &lt;img src=&quot;../images/practicum/P5_DI_RFXG.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;XGBoost:&lt;/strong&gt;&lt;/p&gt;
 
@@ -673,13 +702,17 @@ The following combines the weighted feature importance of the algorithms to iden
 &lt;p&gt;&lt;strong&gt;Prevalence of Risk Factors:&lt;/strong&gt;&lt;br /&gt;
 The prevalence of Diabetes and its risk factors are depicted visually using ggplot2 in R.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../images/practicum/P5_DI_V1.png&quot; alt=&quot;P5_DI_V1&quot; /&gt;&lt;/p&gt;
+&lt;!-- &lt;img src=&quot;../images/practicum/P5_DI_V1.png&quot; alt=&quot;P5_DI_V1&quot;&gt; --&gt;
+&lt;p&gt;&lt;a href=&quot;../images/practicum/P5_DI_V1.png&quot;&gt; &lt;img src=&quot;../images/practicum/P5_DI_V1.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt;&lt;/p&gt;
+
 &lt;ul&gt;
   &lt;li&gt;Those who have high blood pressure also have a high prevalence of diabetes.&lt;/li&gt;
   &lt;li&gt;As Body Mass Index increases, the prevalence of Diabetes increases substantially. BMI is highly correlated to diabetes.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;../images/practicum/P5_DI_V2.png&quot; alt=&quot;P5_DI_V2&quot; /&gt;&lt;/p&gt;
+&lt;!-- &lt;img src=&quot;../images/practicum/P5_DI_V2.png&quot; alt=&quot;P5_DI_V2&quot;&gt; --&gt;
+&lt;p&gt;&lt;a href=&quot;../images/practicum/P5_DI_V2.png&quot;&gt; &lt;img src=&quot;../images/practicum/P5_DI_V2.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt;&lt;/p&gt;
+
 &lt;ul&gt;
   &lt;li&gt;Diabetes is prevalent among individuals ages 49 and over.&lt;/li&gt;
   &lt;li&gt;Most individuals who have diabetes have desirable total cholesterol levels.&lt;/li&gt;
@@ -687,7 +720,8 @@ The prevalence of Diabetes and its risk factors are depicted visually using ggpl
 
 &lt;p&gt;&lt;strong&gt;Diabetes, Hospital Utilization and Proportion of No Healthcare Access Over Time:&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../images/practicum/P5_DI_Time.png&quot; alt=&quot;P5_DI_Time&quot; /&gt;&lt;/p&gt;
+&lt;!-- &lt;img src=&quot;../images/practicum/P5_DI_Time.png&quot; alt=&quot;P5_DI_Time&quot;&gt; --&gt;
+&lt;p&gt;&lt;a href=&quot;../images/practicum/P5_DI_Time.png&quot;&gt; &lt;img src=&quot;../images/practicum/P5_DI_Time.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Diabetes has an increasing trend every single year from 2003 and onwards.&lt;/li&gt;
@@ -708,7 +742,8 @@ The prevalence of Diabetes and its risk factors are depicted visually using ggpl
 &lt;p&gt;From Part 5, since BMI levels are highly correlated to risk of diabetes, I will use BMI levels to visualize and see whether the prevalence of undiagnosed diabetes has increased in rural populations over time compared to non-rural populations.&lt;br /&gt;
 Individuals who have BMI levels greater than 30 are considered to have diabetes. I created a new column in my data with a value of “Undiagnosed Diabetes” or “Not Undiagnosed”. An individual who is coded “Undiagnosed Diabetes” has a value of 0 for DIQ010, indicating no doctor told them they have diabetes, and they also have a value &amp;gt;30 for BMXBMI. The graph below shows the error box plots of the interaction and prevalence between “Undiagnosed Diabetes” and “Year” over time from 1999 to 2016.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../images/practicum/P6_UNDIAG.png&quot; alt=&quot;P6_UNDIAG&quot; width=&quot;450px&quot; /&gt;&lt;/p&gt;
+&lt;!-- &lt;img src=&quot;../images/practicum/P6_UNDIAG.png&quot; alt=&quot;P6_UNDIAG&quot; width=&quot;450px&quot;&gt; --&gt;
+&lt;p&gt;&lt;a href=&quot;../images/practicum/P6_UNDIAG.png&quot;&gt; &lt;img src=&quot;../images/practicum/P6_UNDIAG.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;The plot shows that the prevalence of undiagnosed diabetes has indeed increased over time.&lt;/p&gt;
 
@@ -767,9 +802,9 @@ Individuals who have BMI levels greater than 30 are considered to have diabetes.
 &lt;ul&gt;
   &lt;li&gt;Socio-economic factors such as proportion of individuals with no healthcare access who have diabetes and chronic lung disease have increased over the time period from 2011 to 2016 as well.&lt;/li&gt;
   &lt;li&gt;Also, not shown here, but prevalence of low household income levels and low education levels have actually decreased over time.&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Justin Gong</name></author><category term="practicum" /><category term="python" /><category term="R" /><category term="supervised learning" /><summary type="html">Supervised Learning, R (ggplot2, survey), Python, XGBoost, Random Forest, Sci-kit Learn, Pandas</summary></entry><entry><title type="html">Supervised Learning</title><link href="http://localhost:4000/sl/" rel="alternate" type="text/html" title="Supervised Learning" /><published>2018-06-03T00:00:00-04:00</published><updated>2018-06-03T00:00:00-04:00</updated><id>http://localhost:4000/sl</id><content type="html" xml:base="http://localhost:4000/sl/">&lt;h2 id=&quot;objective&quot;&gt;Objective:&lt;/h2&gt;
+&lt;/ul&gt;</content><author><name>Justin Gong</name></author><category term="practicum" /><category term="python" /><category term="R" /><category term="supervised learning" /><summary type="html">Supervised Learning, R (ggplot2, survey), Python, XGBoost, Random Forest, Sci-kit Learn, Pandas</summary></entry><entry><title type="html">Supervised Learning</title><link href="http://localhost:4000/sl/" rel="alternate" type="text/html" title="Supervised Learning" /><published>2018-06-03T00:00:00-04:00</published><updated>2018-06-03T00:00:00-04:00</updated><id>http://localhost:4000/sl</id><content type="html" xml:base="http://localhost:4000/sl/">&lt;p&gt;Details for this project are available on &lt;a href=&quot;https://github.com/jjgong7/Machine-Learning/tree/master/1%20-%20Supervised%20Learning&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;Details for this project are available on &lt;a href=&quot;https://github.com/jjgong7/Machine-Learning/tree/master/1%20-%20Supervised%20Learning&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;objective&quot;&gt;Objective:&lt;/h2&gt;
 
 &lt;p&gt;Analyze two datasets using five different supervised learning algorithms. Weka, a suite of machine learning software written in Java, is used for analysis.&lt;/p&gt;
 
@@ -1147,8 +1182,9 @@ Identifying phishing websites can:&lt;/p&gt;
       &lt;li&gt;KNN also a fast algorithm since it’s a lazy learner that only tests for 5 nearest neighbors&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Justin Gong</name></author><category term="supervised learning" /><category term="python" /><summary type="html">Supervised Learning, Decision Trees, Boosting, Neural Networks, Support Vector Machines, k-Nearest Neighbors</summary></entry><entry><title type="html">Unsupervised Learning</title><link href="http://localhost:4000/ul/" rel="alternate" type="text/html" title="Unsupervised Learning" /><published>2018-06-02T00:00:00-04:00</published><updated>2018-06-02T00:00:00-04:00</updated><id>http://localhost:4000/ul</id><content type="html" xml:base="http://localhost:4000/ul/">&lt;h2 id=&quot;objective&quot;&gt;Objective:&lt;/h2&gt;
-&lt;p&gt;Details for this project are available on &lt;a href=&quot;https://github.com/jjgong7/Machine-Learning/tree/master/3%20-%20Unsupervised%20Learning%20and%20Dimensionality%20Reduction&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;/ul&gt;</content><author><name>Justin Gong</name></author><category term="supervised learning" /><category term="python" /><summary type="html">Supervised Learning, Decision Trees, Boosting, Neural Networks, Support Vector Machines, k-Nearest Neighbors</summary></entry><entry><title type="html">Unsupervised Learning</title><link href="http://localhost:4000/ul/" rel="alternate" type="text/html" title="Unsupervised Learning" /><published>2018-06-02T00:00:00-04:00</published><updated>2018-06-02T00:00:00-04:00</updated><id>http://localhost:4000/ul</id><content type="html" xml:base="http://localhost:4000/ul/">&lt;p&gt;Details for this project are available on &lt;a href=&quot;https://github.com/jjgong7/Machine-Learning/tree/master/3%20-%20Unsupervised%20Learning%20and%20Dimensionality%20Reduction&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;objective&quot;&gt;Objective:&lt;/h2&gt;
 
 &lt;p&gt;Six different algorithms are implemented; the first two are clustering – k-means clustering and Expectation Maximization and the last four are dimensionality reduction algorithms – PCA, ICA, Randomized Projections, and Random Forest. The experiments are split into four main parts. All algorithms are evaluated using Scikit-learn in Python.&lt;/p&gt;
 
@@ -1311,7 +1347,8 @@ Identifying breast cancer:&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Faulty Steel Plates: Clustering&lt;/strong&gt;&lt;/p&gt;
 &lt;h4 id=&quot;evaluation&quot;&gt;Evaluation:&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&quot;../images/ml-unsup/FP_Clustering.png&quot; alt=&quot;FP Clustering&quot; /&gt;&lt;/p&gt;
+&lt;!-- &lt;img src=&quot;../images/ml-unsup/FP_Clustering.png&quot; alt=&quot;FP Clustering&quot;&gt;   --&gt;
+&lt;p&gt;&lt;a href=&quot;../images/ml-unsup/FP_Clustering.png&quot;&gt; &lt;img src=&quot;../images/ml-unsup/FP_Clustering.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;K-means: SSE
     &lt;ul&gt;
@@ -1340,7 +1377,8 @@ Identifying breast cancer:&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Breast Cancer: Clustering&lt;/strong&gt;&lt;/p&gt;
 &lt;h4 id=&quot;evaluation-1&quot;&gt;Evaluation:&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&quot;../images/ml-unsup/BC_Clustering.png&quot; alt=&quot;BC Clustering&quot; /&gt;&lt;/p&gt;
+&lt;!-- &lt;img src=&quot;../images/ml-unsup/BC_Clustering.png&quot; alt=&quot;BC Clustering&quot;&gt;   --&gt;
+&lt;p&gt;&lt;a href=&quot;../images/ml-unsup/BC_Clustering.png&quot;&gt; &lt;img src=&quot;../images/ml-unsup/BC_Clustering.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;K-means: SSE
     &lt;ul&gt;
@@ -1382,7 +1420,7 @@ Identifying breast cancer:&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Faulty Steel Plates: PCA&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../images/ml-unsup/FP_PCA.png&quot; alt=&quot;FP PCA&quot; width=&quot;350px&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../images/ml-unsup/FP_PCA.png&quot; alt=&quot;FP PCA&quot; width=&quot;450px&quot; /&gt;&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Most of the variance can be explained by the first 12 principal components&lt;/li&gt;
   &lt;li&gt;Original dataset has 27 features, now reduced to 12 principal components&lt;/li&gt;
@@ -1390,7 +1428,9 @@ Identifying breast cancer:&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Faulty Steel Plates: PCA Clustering&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../images/ml-unsup/FP_PCA_Clustering.png&quot; alt=&quot;FP PCA Clustering&quot; /&gt;&lt;/p&gt;
+&lt;!-- &lt;img src=&quot;../images/ml-unsup/FP_PCA_Clustering.png&quot; alt=&quot;FP PCA Clustering&quot;&gt;  
+ --&gt;
+&lt;p&gt;&lt;a href=&quot;../images/ml-unsup/FP_PCA_Clustering.png&quot;&gt; &lt;img src=&quot;../images/ml-unsup/FP_PCA_Clustering.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Using 12 principal components for clustering:&lt;/p&gt;
 &lt;ul&gt;
@@ -1422,7 +1462,7 @@ Identifying breast cancer:&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Breast Cancer: PCA&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../images/ml-unsup/BC_PCA.png&quot; alt=&quot;FP PCA&quot; width=&quot;350px&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../images/ml-unsup/BC_PCA.png&quot; alt=&quot;FP PCA&quot; width=&quot;450px&quot; /&gt;&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Most of the variance is explained by the first 7 principal components&lt;/li&gt;
   &lt;li&gt;Original dataset has 30 features, now reduced to 7 principal components&lt;/li&gt;
@@ -1430,7 +1470,8 @@ Identifying breast cancer:&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Breast Cancer: PCA Clustering&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../images/ml-unsup/BC_PCA_Clustering.png&quot; alt=&quot;FP PCA Clustering&quot; /&gt;&lt;/p&gt;
+&lt;!-- &lt;img src=&quot;../images/ml-unsup/BC_PCA_Clustering.png&quot; alt=&quot;FP PCA Clustering&quot;&gt;   --&gt;
+&lt;p&gt;&lt;a href=&quot;../images/ml-unsup/BC_PCA_Clustering.png&quot;&gt; &lt;img src=&quot;../images/ml-unsup/BC_PCA_Clustering.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Using 7 principal components for clustering:&lt;/p&gt;
 &lt;ul&gt;
@@ -1472,7 +1513,7 @@ Evaluation:&lt;/li&gt;
 
 &lt;p&gt;&lt;strong&gt;Faulty Steel Plates: ICA&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../images/ml-unsup/FP_ICA.png&quot; alt=&quot;FP ICA&quot; width=&quot;350px&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../images/ml-unsup/FP_ICA.png&quot; alt=&quot;FP ICA&quot; width=&quot;450px&quot; /&gt;&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Kurtosis peaks at 4&lt;/li&gt;
   &lt;li&gt;Original dataset has 27 features and now 4 indpenedent components are selected. A huge reduction in dimensionality&lt;/li&gt;
@@ -1480,7 +1521,8 @@ Evaluation:&lt;/li&gt;
 
 &lt;p&gt;&lt;strong&gt;Faulty Steel Plates: ICA Clustering&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../images/ml-unsup/FP_ICA_Clustering.png&quot; alt=&quot;FP ICA Clustering&quot; /&gt;&lt;/p&gt;
+&lt;!-- &lt;img src=&quot;../images/ml-unsup/FP_ICA_Clustering.png&quot; alt=&quot;FP ICA Clustering&quot;&gt;  --&gt;
+&lt;p&gt;&lt;a href=&quot;../images/ml-unsup/FP_ICA_Clustering.png&quot;&gt; &lt;img src=&quot;../images/ml-unsup/FP_ICA_Clustering.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Using 4 independent components for clustering:&lt;/p&gt;
 &lt;ul&gt;
@@ -1512,7 +1554,7 @@ Good cluster at k=7&lt;/li&gt;
 
 &lt;p&gt;&lt;strong&gt;Breast Cancer: ICA&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../images/ml-unsup/BC_ICA.png&quot; alt=&quot;FP ICA&quot; width=&quot;350px&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../images/ml-unsup/BC_ICA.png&quot; alt=&quot;FP ICA&quot; width=&quot;450px&quot; /&gt;&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Kurtosis keeps increasing, meaning non-gaussianity increases as the number of independent components increases&lt;/li&gt;
   &lt;li&gt;Original dataset has 30 features, but 25 independent components is enough since it starts leveling off&lt;/li&gt;
@@ -1520,7 +1562,8 @@ Good cluster at k=7&lt;/li&gt;
 
 &lt;p&gt;&lt;strong&gt;Breast Cancer: ICA Clustering&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../images/ml-unsup/BC_ICA_Clustering.png&quot; alt=&quot;FP ICA Clustering&quot; /&gt;&lt;/p&gt;
+&lt;!-- &lt;img src=&quot;../images/ml-unsup/BC_ICA_Clustering.png&quot; alt=&quot;FP ICA Clustering&quot;&gt; --&gt;
+&lt;p&gt;&lt;a href=&quot;../images/ml-unsup/BC_ICA_Clustering.png&quot;&gt; &lt;img src=&quot;../images/ml-unsup/BC_ICA_Clustering.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Using 25 independent components for clustering:&lt;/p&gt;
 &lt;ul&gt;
@@ -1566,7 +1609,7 @@ Good cluster at k=6 and k=7&lt;/li&gt;
 
 &lt;p&gt;&lt;strong&gt;Faulty Steel Plates: RP&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../images/ml-unsup/FP_RP.png&quot; alt=&quot;FP RP&quot; width=&quot;350px&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../images/ml-unsup/FP_RP.png&quot; alt=&quot;FP RP&quot; width=&quot;450px&quot; /&gt;&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Average Pairwise Distance Correlation starts leveling off around 7 dimensions&lt;/li&gt;
   &lt;li&gt;The Average Reconstruction error keeps decreasing for higher dimensions
@@ -1578,7 +1621,8 @@ Good cluster at k=6 and k=7&lt;/li&gt;
 
 &lt;p&gt;&lt;strong&gt;Faulty Steel Plates: RP Clustering&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../images/ml-unsup/FP_RP_Clustering.png&quot; alt=&quot;FP RP Clustering&quot; /&gt;&lt;/p&gt;
+&lt;!-- &lt;img src=&quot;../images/ml-unsup/FP_RP_Clustering.png&quot; alt=&quot;FP RP Clustering&quot;&gt; --&gt;
+&lt;p&gt;&lt;a href=&quot;../images/ml-unsup/FP_RP_Clustering.png&quot;&gt; &lt;img src=&quot;../images/ml-unsup/FP_RP_Clustering.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Using 7 dimensions for clustering:&lt;/p&gt;
 &lt;ul&gt;
@@ -1611,7 +1655,7 @@ Good cluster at k=6 and k=7&lt;/li&gt;
 
 &lt;p&gt;&lt;strong&gt;Breast Cancer: RP&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../images/ml-unsup/BC_RP.png&quot; alt=&quot;FP RP&quot; width=&quot;350px&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../images/ml-unsup/BC_RP.png&quot; alt=&quot;FP RP&quot; width=&quot;450px&quot; /&gt;&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Average Pairwise Distance Correlation starts levling off around 7 dimensions&lt;/li&gt;
   &lt;li&gt;Average reconstruction error keeps decreasing for higher dimensions&lt;/li&gt;
@@ -1619,7 +1663,8 @@ Good cluster at k=6 and k=7&lt;/li&gt;
 
 &lt;p&gt;&lt;strong&gt;Breast Cancer: RP Clustering&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../images/ml-unsup/BC_RP_Clustering.png&quot; alt=&quot;FP RP Clustering&quot; /&gt;&lt;/p&gt;
+&lt;!-- &lt;img src=&quot;../images/ml-unsup/BC_RP_Clustering.png&quot; alt=&quot;FP RP Clustering&quot;&gt; --&gt;
+&lt;p&gt;&lt;a href=&quot;../images/ml-unsup/BC_RP_Clustering.png&quot;&gt; &lt;img src=&quot;../images/ml-unsup/BC_RP_Clustering.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Using 7 dimensions for clustering:&lt;/p&gt;
 &lt;ul&gt;
@@ -1665,7 +1710,7 @@ Good cluster at k=6 and k=7&lt;/li&gt;
 
 &lt;p&gt;&lt;strong&gt;Faulty Steel Plates: RF&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../images/ml-unsup/FP_RF.png&quot; alt=&quot;FP RF&quot; width=&quot;350px&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../images/ml-unsup/FP_RF.png&quot; alt=&quot;FP RF&quot; width=&quot;450px&quot; /&gt;&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Faulty Plates dataset has a lot of important features, and has a sharp decline at 25 features.&lt;/li&gt;
   &lt;li&gt;Decrease in dimensionality from 27 to 24&lt;/li&gt;
@@ -1673,7 +1718,8 @@ Good cluster at k=6 and k=7&lt;/li&gt;
 
 &lt;p&gt;&lt;strong&gt;Faulty Steel Plates: RF Clustering&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../images/ml-unsup/FP_RF_Clustering.png&quot; alt=&quot;FP RF Clustering&quot; /&gt;&lt;/p&gt;
+&lt;!-- &lt;img src=&quot;../images/ml-unsup/FP_RF_Clustering.png&quot; alt=&quot;FP RF Clustering&quot;&gt; --&gt;
+&lt;p&gt;&lt;a href=&quot;../images/ml-unsup/FP_RF_Clustering.png&quot;&gt; &lt;img src=&quot;../images/ml-unsup/FP_RF_Clustering.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Using 25 dimensions for clustering:&lt;/p&gt;
 &lt;ul&gt;
@@ -1704,7 +1750,7 @@ Good clusters at k=4 and k=9&lt;/li&gt;
 
 &lt;p&gt;&lt;strong&gt;Breast Cancer: RF&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../images/ml-unsup/BC_RF.png&quot; alt=&quot;FP RF&quot; width=&quot;350px&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../images/ml-unsup/BC_RF.png&quot; alt=&quot;FP RF&quot; width=&quot;450px&quot; /&gt;&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;10 important features, because Gini Importance starts to level off after that&lt;/li&gt;
   &lt;li&gt;Features reduced from 30 to 10 using Random Forest&lt;/li&gt;
@@ -1712,7 +1758,8 @@ Good clusters at k=4 and k=9&lt;/li&gt;
 
 &lt;p&gt;&lt;strong&gt;Breast Cancer: RF Clustering&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../images/ml-unsup/BC_RF_Clustering.png&quot; alt=&quot;FP RF Clustering&quot; /&gt;&lt;/p&gt;
+&lt;!-- &lt;img src=&quot;../images/ml-unsup/BC_RF_Clustering.png&quot; alt=&quot;FP RF Clustering&quot;&gt; --&gt;
+&lt;p&gt;&lt;a href=&quot;../images/ml-unsup/BC_RF_Clustering.png&quot;&gt; &lt;img src=&quot;../images/ml-unsup/BC_RF_Clustering.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Using 10 dimensions for clustering:&lt;/p&gt;
 &lt;ul&gt;
@@ -1759,7 +1806,7 @@ Good clusters at k=3, 6, and 10&lt;/li&gt;
   &lt;li&gt;Baseline is the same as above&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;../images/ml-unsup/CF_NN.png&quot; alt=&quot;CF NN&quot; width=&quot;350px&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../images/ml-unsup/CF_NN.png&quot; alt=&quot;CF NN&quot; width=&quot;450px&quot; /&gt;&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;When clusters are used as features, it doesn’t do a good job of predicting the labels&lt;/li&gt;
   &lt;li&gt;Performs far below benchmark accuracy of 71.9%&lt;/li&gt;
@@ -1776,16 +1823,176 @@ Good clusters at k=3, 6, and 10&lt;/li&gt;
   &lt;li&gt;Random Forest used as feature selection takes too much computational time&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Most of the dimensionality reductions do help in reducing SSE within clusters. PCA and ICA do not increase the intra-cluster distance, but Random Projection and Random Forest does.&lt;/p&gt;</content><author><name>Justin Gong</name></author><category term="unsupervised learning" /><category term="python" /><category term="jython" /><summary type="html">Unsupervised Learning, Dimensionality Reduction, Clustering, PCA, ICA</summary></entry><entry><title type="html">MORE Application</title><link href="http://localhost:4000/more/" rel="alternate" type="text/html" title="MORE Application" /><published>2018-06-01T00:00:00-04:00</published><updated>2018-06-01T00:00:00-04:00</updated><id>http://localhost:4000/more</id><content type="html" xml:base="http://localhost:4000/more/">&lt;h2 id=&quot;details&quot;&gt;Details:&lt;/h2&gt;
-&lt;p&gt;Code for this project is available on &lt;a href=&quot;https://github.com/jjgong7/DVA-Project&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Most of the dimensionality reductions do help in reducing SSE within clusters. PCA and ICA do not increase the intra-cluster distance, but Random Projection and Random Forest does.&lt;/p&gt;</content><author><name>Justin Gong</name></author><category term="unsupervised learning" /><category term="python" /><category term="jython" /><summary type="html">Unsupervised Learning, Dimensionality Reduction, Clustering, PCA, ICA</summary></entry><entry><title type="html">M.O.R.E. Application</title><link href="http://localhost:4000/more/" rel="alternate" type="text/html" title="M.O.R.E. Application" /><published>2018-06-01T00:00:00-04:00</published><updated>2018-06-01T00:00:00-04:00</updated><id>http://localhost:4000/more</id><content type="html" xml:base="http://localhost:4000/more/">&lt;p&gt;Code for this project is available on &lt;a href=&quot;https://github.com/jjgong7/DVA-Project&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Deployed project on AWS Elastic Beanstalk is available &lt;a href=&quot;http://more-project.us-east-1.elasticbeanstalk.com/&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;poster&quot;&gt;Poster:&lt;/h2&gt;
 &lt;!-- &lt;img src=&quot;../images/more-app/poster.png&quot; alt=&quot;poster&quot; class=&quot;img&quot; style=&quot;cursor: zoom-in;&quot;&gt;   --&gt;
-&lt;p&gt;&lt;a href=&quot;../images/more-app/poster.png&quot;&gt; &lt;img src=&quot;../images/more-app/poster.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt;&lt;/p&gt;</content><author><name>Justin Gong</name></author><category term="python" /><category term="javascript" /><category term="SQL" /><category term="D3.js" /><summary type="html">Python, Javascript, SQL, D3.js</summary></entry><entry><title type="html">Space Shuttle Challenger</title><link href="http://localhost:4000/bay/" rel="alternate" type="text/html" title="Space Shuttle Challenger" /><published>2018-05-02T00:00:00-04:00</published><updated>2018-05-02T00:00:00-04:00</updated><id>http://localhost:4000/bay</id><content type="html" xml:base="http://localhost:4000/bay/">&lt;p&gt;Code for this project is available on &lt;a href=&quot;https://github.com/jjgong7/Bayesian-Statistics&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;</content><author><name>Justin Gong</name></author><category term="bayesian statistics" /><category term="WinBUGS" /><summary type="html">Bayesian Statistics, WinBugs</summary></entry><entry><title type="html">Database Systems - Emergency Resource Management System</title><link href="http://localhost:4000/dbm/" rel="alternate" type="text/html" title="Database Systems - Emergency Resource Management System" /><published>2018-05-01T00:00:00-04:00</published><updated>2018-05-01T00:00:00-04:00</updated><id>http://localhost:4000/dbm</id><content type="html" xml:base="http://localhost:4000/dbm/">&lt;!-- # Emergency Resource Management System (ERMS) --&gt;
+&lt;p&gt;&lt;a href=&quot;../images/more-app/poster.png&quot;&gt; &lt;img src=&quot;../images/more-app/poster.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt;&lt;/p&gt;</content><author><name>Justin Gong</name></author><category term="python" /><category term="javascript" /><category term="SQL" /><category term="D3.js" /><summary type="html">Python, Javascript, SQL, D3.js</summary></entry><entry><title type="html">Computational Data Analytics Assignments</title><link href="http://localhost:4000/cda/" rel="alternate" type="text/html" title="Computational Data Analytics Assignments" /><published>2018-05-02T00:00:00-04:00</published><updated>2018-05-02T00:00:00-04:00</updated><id>http://localhost:4000/cda</id><content type="html" xml:base="http://localhost:4000/cda/">&lt;!-- 
+# Computational Data Analysis --&gt;
+&lt;p&gt;Code for this project is available on &lt;a href=&quot;https://github.com/jjgong7/Computational-Data-Analytics&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;description&quot;&gt;Description:&lt;/h2&gt;
+&lt;p&gt;Course includes hands-on introduction to programming techniques relevant to data analysis and machine learning. Most of the programming exercises are based on Python and SQL.&lt;/p&gt;
+
+&lt;p&gt;Notebooks are built “from scratch,” of the basic components of a data analysis pipeline: collection, preprocessing, storage, analysis, and visualization. There are several examples of high-level data analysis questions, concepts and techniques for formalizing those questions into mathematical or computational tasks, and methods for translating those tasks into code. Beyond programming and best practices, notebooks include elementary data processing algorithms, notions of program correctness and efficiency, and numerical methods for linear
+algebra and mathematical optimization.&lt;/p&gt;
+
+&lt;h2 id=&quot;notebooks&quot;&gt;Notebooks:&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/jjgong7/Computational-Data-Analytics/tree/master/Notebook%201&quot;&gt;Notebook 1: Python Essentials&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/jjgong7/Computational-Data-Analytics/tree/master/Notebook%202&quot;&gt;Notebook 2: Pairwise Association Mining&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Notebook 3: Math Review (Not present)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/jjgong7/Computational-Data-Analytics/tree/master/Notebook%204&quot;&gt;Notebook 4: Representing Numbers&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/jjgong7/Computational-Data-Analytics/tree/master/Notebook%205&quot;&gt;Notebook 5: Preprocessing Unstructured Text (Regex)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/jjgong7/Computational-Data-Analytics/tree/master/Notebook%206&quot;&gt;Notebook 6: Mining the Web (BeautifulSoup, APIs, JSON)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/jjgong7/Computational-Data-Analytics/tree/master/Notebook%207&quot;&gt;Notebook 7: Tidying Data (Tibbles, Melting, and Casting)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/jjgong7/Computational-Data-Analytics/tree/master/Notebook%208&quot;&gt;Notebook 8: Visualizing Data and Results (Bokeh, Seaborn)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/jjgong7/Computational-Data-Analytics/tree/master/Notebook%209&quot;&gt;Notebook 9: Relational Data (SQL, SQLite3)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/jjgong7/Computational-Data-Analytics/tree/master/Notebook%2010&quot;&gt;Notebook 10: Numerical Computing with Numpy/Scipy (Sparse Matrix, COO, CSR)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/jjgong7/Computational-Data-Analytics/tree/master/Notebook%2011&quot;&gt;Notebook 11: Ranking Relational Objects (Markov Chain Analysis)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/jjgong7/Computational-Data-Analytics/tree/master/Notebook%2012&quot;&gt;Notebook 12: Linear Regression&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/jjgong7/Computational-Data-Analytics/tree/master/Notebook%2013&quot;&gt;Notebook 13: Classification (Logistic Regression)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/jjgong7/Computational-Data-Analytics/tree/master/Notebook%2014&quot;&gt;Notebook 14: Clustering via k-means&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/jjgong7/Computational-Data-Analytics/tree/master/Notebook%2015&quot;&gt;Notebook 15: Compression via PCA&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/jjgong7/Computational-Data-Analytics/tree/master/Notebook%2016&quot;&gt;Notebook 16: Eigenfaces&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;Languages:&lt;/strong&gt;&lt;br /&gt;
+Python 3.6, SQL&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Libraries:&lt;/strong&gt;&lt;br /&gt;
+Pandas, NumPy, SciPy, re, matplotlib, seaborn, bokeh, collections, itertools&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Relational Database Management System:&lt;/strong&gt;&lt;br /&gt;
+SQLite3&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Environments:&lt;/strong&gt;&lt;br /&gt;
+Jupyter Notebooks&lt;/p&gt;</content><author><name>Justin Gong</name></author><category term="machine learning" /><category term="python" /><category term="supervised learning" /><summary type="html">Python, Numpy, Pandas, Supervised Learning, Data Science, Machine Learning</summary></entry><entry><title type="html">Randomized Optimization</title><link href="http://localhost:4000/ro/" rel="alternate" type="text/html" title="Randomized Optimization" /><published>2018-05-01T00:00:00-04:00</published><updated>2018-05-01T00:00:00-04:00</updated><id>http://localhost:4000/ro</id><content type="html" xml:base="http://localhost:4000/ro/">&lt;p&gt;Details for this project are available on &lt;a href=&quot;https://github.com/jjgong7/Machine-Learning/tree/master/2%20-%20Randomized%20Optimization&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;report&quot;&gt;Report:&lt;/h2&gt;
+&lt;object data=&quot;https://github.com/jjgong7/Machine-Learning/raw/master/2%20-%20Randomized%20Optimization/Analysis.pdf&quot; type=&quot;application/pdf&quot; width=&quot;100%&quot; height=&quot;100%&quot;&gt;
+&lt;/object&gt;</content><author><name>Justin Gong</name></author><category term="randomized optimization" /><category term="jython" /><category term="java" /><summary type="html">Randomized Optimization, ABAGAIL, Jython, Java, Jupyter Notebooks, Python</summary></entry><entry><title type="html">Markov Decision Processes</title><link href="http://localhost:4000/mdp/" rel="alternate" type="text/html" title="Markov Decision Processes" /><published>2018-04-02T00:00:00-04:00</published><updated>2018-04-02T00:00:00-04:00</updated><id>http://localhost:4000/mdp</id><content type="html" xml:base="http://localhost:4000/mdp/">&lt;p&gt;Details for this project are available on &lt;a href=&quot;https://github.com/jjgong7/Machine-Learning/tree/master/4%20-%20Markov%20Decision%20Processes&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;report&quot;&gt;Report:&lt;/h2&gt;
+&lt;object data=&quot;https://github.com/jjgong7/Machine-Learning/raw/master/4%20-%20Markov%20Decision%20Processes/Analysis.pdf&quot; type=&quot;application/pdf&quot; width=&quot;100%&quot; height=&quot;100%&quot;&gt;
+&lt;/object&gt;</content><author><name>Justin Gong</name></author><category term="markov decision processes" /><category term="jython" /><category term="java" /><summary type="html">Markov Decision Processes, BURLAP, Jython, Java, Jupyter Notebooks, Python</summary></entry><entry><title type="html">Space Shuttle Challenger</title><link href="http://localhost:4000/bay/" rel="alternate" type="text/html" title="Space Shuttle Challenger" /><published>2018-04-01T00:00:00-04:00</published><updated>2018-04-01T00:00:00-04:00</updated><id>http://localhost:4000/bay</id><content type="html" xml:base="http://localhost:4000/bay/">&lt;p&gt;Code for this project is available on &lt;a href=&quot;https://github.com/jjgong7/Bayesian-Statistics&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;introduction&quot;&gt;Introduction:&lt;/h2&gt;
+
+&lt;p&gt;On January 28, 1986, space shuttle Challenger was due to takeoff from Kennedy Space Center on its tenth space mission to deploy satellites and observe Halley’s Comet among other things.&lt;/p&gt;
+
+&lt;p&gt;Space shuttle Challenger contained two Solid Rocket Boosters (SRBs) that boosts the shuttle into space. Each booster has three field joints, which contains two O-rings (secondary and primary). These O-rings are 37 foot circles of special rubber that help pressure seal the gas and exhaust.&lt;/p&gt;
+
+&lt;p&gt;It was an unusually cold morning that day, measuring 31 degrees Fahrenheit. Ice was visible around the launchpad and on the equipment. NASA had no experience launching at such cold temperatures with the coldest previous launch being 22 degrees warmer, at 53 degrees Fahrenheit. There was concern about the durability of the O-rings because they haven’t been tested at such low temperatures and could fail by erosion or blowby. However, there wasn’t enough support to abort and they decided to continue on with the mission.&lt;/p&gt;
+
+&lt;p&gt;73 seconds after liftoff, at an altitude of 9 miles, the O-ring on one of the boosters malfunctioned. The rubber O-rings had become stiff under the cold and failed to seal the joint, letting a plume of exhaust to leak out. Hot gases enveloped the cold hull of an external tank full of gases and ruptured it, causing the shuttle to be torn apart by aerodynamic forces.&lt;/p&gt;
+
+&lt;p&gt;The space shuttle had no escape hatch, so it went into a free fall and disintegrated going terminal velocity over the Atlantic Ocean near Cape Canaveral, Florida. The outcome of this terrible tragedy resulted in the death of 7 crewmembers and a nearly 3 year hiatus of the space program.&lt;/p&gt;
+
+&lt;p&gt;This tragedy could have possibly been prevented with enough statistical analysis using Bayesian Linear Regression by predicting the Number of O-rings experiencing thermal distress given historical data from 23 shuttle flights previous to the Challenger disaster.&lt;/p&gt;
+
+&lt;h2 id=&quot;description-of-dataset&quot;&gt;Description of Dataset:&lt;/h2&gt;
+&lt;p&gt;The dataset is found on the UCI Machine Learning Repository. The donor of the data is David Draper of UCLA.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;There are 23 instances with 4 attributes and a response variable.&lt;/li&gt;
+  &lt;li&gt;The four attributes are:
+    &lt;ol&gt;
+      &lt;li&gt;The number of O-rings at risk on a given flight&lt;/li&gt;
+      &lt;li&gt;Launch temperature (degrees Fahrenheit)&lt;/li&gt;
+      &lt;li&gt;Leak-check pressure (psi)&lt;/li&gt;
+      &lt;li&gt;Temporal order of flight.&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The Number of O-rings is always 6 and the temporal order of flight isn’t necessary since the flights are independent of each other. The data for Number of O-rings at risk on a given flight and Temporal order of flight is still listed in the dataset in OpenBUGS, but not used for the linear regression models.&lt;/p&gt;
+
+&lt;p&gt;As a result, there are really only two relevant attributes:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;The Launch Temperature (degrees F)&lt;/li&gt;
+  &lt;li&gt;Leak-Check pressure
+    &lt;ul&gt;
+      &lt;li&gt;The pressure (in psi) at which safety testing for field joint leaks was performed, was available, but the relevance to the problem was unclear.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Therefore, I will run two linear regression models:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;One with 3 parameters – intercept, Launch Temperature (degrees F) and Leak-Check pressure and&lt;/li&gt;
+  &lt;li&gt;One with 2 parameters – intercept and Launch Temperature (degrees F).&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;The goal is to make a prediction of how many O-rings will experience thermal distress at 31 degrees Fahrenheit with Leak-Check pressure of 50, 100, and 200, and with temperature alone in the second model.&lt;/p&gt;
+
+&lt;h2 id=&quot;bayesian-linear-regression-vs-ols-linear-regression&quot;&gt;Bayesian Linear Regression vs OLS Linear Regression:&lt;/h2&gt;
+&lt;p&gt;The Bayesian approach compared to OLS is that instead of maximizing the likelihood function alone, we assume prior distributions for the parameters and use Bayes theorem. Since I don’t have any estimates for the prior parameters, I will be setting normal non-informative priors on the beta coefficients and a gamma prior on the precision parameter.&lt;/p&gt;
+
+&lt;p&gt;By applying Bayes theorem, we obtain the posterior distribution of the parameters, which is an estimate that depends on both the data’s likelihood function and the prior belief. Bayesian Linear Regression doesn’t find the single “best” value of the model parameters, but determines the posterior distribution for the model parameters.&lt;/p&gt;
+
+&lt;p&gt;Depending on priors, Bayesian analysis is generally more accurate in small samples such as this problem with only 23 instances. With more information in the data, the priors are less influential.&lt;/p&gt;
+
+&lt;h2 id=&quot;summary-of-data&quot;&gt;Summary of Data:&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;../images/bay/summary.png&quot;&gt; &lt;img src=&quot;../images/bay/summary.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Summary of the data shows:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;The mean launch temp is 69.57 degrees Fahrenheit, which is much warmer than the temperature on that day.&lt;/li&gt;
+  &lt;li&gt;Leak pressure is 152.2 psi on average, but it takes values of 50, 100, and 200.&lt;/li&gt;
+  &lt;li&gt;There are 7 occurrences of O-rings experiencing thermal distress, with 5 involving 1 O-ring and 2 involving 2 O-rings.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;analysis&quot;&gt;Analysis:&lt;/h2&gt;
+&lt;p&gt;Both are sampled at 1,000,000 iterations and 1,000 burned.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;With 3 parameters: Intercept, Launch Temperature (degrees F) and Leak-Check pressure&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;../images/bay/3_param.png&quot;&gt; &lt;img src=&quot;../images/bay/3_param.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Beta[1] is intercept, beta[2] is Launch Temperature, and beta[3] is Leak-Check Pressure. From the 95% Credible Set, I can see that the intercept and launch temperature coefficients are statistically significant because the set doesn’t contain 0. Leak-Check pressure has a 95% Credible Set of (-6.623E-4, 0.00656) and barely includes 0 in the lower bound. It is possible that this coefficient isn’t significant. This Leak Pressure will be taken out in the 2 parameter model.&lt;/p&gt;
+
+&lt;p&gt;The mean response of the number of O-rings experiencing thermal distress when Launch temperature = 31 degrees Fahrenheit and Leak-check pressure (psi) = 50, 100, and 200 are as follows:&lt;/p&gt;
+
+&lt;p&gt;Leak-check pressure (psi) = 50, Thermal distress = 1.96, with 95% Credible Set (0.5725, 3.35)&lt;/p&gt;
+
+&lt;p&gt;Leak-check pressure (psi) = 100, Thermal distress = 2.11, with 95% Credible Set (0.7468, 3.466)&lt;/p&gt;
+
+&lt;p&gt;Leak-check pressure (psi) = 200, Thermal distress = 2.40, with 95% Credible Set (1.027, 3.766)&lt;/p&gt;
+
+&lt;p&gt;The 95% Credible Sets for prediction (new.TD_50, 100, 200) are much larger than the mean response, as expected, because there is more error in prediction.&lt;/p&gt;
+
+&lt;p&gt;Since the mean for coefficient beta[3] is 0.002943, it means that each unit of Leak-check pressure (psi) increases the number of O-rings experiencing thermal distress by 0.002943. From 50 psi to 200 psi, there is almost a .5 increase in O-rings experiencing thermal distress. A higher leak-check pressure is not better. This is a little strange and contrary to what I would believe - that checking leaks at a higher pressures should mean it’s more safe. However, this could also mean that they are expecting the rocket booster to withstand more pressure based on cargo or whatever and believe it’s necessary to test at higher pressures.&lt;/p&gt;
+
+&lt;p&gt;The R-squared = 0.2829 and the adjusted R-squared = 0.2112. The R-squared is a goodness-of-fit measure and explains the variability in the data. It’s small at .2 something. A higher R-squared is better and desired, but not possible with the given data. Adjusted R-squared modifies for the number of predictors in the model. The small R-squared could make the results more skeptical. The deviance is 39.19.&lt;/p&gt;
+
+&lt;p&gt;Still, it’s quite clear that regardless of the leak-check pressure, due to a very lower than normal temperature at launch of 31 degrees Fahrenheit, the chance of O-ring malfunction is very high and that the mission should have been aborted. The mean response of the number of O-rings experiencing thermal distress is around 2 for the three different values of leak-check pressure.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;With 2 parameters: Intercept and Launch Temperature (degrees F)&lt;/strong&gt;&lt;br /&gt;
+&lt;a href=&quot;../images/bay/2_param.png&quot;&gt; &lt;img src=&quot;../images/bay/2_param.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Beta[1] is intercept and beta[2] is Launch Temperature. From the 95% Credible Set, I can see that the intercept and launch temperature coefficients are statistically significant because the set doesn’t contain 0.&lt;/p&gt;
+
+&lt;p&gt;The mean response of the number of O-rings experiencing thermal distress when Launch temperature = 31 degrees Fahrenheit is as follows:&lt;/p&gt;
+
+&lt;p&gt;Thermal distress = 2.245, with 95% Credible Set (0.8436, 3.668)&lt;/p&gt;
+
+&lt;p&gt;The 95% Credible Sets for prediction (new.TD) is much larger than the mean response as expected because there is more error in prediction.&lt;/p&gt;
+
+&lt;p&gt;The R-squared = 0.184 and the adjusted R-squared = 0.1452. The R-squared is a goodness-of-fit measure and explains the variability in the data. The R-squared values are much worse without Leak-check pressure as a variable. The R-squared is 0.184 vs 0.2829 and R-squared adjusted is 0.1452 vs. 0.2112. The deviance is also higher at 41.11 vs 39.19 and variance (sigma squared) is higher as well.&lt;/p&gt;
+
+&lt;p&gt;Due to a very lower than normal temperature at launch of 31 degrees Fahrenheit, the chance of O-ring malfunction is very high and that the mission should be aborted.&lt;/p&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion:&lt;/h2&gt;
+&lt;p&gt;In comparing the two models, the 3 parameter model with the intercept, launch temperature and leak-check pressure performs better than the 2 parameter model. The 3 parameter model explains much more of the variability in the data with the higher R-squared and R-squared adjusted value and has a slightly lower deviance. Having the leak-check pressure coefficient also explains a 0.5 variability in the number of O-rings experiencing thermal distress from 50 to 200 psi. With both models, it’s clear that with a launch temperature of 31 degrees Fahrenheit, the number of O-rings experiencing thermal distress is very high at around 2. If they performed regression using data from the 23 previous flights, they could have concluded there was a high chance of malfunction predicted and that the mission should not have been flown.&lt;/p&gt;</content><author><name>Justin Gong</name></author><category term="bayesian statistics" /><category term="WinBUGS" /><summary type="html">Bayesian Statistics, WinBugs</summary></entry><entry><title type="html">Database Systems - Emergency Resource Management System</title><link href="http://localhost:4000/dbm/" rel="alternate" type="text/html" title="Database Systems - Emergency Resource Management System" /><published>2018-03-02T00:00:00-05:00</published><updated>2018-03-02T00:00:00-05:00</updated><id>http://localhost:4000/dbm</id><content type="html" xml:base="http://localhost:4000/dbm/">&lt;p&gt;Code for this project is available on &lt;a href=&quot;https://github.com/jjgong7/Database-Systems-Concepts-and-Design&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+
 &lt;h2 id=&quot;database-systems---team-project&quot;&gt;Database Systems - Team Project&lt;/h2&gt;
-&lt;p&gt;Code for this project is available on &lt;a href=&quot;https://github.com/jjgong7/Database-Systems-Concepts-and-Design&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Team Members:&lt;/strong&gt;&lt;br /&gt;
 Evan Althouse, Chang-Zhou Gong, Tich Mangono, David Ribeiro&lt;/p&gt;
@@ -1974,50 +2181,7 @@ MariaDB (MySQL)&lt;/p&gt;
 
 &lt;h2 id=&quot;resource-report&quot;&gt;Resource Report&lt;/h2&gt;
 &lt;h3 id=&quot;resource-report-by-primary-esf&quot;&gt;Resource Report By Primary ESF&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;https://github.com/jjgong7/Database-Systems-Concepts-and-Design/raw/master/Phase%203/images/7a.ResourceReport.png&quot; alt=&quot;ResourceReport1&quot; /&gt;&lt;/p&gt;</content><author><name>Justin Gong</name></author><category term="python" /><category term="flask" /><category term="sql" /><summary type="html">Python, Javascript, Database Systems, MySQL, Flask</summary></entry><entry><title type="html">Computational Data Analytics Assignments</title><link href="http://localhost:4000/cda/" rel="alternate" type="text/html" title="Computational Data Analytics Assignments" /><published>2018-04-01T00:00:00-04:00</published><updated>2018-04-01T00:00:00-04:00</updated><id>http://localhost:4000/cda</id><content type="html" xml:base="http://localhost:4000/cda/">&lt;!-- 
-# Computational Data Analysis --&gt;
-&lt;p&gt;Code for this project is available on &lt;a href=&quot;https://github.com/jjgong7/Computational-Data-Analytics&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;description&quot;&gt;Description:&lt;/h2&gt;
-&lt;p&gt;Course includes hands-on introduction to programming techniques relevant to data analysis and machine learning. Most of the programming exercises are based on Python and SQL.&lt;/p&gt;
-
-&lt;p&gt;Notebooks are built “from scratch,” of the basic components of a data analysis pipeline: collection, preprocessing, storage, analysis, and visualization. There are several examples of high-level data analysis questions, concepts and techniques for formalizing those questions into mathematical or computational tasks, and methods for translating those tasks into code. Beyond programming and best practices, notebooks include elementary data processing algorithms, notions of program correctness and efficiency, and numerical methods for linear
-algebra and mathematical optimization.&lt;/p&gt;
-
-&lt;h2 id=&quot;notebooks&quot;&gt;Notebooks:&lt;/h2&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/jjgong7/Computational-Data-Analytics/tree/master/Notebook%201&quot;&gt;Notebook 1: Python Essentials&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/jjgong7/Computational-Data-Analytics/tree/master/Notebook%202&quot;&gt;Notebook 2: Pairwise Association Mining&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Notebook 3: Math Review (Not present)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/jjgong7/Computational-Data-Analytics/tree/master/Notebook%204&quot;&gt;Notebook 4: Representing Numbers&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/jjgong7/Computational-Data-Analytics/tree/master/Notebook%205&quot;&gt;Notebook 5: Preprocessing Unstructured Text (Regex)&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/jjgong7/Computational-Data-Analytics/tree/master/Notebook%206&quot;&gt;Notebook 6: Mining the Web (BeautifulSoup, APIs, JSON)&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/jjgong7/Computational-Data-Analytics/tree/master/Notebook%207&quot;&gt;Notebook 7: Tidying Data (Tibbles, Melting, and Casting)&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/jjgong7/Computational-Data-Analytics/tree/master/Notebook%208&quot;&gt;Notebook 8: Visualizing Data and Results (Bokeh, Seaborn)&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/jjgong7/Computational-Data-Analytics/tree/master/Notebook%209&quot;&gt;Notebook 9: Relational Data (SQL, SQLite3)&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/jjgong7/Computational-Data-Analytics/tree/master/Notebook%2010&quot;&gt;Notebook 10: Numerical Computing with Numpy/Scipy (Sparse Matrix, COO, CSR)&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/jjgong7/Computational-Data-Analytics/tree/master/Notebook%2011&quot;&gt;Notebook 11: Ranking Relational Objects (Markov Chain Analysis)&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/jjgong7/Computational-Data-Analytics/tree/master/Notebook%2012&quot;&gt;Notebook 12: Linear Regression&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/jjgong7/Computational-Data-Analytics/tree/master/Notebook%2013&quot;&gt;Notebook 13: Classification (Logistic Regression)&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/jjgong7/Computational-Data-Analytics/tree/master/Notebook%2014&quot;&gt;Notebook 14: Clustering via k-means&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/jjgong7/Computational-Data-Analytics/tree/master/Notebook%2015&quot;&gt;Notebook 15: Compression via PCA&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/jjgong7/Computational-Data-Analytics/tree/master/Notebook%2016&quot;&gt;Notebook 16: Eigenfaces&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;strong&gt;Languages:&lt;/strong&gt;&lt;br /&gt;
-Python 3.6, SQL&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Libraries:&lt;/strong&gt;&lt;br /&gt;
-Pandas, NumPy, SciPy, re, matplotlib, seaborn, bokeh, collections, itertools&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Relational Database Management System:&lt;/strong&gt;&lt;br /&gt;
-SQLite3&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Environments:&lt;/strong&gt;&lt;br /&gt;
-Jupyter Notebooks&lt;/p&gt;</content><author><name>Justin Gong</name></author><category term="machine learning" /><category term="python" /><category term="supervised learning" /><summary type="html">Python, Numpy, Pandas, Supervised Learning, Data Science, Machine Learning</summary></entry><entry><title type="html">Data and Visual Analytics</title><link href="http://localhost:4000/dva/" rel="alternate" type="text/html" title="Data and Visual Analytics" /><published>2018-03-01T00:00:00-05:00</published><updated>2018-03-01T00:00:00-05:00</updated><id>http://localhost:4000/dva</id><content type="html" xml:base="http://localhost:4000/dva/">&lt;h2 id=&quot;description&quot;&gt;Description:&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/jjgong7/Database-Systems-Concepts-and-Design/raw/master/Phase%203/images/7a.ResourceReport.png&quot; alt=&quot;ResourceReport1&quot; /&gt;&lt;/p&gt;</content><author><name>Justin Gong</name></author><category term="python" /><category term="flask" /><category term="sql" /><summary type="html">Python, Javascript, Database Systems, MySQL, Flask</summary></entry><entry><title type="html">Data and Visual Analytics</title><link href="http://localhost:4000/dva/" rel="alternate" type="text/html" title="Data and Visual Analytics" /><published>2018-03-01T00:00:00-05:00</published><updated>2018-03-01T00:00:00-05:00</updated><id>http://localhost:4000/dva</id><content type="html" xml:base="http://localhost:4000/dva/">&lt;h2 id=&quot;description&quot;&gt;Description:&lt;/h2&gt;
 &lt;p&gt;Four assignments demonstrating techniques and tools for analyzing and visualizing data at scale. Languages &amp;amp; Frameworks used: JavaScript (D3.js), Python, Java, Scala, Pig, SQL, HTML, CSS, Hadoop, Spark, and AWS.&lt;/p&gt;
 
 &lt;h2 id=&quot;data-and-visual-analytics-assignments&quot;&gt;Data and Visual Analytics Assignments:&lt;/h2&gt;
