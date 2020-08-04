@@ -4,7 +4,7 @@ permalink: /about/
 author_profile: true
 ---
 
-* I'm a Business Analyst/Data Scientist with 2 years experience.
+* Business Analyst/Data Scientist with 2 years experience.
 * Currently data wrangling, data warehousing, building dashboards, and identifying KPIs at [Ghostery](https://www.ghostery.com/).  
 * Proficient in Python, R, and SQL. 
 * Skilled in business, ML, stats, and programming.  
