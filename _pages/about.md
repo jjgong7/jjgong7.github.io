@@ -5,7 +5,7 @@ author_profile: true
 ---
 
 * Business Analyst/Data Scientist with 2 years experience.
-* Currently data wrangling, data warehousing, building dashboards, and identifying KPIs at [Ghostery](https://www.ghostery.com/).  
+* Currently data wrangling, data warehousing, building dashboards, and analyzing KPIs at [Ghostery](https://www.ghostery.com/).  
 * Proficient in Python, R, and SQL. 
 * Skilled in business, ML, stats, and programming.  
 * Graduated with an M.S. in Analytics @ Georgia Tech and a B.S. in Managerial Economics @ UC Davis
