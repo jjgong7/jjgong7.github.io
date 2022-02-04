@@ -18,8 +18,8 @@ minimal_mistakes_skin    :  "air" # "default", "aqua", "contrast", "dark", "dirt
 locale                   : "en-US"
 title                    : "JJ Gong"
 title_separator          : "-"
-name                     : "Justin (JJ) Gong"
-description              : "Business Intelligence/Data Analytics"
+name                     : "JJ Gong"
+description              : "Data Engineer"
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -106,9 +106,9 @@ analytics:
 
 # Site Author
 author:
-  name             : "Justin (JJ) Gong"
+  name             : "JJ Gong"
   avatar           : "https://avatars3.githubusercontent.com/u/29085635?s=400&u=d711d1e7ac6007b219e9c9e621f4cf56b4f00458&v=4"
-  bio              : "BI/Data Science Portfolio"
+  bio              : "Data Engineering/BI/DS Portfolio"
   location         : "New York City"
   email            :
   links:
@@ -132,10 +132,10 @@ author:
       # url: "https://instagram.com/"
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
-      url: https://www.linkedin.com/in/justin-gong/
+      url: https://www.linkedin.com/in/jj-gong/
 
 
-      # 
+      #
 
 # Site Footer
 footer:
@@ -160,7 +160,7 @@ footer:
     #   # url:
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
-      url: https://www.linkedin.com/in/justin-gong/
+      url: https://www.linkedin.com/in/jj-gong/
 
 
 # Reading Files
@@ -310,5 +310,3 @@ defaults:
     values:
       layout: single
       author_profile: true
-
-
