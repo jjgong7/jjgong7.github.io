@@ -4,11 +4,11 @@ permalink: /about/
 author_profile: true
 ---
 
-* Data Engineer with 4+ years experience
+* Data Engineer with 5+ years experience
 * Currently data wrangling/data pipelining in the med-tech space at [Pulse Analytics App](https://www.pulseanalyticsapp.com/)
-* Previously worked as a data engineer/business intelligence at [Ghostery](https://www.ghostery.com/)
-* Proficient in Python/SQL/Jupyter Notebooks/AWS
-* Skilled in business, ML, stats, and programming.
+* Previously worked as a data/bi engineer at [Ghostery](https://www.ghostery.com/)
+* Proficient in Python/SQL/NoSQL/Jupyter Notebooks/AWS
+* Skilled in business, ETLs, and programming.
 * Graduated with an M.S. in Analytics @ Georgia Tech and a B.S. in Managerial Economics @ UC Davis
 * Also worked as a CPA/Tax Accountant for 3 years before career transitioning
 
