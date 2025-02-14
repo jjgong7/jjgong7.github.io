@@ -4,7 +4,7 @@ permalink: /about/
 author_profile: true
 ---
 
-* Data Engineer with 5+ years experience
+* Data Engineer with 6+ years experience
 * Currently data wrangling/data pipelining in the med-tech space at [Pulse Analytics App](https://www.pulseanalyticsapp.com/)
 * Previously worked as a data/bi engineer at [Ghostery](https://www.ghostery.com/)
 * Proficient in Python/SQL/NoSQL/Jupyter Notebooks/AWS
