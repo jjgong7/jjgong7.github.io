@@ -19,7 +19,7 @@ locale                   : "en-US"
 title                    : "JJ Gong"
 title_separator          : "-"
 name                     : "JJ Gong"
-description              : "Data Engineer"
+description              : "Senior Machine Learning Engineer"
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -108,7 +108,7 @@ analytics:
 author:
   name             : "JJ Gong"
   avatar           : "https://avatars3.githubusercontent.com/u/29085635?s=400&u=d711d1e7ac6007b219e9c9e621f4cf56b4f00458&v=4"
-  bio              : "Data Engineering/BI/DS Portfolio"
+  bio              : "Senior Machine Learning Engineer at SAP"
   location         : "New York City"
   email            :
   links:
