@@ -28,7 +28,7 @@ author_profile: true
 
 **Languages:** Python, SQL, NoSQL
 
-**Tools & Platforms:** AWS, Jupyter Notebooks
+**Tools & Platforms:** AWS, Azure, Postgres, MongoDB, Claude Code
 
 ---
 
